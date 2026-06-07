@@ -7,9 +7,9 @@ Repeat-miss threshold: 2.
 
 | Leg | Misses | Last Event | Sample Events |
 | --- | ---: | --- | --- |
+| 1st Half Over 25.5 | 3 | Cronulla Sharks vs St George Illawarra Dragons | NTH Queensland Cowboys vs South Sydney Rabbitohs / Brisbane Broncos vs Gold Coast Titans / Cronulla Sharks vs St George Illawarra Dragons |
 | Andres Gimenez 1+ Hit | 3 | Pittsburgh Pirates M Keller vs Toronto Blue Jays D Cease | Pittsburgh Pirates B Chandler vs Toronto Blue Jays K Gausman / Miami Marlins (J Junk) vs Toronto Blue Jays (T Yesavage) / Pittsburgh Pirates M Keller vs Toronto Blue Jays D Cease |
 | Alejandro Osuna 1+ Hit | 3 | Kansas City Royals (S Lugo) vs Texas Rangers (K Rocker) | Houston Astros (T Imai) vs Texas Rangers (K Rocker) / Houston Astros (M Burrows) vs Texas Rangers (J deGrom) / Kansas City Royals (S Lugo) vs Texas Rangers (K Rocker) |
-| 1st Half Over 25.5 | 2 | Brisbane Broncos vs Gold Coast Titans | NTH Queensland Cowboys vs South Sydney Rabbitohs / Brisbane Broncos vs Gold Coast Titans |
 | Kyle Stowers 1+ Hit | 2 | Tampa Bay Rays (D Rasmussen) vs Miami Marlins (R Gusto) | Miami Marlins (S Alcantara) vs Toronto Blue Jays (B Fisher) / Tampa Bay Rays (D Rasmussen) vs Miami Marlins (R Gusto) |
 | Andy Pages 1+ Hit | 2 | Los Angeles Dodgers (J Wrobleski) vs Arizona Diamondbacks (R Nelson) | LOS Angeles Dodgers J Wrobleski vs Milwaukee Brewers L Henderson / Los Angeles Dodgers (J Wrobleski) vs Arizona Diamondbacks (R Nelson) |
 | Alec Bohm 1+ Hit | 2 | Cleveland Guardians P Messick vs Philadelphia Phillies A Painter | Cleveland Guardians G Williams vs Philadelphia Phillies C Sanchez / Cleveland Guardians P Messick vs Philadelphia Phillies A Painter |
@@ -20,6 +20,6 @@ Repeat-miss threshold: 2.
 
 ## Recent Missed Legs
 
-- Brisbane Broncos vs Gold Coast Titans | 1st Half Over 25.5
-- North Melbourne vs Fremantle | Karl Worner 15+ Disposals
-- Tampa Bay Rays (D Rasmussen) vs Miami Marlins (R Gusto) | Kyle Stowers 1+ Hit
+- Cronulla Sharks vs St George Illawarra Dragons | 1st Half Over 25.5 | 1st Half Cronulla Sharks -5.5
+- Sydney Swans vs St Kilda | Matt Roberts 15+ Disposals
+- Wests Tigers vs Penrith Panthers | 1st Half Wests Tigers +6.5
