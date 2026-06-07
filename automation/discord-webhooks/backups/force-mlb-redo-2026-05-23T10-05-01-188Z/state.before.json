@@ -1,0 +1,2035 @@
+{
+  "jobs": {
+    "analysis": {
+      "lastRunAt": "2026-05-23T09:12:45.410Z",
+      "generated": 12,
+      "considered": 14,
+      "pendingAfterMerge": 38,
+      "analysisEngine": "rules",
+      "quotaFallbackUsed": false
+    },
+    "slates": {
+      "lastRunDate": "2026-05-23",
+      "lastRunAt": "2026-05-22T22:00:46.196Z",
+      "targetDateKey": "2026-05-23",
+      "source": "market-scrape"
+    },
+    "picks": {
+      "lastRunDate": "2026-05-23",
+      "lastRunAt": "2026-05-23T09:50:05.661Z"
+    },
+    "results": {
+      "lastRunAt": "2026-05-23T09:54:05.671Z"
+    },
+    "trackerSummary": {
+      "lastRunDate": "2026-05-23",
+      "lastRunAt": "2026-05-23T08:53:21.986Z",
+      "sourceDateKey": "2026-05-23"
+    }
+  },
+  "posts": {
+    "slates": {},
+    "picks": {
+      "auto-generator:afl:snapshot:afl:richmond vs essendon:2026-05-22T09:45:07.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:nrl:snapshot:nrl:canterbury bulldogs vs melbourne storm:2026-05-22T10:00:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:afl:snapshot:afl:fremantle vs st kilda:2026-05-22T10:30:37.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:houston astros s arrighetti vs chicago cubs j taillon:2026-05-22T18:21:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:cleveland guardians g williams vs philadelphia phillies c sanchez:2026-05-22T22:41:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:st louis cardinals k leahy vs cincinnati reds c paddack:2026-05-22T22:41:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:tampa bay rays n martinez vs new york yankees g cole:2026-05-22T23:06:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:pittsburgh pirates b chandler vs toronto blue jays k gausman:2026-05-22T23:08:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:minnesota twins c prielipp vs boston red sox p tolle:2026-05-22T23:11:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:new york mets t myers vs miami marlins e perez:2026-05-22T23:11:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:mlb:snapshot:mlb:detroit tigers j flaherty vs baltimore orioles c bassitt:2026-05-22T23:16:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:nba:snapshot:nba:oklahoma city thunder vs san antonio spurs:2026-05-23T00:40:00.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:afl:snapshot:afl:north melbourne vs gold coast suns:2026-05-23T03:15:07.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:afl:snapshot:afl:geelong cats vs sydney swans:2026-05-23T06:15:55.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:afl:snapshot:afl:collingwood vs west coast eagles:2026-05-23T06:35:36.000Z": "2026-05-22T06:51:18.389Z",
+      "auto-generator:afl:snapshot:afl:port adelaide vs carlton:2026-05-23T09:35:18.000Z": "2026-05-22T09:37:11.707Z",
+      "auto-generator:mlb:snapshot:mlb:detroit tigers j flaherty vs baltimore orioles k akin:2026-05-22T23:16:00.000Z": "2026-05-22T23:00:04.139Z",
+      "auto-generator:mlb:snapshot:mlb:washington nationals r lovelady vs atlanta braves b elder:2026-05-22T23:16:00.000Z": "2026-05-22T23:00:04.139Z",
+      "auto-generator:mlb:snapshot:mlb:los angeles dodgers j wrobleski vs milwaukee brewers l henderson:2026-05-22T23:41:00.000Z": "2026-05-22T23:00:04.139Z",
+      "auto-generator:mlb:snapshot:mlb:texas rangers j degrom vs los angeles angels g rodriguez:2026-05-23T01:39:00.000Z": "2026-05-22T23:45:14.479Z",
+      "auto-generator:mlb:snapshot:mlb:athletics j springs vs san diego padres w buehler:2026-05-23T01:41:00.000Z": "2026-05-22T23:45:14.479Z",
+      "auto-generator:mlb:snapshot:mlb:colorado rockies t sugano vs arizona diamondbacks m soroka:2026-05-23T01:41:00.000Z": "2026-05-22T23:45:14.479Z",
+      "auto-generator:mlb:snapshot:mlb:chicago white sox d martin vs san francisco giants t mcdonald:2026-05-23T02:16:00.000Z": "2026-05-22T23:45:14.479Z",
+      "auto-generator:mlb:snapshot:mlb:st louis cardinals a pallante vs cincinnati reds c paddack:2026-05-23T17:11:00.000Z": "2026-05-22T23:45:14.479Z",
+      "auto-generator:mlb:snapshot:mlb:tampa bay rays d rasmussen vs new york yankees r weathers:2026-05-23T17:36:00.000Z": "2026-05-22T23:45:14.479Z",
+      "auto-generator:nba:snapshot:nba:new york knicks vs cleveland cavaliers:2026-05-24T00:10:00.000Z": "2026-05-23T00:15:15.811Z",
+      "auto-generator:mlb:snapshot:mlb:houston astros k teng vs chicago cubs c rea:2026-05-23T18:21:00.000Z": "2026-05-23T00:45:22.178Z",
+      "auto-generator:mlb:snapshot:mlb:pittsburgh pirates p skenes vs toronto blue jays p corbin:2026-05-23T19:08:00.000Z": "2026-05-23T00:45:22.178Z",
+      "auto-generator:afl:snapshot:afl:gws giants vs brisbane lions:2026-05-24T02:30:07.000Z": "2026-05-23T02:30:29.556Z",
+      "auto-generator:mlb:snapshot:mlb:chicago white sox e fedde vs san francisco giants a houser:2026-05-23T20:06:00.000Z": "2026-05-23T02:45:44.790Z",
+      "auto-generator:mlb:snapshot:mlb:cleveland guardians s cecconi vs philadelphia phillies z wheeler:2026-05-23T20:06:00.000Z": "2026-05-23T02:45:44.790Z",
+      "auto-generator:mlb:snapshot:mlb:detroit tigers f valdez vs baltimore orioles b young:2026-05-23T20:06:00.000Z": "2026-05-23T02:45:44.790Z",
+      "auto-generator:mlb:snapshot:mlb:new york mets f peralta vs miami marlins m meyer:2026-05-23T20:11:00.000Z": "2026-05-23T02:45:44.790Z",
+      "auto-generator:mlb:snapshot:mlb:minnesota twins t bradley vs boston red sox j moran:2026-05-23T20:11:00.000Z": "2026-05-23T03:45:57.247Z",
+      "auto-generator:nrl:snapshot:nrl:st george illawarra dragons vs new zealand warriors:2026-05-23T07:30:00.000Z": "2026-05-23T04:10:39.704Z",
+      "auto-generator:nrl:snapshot:nrl:manly sea eagles vs gold coast titans:2026-05-23T09:35:00.000Z": "2026-05-23T04:10:39.704Z",
+      "auto-generator:afl:snapshot:afl:western bulldogs vs melbourne:2026-05-24T05:15:50.000Z": "2026-05-23T05:28:04.591Z",
+      "auto-generator:nrl:snapshot:nrl:nth queensland cowboys vs south sydney rabbitohs:2026-05-24T06:05:00.000Z": "2026-05-23T06:13:45.344Z"
+    },
+    "results": {
+      "auto-generator:afl:snapshot:afl:richmond vs essendon:2026-05-22T09:45:07.000Z": "2026-05-22T20:23:41.107Z",
+      "auto-generator:nrl:snapshot:nrl:canterbury bulldogs vs melbourne storm:2026-05-22T10:00:00.000Z": "2026-05-22T20:23:41.107Z",
+      "auto-generator:afl:snapshot:afl:fremantle vs st kilda:2026-05-22T10:30:37.000Z": "2026-05-22T20:23:41.107Z",
+      "auto-generator:mlb:snapshot:mlb:houston astros s arrighetti vs chicago cubs j taillon:2026-05-22T18:21:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:cleveland guardians g williams vs philadelphia phillies c sanchez:2026-05-22T22:41:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:tampa bay rays n martinez vs new york yankees g cole:2026-05-22T23:06:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:pittsburgh pirates b chandler vs toronto blue jays k gausman:2026-05-22T23:08:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:minnesota twins c prielipp vs boston red sox p tolle:2026-05-22T23:11:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:new york mets t myers vs miami marlins e perez:2026-05-22T23:11:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:detroit tigers j flaherty vs baltimore orioles k akin:2026-05-22T23:16:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:los angeles dodgers j wrobleski vs milwaukee brewers l henderson:2026-05-22T23:41:00.000Z": "2026-05-23T03:54:58.017Z",
+      "auto-generator:mlb:snapshot:mlb:texas rangers j degrom vs los angeles angels g rodriguez:2026-05-23T01:39:00.000Z": "2026-05-23T04:40:25.417Z",
+      "auto-generator:mlb:snapshot:mlb:athletics j springs vs san diego padres w buehler:2026-05-23T01:41:00.000Z": "2026-05-23T04:55:27.101Z",
+      "auto-generator:mlb:snapshot:mlb:colorado rockies t sugano vs arizona diamondbacks m soroka:2026-05-23T01:41:00.000Z": "2026-05-23T04:55:27.101Z",
+      "auto-generator:mlb:snapshot:mlb:chicago white sox d martin vs san francisco giants t mcdonald:2026-05-23T02:16:00.000Z": "2026-05-23T05:27:02.187Z",
+      "auto-generator:afl:snapshot:afl:north melbourne vs gold coast suns:2026-05-23T03:15:07.000Z": "2026-05-23T06:28:29.889Z",
+      "auto-generator:nba:snapshot:nba:oklahoma city thunder vs san antonio spurs:2026-05-23T00:40:00.000Z": "2026-05-23T07:59:52.190Z",
+      "auto-generator:mlb:snapshot:mlb:st louis cardinals k leahy vs cincinnati reds c paddack:2026-05-22T22:41:00.000Z": "2026-05-23T08:17:47.764Z",
+      "auto-generator:mlb:snapshot:mlb:washington nationals r lovelady vs atlanta braves b elder:2026-05-22T23:16:00.000Z": "2026-05-23T08:17:47.764Z",
+      "auto-generator:afl:snapshot:afl:geelong cats vs sydney swans:2026-05-23T06:15:55.000Z": "2026-05-23T09:23:59.714Z",
+      "auto-generator:afl:snapshot:afl:collingwood vs west coast eagles:2026-05-23T06:35:36.000Z": "2026-05-23T09:39:03.868Z"
+    }
+  },
+  "cache": {
+    "oddsValidation": {
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"richmond\",\"awayTeam\":\"essendon\",\"outcomeName\":\"10 disposals\",\"description\":\"archer day wicks\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:18.394Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.47,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.47,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"richmond\",\"awayTeam\":\"essendon\",\"outcomeName\":\"13 disposals\",\"description\":\"archie perkins\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:18.397Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.25,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.25,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"richmond\",\"awayTeam\":\"essendon\",\"outcomeName\":\"12 disposals\",\"description\":\"ben miller\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:18.401Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.2,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.2,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"player_points\",\"homeTeam\":\"canterbury bulldogs\",\"awayTeam\":\"melbourne storm\",\"outcomeName\":\"6 points\",\"description\":\"matt burton\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:19.884Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.24,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.24,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"player_points\",\"homeTeam\":\"canterbury bulldogs\",\"awayTeam\":\"melbourne storm\",\"outcomeName\":\"4 points\",\"description\":\"nick meaney\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:19.887Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.08,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.08,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"first_half_totals\",\"homeTeam\":\"canterbury bulldogs\",\"awayTeam\":\"melbourne storm\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":23.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:19.890Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.84,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.84,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"fremantle\",\"awayTeam\":\"st kilda\",\"outcomeName\":\"10 disposals\",\"description\":\"anthony caminiti\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:19.893Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.33,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.33,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"fremantle\",\"awayTeam\":\"st kilda\",\"outcomeName\":\"10 disposals\",\"description\":\"brennan cox\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:19.896Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.25,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.25,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"fremantle\",\"awayTeam\":\"st kilda\",\"outcomeName\":\"11 disposals\",\"description\":\"charlie banfield\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:19.899Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.25,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.25,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"chicago cubs j taillon\",\"awayTeam\":\"houston astros s arrighetti\",\"outcomeName\":\"1 hit\",\"description\":\"alex bregman\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:20.531Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.52,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.52,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"chicago cubs j taillon\",\"awayTeam\":\"houston astros s arrighetti\",\"outcomeName\":\"1 hit\",\"description\":\"braden shewmake\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:20.534Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.57,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.57,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"philadelphia phillies c sanchez\",\"awayTeam\":\"cleveland guardians g williams\",\"outcomeName\":\"1 hit\",\"description\":\"adolis garcia\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:20.995Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.68,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.68,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"philadelphia phillies c sanchez\",\"awayTeam\":\"cleveland guardians g williams\",\"outcomeName\":\"1 hit\",\"description\":\"alec bohm\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:20.998Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.5,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.5,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"cincinnati reds c paddack\",\"awayTeam\":\"st louis cardinals k leahy\",\"outcomeName\":\"1 hit\",\"description\":\"jj bleday\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:21.100Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.46,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.46,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"cincinnati reds c paddack\",\"awayTeam\":\"st louis cardinals k leahy\",\"outcomeName\":\"1 hit\",\"description\":\"nathaniel lowe\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:21.103Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.46,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.46,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"cincinnati reds c paddack\",\"awayTeam\":\"st louis cardinals k leahy\",\"outcomeName\":\"1 hit\",\"description\":\"tyler stephenson\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:21.107Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.48,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.48,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"new york yankees g cole\",\"awayTeam\":\"tampa bay rays n martinez\",\"outcomeName\":\"1 hit\",\"description\":\"austin wells\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.418Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.98,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.98,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"new york yankees g cole\",\"awayTeam\":\"tampa bay rays n martinez\",\"outcomeName\":\"1 hit\",\"description\":\"cedric mullins\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.420Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.74,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.74,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"toronto blue jays k gausman\",\"awayTeam\":\"pittsburgh pirates b chandler\",\"outcomeName\":\"1 hit\",\"description\":\"andres gimenez\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.457Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.59,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.59,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"toronto blue jays k gausman\",\"awayTeam\":\"pittsburgh pirates b chandler\",\"outcomeName\":\"1 hit\",\"description\":\"brandon lowe\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.459Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.48,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.48,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"boston red sox p tolle\",\"awayTeam\":\"minnesota twins c prielipp\",\"outcomeName\":\"1 hit\",\"description\":\"alex jackson\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.498Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.98,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.98,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"boston red sox p tolle\",\"awayTeam\":\"minnesota twins c prielipp\",\"outcomeName\":\"1 hit\",\"description\":\"andruw monasterio\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.500Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.55,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.55,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"miami marlins e perez\",\"awayTeam\":\"new york mets t myers\",\"outcomeName\":\"1 hit\",\"description\":\"a j ewing\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.539Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.69,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.69,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"miami marlins e perez\",\"awayTeam\":\"new york mets t myers\",\"outcomeName\":\"1 hit\",\"description\":\"brett baty\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.541Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.59,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.59,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"baltimore orioles c bassitt\",\"awayTeam\":\"detroit tigers j flaherty\",\"outcomeName\":\"detroit tigers j flaherty\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:21.610Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.51,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.51,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"baltimore orioles c bassitt\",\"awayTeam\":\"detroit tigers j flaherty\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":8.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T06:51:21.613Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.85,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.85,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T06:45:35.481Z"
+        }
+      },
+      "{\"sportKey\":\"nba\",\"market\":\"player_rebounds\",\"homeTeam\":\"san antonio spurs\",\"awayTeam\":\"oklahoma city thunder\",\"outcomeName\":\"4 rebounds\",\"description\":\"ajay mitchell\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.514Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 2,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 2,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"nba\",\"market\":\"player_assists\",\"homeTeam\":\"san antonio spurs\",\"awayTeam\":\"oklahoma city thunder\",\"outcomeName\":\"2 assists\",\"description\":\"cason wallace\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.517Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.62,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.62,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"north melbourne\",\"awayTeam\":\"gold coast suns\",\"outcomeName\":\"10 disposals\",\"description\":\"bailey humphrey\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:15:27.311Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.25,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.25,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T01:31:23.902Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"north melbourne\",\"awayTeam\":\"gold coast suns\",\"outcomeName\":\"14 disposals\",\"description\":\"cameron zurhaar\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:15:27.314Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.67,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.67,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T01:31:23.902Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"north melbourne\",\"awayTeam\":\"gold coast suns\",\"outcomeName\":\"11 disposals\",\"description\":\"charlie comben\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:15:27.320Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.4,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.4,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T01:31:23.902Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"geelong cats\",\"awayTeam\":\"sydney swans\",\"outcomeName\":\"11 disposals\",\"description\":\"caiden cleary\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:28:05.667Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.17,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.17,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:11:00.432Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"geelong cats\",\"awayTeam\":\"sydney swans\",\"outcomeName\":\"11 disposals\",\"description\":\"charlie curnow\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:28:05.671Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.59,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.59,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:11:00.432Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"geelong cats\",\"awayTeam\":\"sydney swans\",\"outcomeName\":\"12 disposals\",\"description\":\"connor o sullivan\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:28:05.676Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.3,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.3,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:11:00.432Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"collingwood\",\"awayTeam\":\"west coast eagles\",\"outcomeName\":\"11 disposals\",\"description\":\"bailey j williams\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:43:28.302Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.3,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.3,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:28:06.887Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"collingwood\",\"awayTeam\":\"west coast eagles\",\"outcomeName\":\"13 disposals\",\"description\":\"beau mccreery\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:43:28.306Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.22,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.22,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:28:06.887Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"collingwood\",\"awayTeam\":\"west coast eagles\",\"outcomeName\":\"11 disposals\",\"description\":\"billy frampton\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:43:28.312Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.41,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.41,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:28:06.887Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"port adelaide\",\"awayTeam\":\"carlton\",\"outcomeName\":\"11 disposals\",\"description\":\"aliir aliir\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T08:48:47.253Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.17,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.17,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T08:12:38.745Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"port adelaide\",\"awayTeam\":\"carlton\",\"outcomeName\":\"13 disposals\",\"description\":\"ben ainsworth\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T08:48:47.256Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.3,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.3,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T08:12:38.745Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"port adelaide\",\"awayTeam\":\"carlton\",\"outcomeName\":\"10 disposals\",\"description\":\"brodie kemp\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T08:48:47.258Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.49,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.49,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T08:12:38.745Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"baltimore orioles k akin\",\"awayTeam\":\"detroit tigers j flaherty\",\"outcomeName\":\"1 hit\",\"description\":\"adley rutschman\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:04.144Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.46,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.46,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"baltimore orioles k akin\",\"awayTeam\":\"detroit tigers j flaherty\",\"outcomeName\":\"1 hit\",\"description\":\"coby mayo\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:04.147Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.88,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.88,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"atlanta braves b elder\",\"awayTeam\":\"washington nationals r lovelady\",\"outcomeName\":\"1 hit\",\"description\":\"austin riley\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.167Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.45,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.45,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"atlanta braves b elder\",\"awayTeam\":\"washington nationals r lovelady\",\"outcomeName\":\"1 hit\",\"description\":\"c j abrams\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.170Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.47,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.47,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"atlanta braves b elder\",\"awayTeam\":\"washington nationals r lovelady\",\"outcomeName\":\"1 hit\",\"description\":\"curtis mead\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.172Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.47,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.47,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"milwaukee brewers l henderson\",\"awayTeam\":\"los angeles dodgers j wrobleski\",\"outcomeName\":\"1 hit\",\"description\":\"andy pages\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.377Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.5,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.5,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"batter_hits\",\"homeTeam\":\"milwaukee brewers l henderson\",\"awayTeam\":\"los angeles dodgers j wrobleski\",\"outcomeName\":\"1 hit\",\"description\":\"dalton rushing\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:00:05.380Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.75,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.75,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T22:00:46.207Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"los angeles angels g rodriguez\",\"awayTeam\":\"texas rangers j degrom\",\"outcomeName\":\"los angeles angels g rodriguez\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.483Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.74,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.74,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"los angeles angels g rodriguez\",\"awayTeam\":\"texas rangers j degrom\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":7.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.486Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.84,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.84,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"san diego padres w buehler\",\"awayTeam\":\"athletics j springs\",\"outcomeName\":\"san diego padres w buehler\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.489Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.49,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.49,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"san diego padres w buehler\",\"awayTeam\":\"athletics j springs\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":7.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.493Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.83,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.83,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"arizona diamondbacks m soroka\",\"awayTeam\":\"colorado rockies t sugano\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":9,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.495Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.94,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.94,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"h2h\",\"homeTeam\":\"arizona diamondbacks m soroka\",\"awayTeam\":\"colorado rockies t sugano\",\"outcomeName\":\"arizona diamondbacks m soroka\",\"description\":\"\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.498Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.44,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.44,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"san francisco giants t mcdonald\",\"awayTeam\":\"chicago white sox d martin\",\"outcomeName\":\"san francisco giants t mcdonald\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.501Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.52,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.52,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"san francisco giants t mcdonald\",\"awayTeam\":\"chicago white sox d martin\",\"outcomeName\":\"under\",\"description\":\"\",\"point\":7.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.503Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.8,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.8,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"cincinnati reds c paddack\",\"awayTeam\":\"st louis cardinals a pallante\",\"outcomeName\":\"cincinnati reds c paddack\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.505Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.55,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.55,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"cincinnati reds c paddack\",\"awayTeam\":\"st louis cardinals a pallante\",\"outcomeName\":\"under\",\"description\":\"\",\"point\":9.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.508Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.8,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.8,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"new york yankees r weathers\",\"awayTeam\":\"tampa bay rays d rasmussen\",\"outcomeName\":\"tampa bay rays d rasmussen\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.510Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.52,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.52,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"new york yankees r weathers\",\"awayTeam\":\"tampa bay rays d rasmussen\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":7,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-22T23:45:14.512Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.83,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.83,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"nba\",\"market\":\"player_rebounds\",\"homeTeam\":\"cleveland cavaliers\",\"awayTeam\":\"new york knicks\",\"outcomeName\":\"4 rebounds\",\"description\":\"dean wade\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T00:15:15.815Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.71,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.71,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"nba\",\"market\":\"player_rebounds\",\"homeTeam\":\"cleveland cavaliers\",\"awayTeam\":\"new york knicks\",\"outcomeName\":\"4 rebounds\",\"description\":\"donovan mitchell\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T00:15:15.818Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.45,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.45,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"nba\",\"market\":\"player_assists\",\"homeTeam\":\"cleveland cavaliers\",\"awayTeam\":\"new york knicks\",\"outcomeName\":\"2 assists\",\"description\":\"evan mobley\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T00:15:15.823Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.1,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.1,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-22T23:31:07.129Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"chicago cubs c rea\",\"awayTeam\":\"houston astros k teng\",\"outcomeName\":\"houston astros k teng\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T00:45:22.182Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.51,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.51,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T00:31:18.666Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"chicago cubs c rea\",\"awayTeam\":\"houston astros k teng\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":7.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T00:45:22.185Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.93,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.93,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T00:31:18.666Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"toronto blue jays p corbin\",\"awayTeam\":\"pittsburgh pirates p skenes\",\"outcomeName\":\"toronto blue jays p corbin\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T00:45:22.188Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.75,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.75,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T00:31:18.666Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"toronto blue jays p corbin\",\"awayTeam\":\"pittsburgh pirates p skenes\",\"outcomeName\":\"under\",\"description\":\"\",\"point\":7.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T00:45:22.191Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.84,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.84,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T00:31:18.666Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"gws giants\",\"awayTeam\":\"brisbane lions\",\"outcomeName\":\"10 disposals\",\"description\":\"aaron cadman\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:30:29.560Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.25,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.25,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T01:31:23.902Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"gws giants\",\"awayTeam\":\"brisbane lions\",\"outcomeName\":\"14 disposals\",\"description\":\"brent daniels\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:30:29.563Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.28,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.28,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T01:31:23.902Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"gws giants\",\"awayTeam\":\"brisbane lions\",\"outcomeName\":\"15 disposals\",\"description\":\"bruce reville\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:30:29.566Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.3,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.3,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T01:31:23.902Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"san francisco giants a houser\",\"awayTeam\":\"chicago white sox e fedde\",\"outcomeName\":\"chicago white sox e fedde\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.794Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.49,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.49,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"san francisco giants a houser\",\"awayTeam\":\"chicago white sox e fedde\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":8.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.798Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.93,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.93,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"philadelphia phillies z wheeler\",\"awayTeam\":\"cleveland guardians s cecconi\",\"outcomeName\":\"cleveland guardians s cecconi\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.801Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.78,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.78,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"philadelphia phillies z wheeler\",\"awayTeam\":\"cleveland guardians s cecconi\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":7,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.805Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.79,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.79,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"baltimore orioles b young\",\"awayTeam\":\"detroit tigers f valdez\",\"outcomeName\":\"baltimore orioles b young\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.808Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.52,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.52,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"baltimore orioles b young\",\"awayTeam\":\"detroit tigers f valdez\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":8,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.811Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.83,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.83,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"miami marlins m meyer\",\"awayTeam\":\"new york mets f peralta\",\"outcomeName\":\"miami marlins m meyer\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.814Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.51,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.51,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"miami marlins m meyer\",\"awayTeam\":\"new york mets f peralta\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":7.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T02:45:44.816Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.83,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.83,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T02:31:31.618Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"spreads\",\"homeTeam\":\"boston red sox j moran\",\"awayTeam\":\"minnesota twins t bradley\",\"outcomeName\":\"boston red sox j moran\",\"description\":\"\",\"point\":1.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T03:45:57.257Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.52,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.52,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T03:31:46.197Z"
+        }
+      },
+      "{\"sportKey\":\"mlb\",\"market\":\"totals\",\"homeTeam\":\"boston red sox j moran\",\"awayTeam\":\"minnesota twins t bradley\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":8.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T03:45:57.262Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.88,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.88,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T03:31:46.197Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"player_points\",\"homeTeam\":\"st george illawarra dragons\",\"awayTeam\":\"new zealand warriors\",\"outcomeName\":\"6 points\",\"description\":\"valentine holmes\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T04:10:39.725Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.53,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.53,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T03:31:46.197Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"first_half_totals\",\"homeTeam\":\"st george illawarra dragons\",\"awayTeam\":\"new zealand warriors\",\"outcomeName\":\"over\",\"description\":\"\",\"point\":24.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T04:10:39.729Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.87,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.87,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T03:31:46.197Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"player_points\",\"homeTeam\":\"manly sea eagles\",\"awayTeam\":\"gold coast titans\",\"outcomeName\":\"6 points\",\"description\":\"jayden campbell\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T08:48:47.236Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.62,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.62,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T08:12:38.745Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"first_half_totals\",\"homeTeam\":\"manly sea eagles\",\"awayTeam\":\"gold coast titans\",\"outcomeName\":\"under\",\"description\":\"\",\"point\":24.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T04:10:39.738Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.81,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.81,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T03:31:46.197Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"western bulldogs\",\"awayTeam\":\"melbourne\",\"outcomeName\":\"10 disposals\",\"description\":\"arthur jones\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:28:04.605Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.17,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.17,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:11:00.432Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"western bulldogs\",\"awayTeam\":\"melbourne\",\"outcomeName\":\"15 disposals\",\"description\":\"blake howes\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:28:04.613Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.4,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.4,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:11:00.432Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"western bulldogs\",\"awayTeam\":\"melbourne\",\"outcomeName\":\"10 disposals\",\"description\":\"buku khamis\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:28:04.621Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.34,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.34,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:11:00.432Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"geelong cats\",\"awayTeam\":\"sydney swans\",\"outcomeName\":\"10 disposals\",\"description\":\"charlie curnow\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:29:08.121Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.36,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.36,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:28:06.887Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"geelong cats\",\"awayTeam\":\"sydney swans\",\"outcomeName\":\"10 disposals\",\"description\":\"jack martin\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:29:08.127Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.34,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.34,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:28:06.887Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"geelong cats\",\"awayTeam\":\"sydney swans\",\"outcomeName\":\"15 disposals\",\"description\":\"jai serong\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:29:08.131Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.44,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.44,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:28:06.887Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"collingwood\",\"awayTeam\":\"west coast eagles\",\"outcomeName\":\"10 disposals\",\"description\":\"bailey j williams\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:44:28.192Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.17,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.17,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:43:29.630Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"collingwood\",\"awayTeam\":\"west coast eagles\",\"outcomeName\":\"10 disposals\",\"description\":\"billy frampton\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:44:28.195Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.28,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.28,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:43:29.630Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"collingwood\",\"awayTeam\":\"west coast eagles\",\"outcomeName\":\"10 disposals\",\"description\":\"brady hough\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T05:44:28.200Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.4,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.4,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:43:29.630Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"player_points\",\"homeTeam\":\"nth queensland cowboys\",\"awayTeam\":\"south sydney rabbitohs\",\"outcomeName\":\"8 points\",\"description\":\"jake clifford\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T06:13:45.356Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.46,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.46,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:43:29.630Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"player_points\",\"homeTeam\":\"nth queensland cowboys\",\"awayTeam\":\"south sydney rabbitohs\",\"outcomeName\":\"6 points\",\"description\":\"latrell siegwalt\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T06:13:45.363Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.25,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.25,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:43:29.630Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"first_half_totals\",\"homeTeam\":\"nth queensland cowboys\",\"awayTeam\":\"south sydney rabbitohs\",\"outcomeName\":\"under\",\"description\":\"\",\"point\":26.5,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T06:13:45.367Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.76,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.76,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T05:43:29.630Z"
+        }
+      },
+      "{\"sportKey\":\"nrl\",\"market\":\"player_points\",\"homeTeam\":\"manly sea eagles\",\"awayTeam\":\"gold coast titans\",\"outcomeName\":\"4 points\",\"description\":\"jayden campbell\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T08:48:47.249Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.2,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.2,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T08:12:38.745Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"port adelaide\",\"awayTeam\":\"carlton\",\"outcomeName\":\"15 disposals\",\"description\":\"billy wilson\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T08:49:28.952Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.33,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.33,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T08:48:47.973Z"
+        }
+      },
+      "{\"sportKey\":\"afl\",\"market\":\"player_disposals\",\"homeTeam\":\"port adelaide\",\"awayTeam\":\"carlton\",\"outcomeName\":\"15 disposals\",\"description\":\"christian moraes\",\"point\":null,\"minimumOdds\":1.01,\"minimumBooksAtOrAbove\":0,\"regions\":\"\",\"bookmakers\":[]}": {
+        "cachedAt": "2026-05-23T08:49:28.955Z",
+        "result": {
+          "status": "ok",
+          "booksChecked": 1,
+          "booksAtOrAbove": 1,
+          "minimumOdds": 1.01,
+          "bestOdds": 1.42,
+          "bestBookmaker": "Sportsbet Web",
+          "averageOdds": 1.42,
+          "source": "snapshot",
+          "sourceLabel": "bookmaker snapshot",
+          "snapshotFetchedAt": "2026-05-23T08:48:47.973Z"
+        }
+      }
+    }
+  },
+  "providers": {
+    "sportsGameOdds": {},
+    "marketScrape": {
+      "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+      "lastStatus": "ok",
+      "lastQuoteCount": 1556,
+      "sports": {
+        "afl": {
+          "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+          "lastStatus": "ok",
+          "lastQuoteCount": 956,
+          "featuredQuoteCount": 24,
+          "propQuoteCount": 932,
+          "eventCount": 4,
+          "marketPageUrl": "https://www.sportsbet.com.au/betting/australian-rules/afl"
+        },
+        "nrl": {
+          "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+          "lastStatus": "ok",
+          "lastQuoteCount": 57,
+          "featuredQuoteCount": 16,
+          "propQuoteCount": 41,
+          "eventCount": 3,
+          "marketPageUrl": "https://www.sportsbet.com.au/betting/rugby-league/nrl"
+        },
+        "mlb": {
+          "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+          "lastStatus": "ok",
+          "lastQuoteCount": 475,
+          "featuredQuoteCount": 96,
+          "propQuoteCount": 379,
+          "eventCount": 16,
+          "marketPageUrl": "https://www.sportsbet.com.au/betting/baseball/mlb"
+        },
+        "nba": {
+          "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+          "lastStatus": "ok",
+          "lastQuoteCount": 68,
+          "featuredQuoteCount": 12,
+          "propQuoteCount": 56,
+          "eventCount": 2,
+          "marketPageUrl": "https://www.sportsbet.com.au/betting/basketball-us/nba"
+        },
+        "nhl": {
+          "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+          "lastStatus": "no_quotes",
+          "lastQuoteCount": 0,
+          "featuredQuoteCount": 0,
+          "propQuoteCount": 0,
+          "eventCount": 0,
+          "marketPageUrl": "https://www.sportsbet.com.au/betting/ice-hockey-us/nhl"
+        },
+        "nfl": {
+          "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+          "lastStatus": "no_quotes",
+          "lastQuoteCount": 0,
+          "featuredQuoteCount": 0,
+          "propQuoteCount": 0,
+          "eventCount": 0,
+          "marketPageUrl": "https://www.sportsbet.com.au/betting/american-football-us/nfl"
+        },
+        "soccer_epl": {
+          "lastRefreshAt": "2026-05-23T08:48:47.973Z",
+          "lastStatus": "no_quotes",
+          "lastQuoteCount": 0,
+          "featuredQuoteCount": 0,
+          "propQuoteCount": 0,
+          "eventCount": 0,
+          "marketPageUrl": "https://www.sportsbet.com.au/betting/soccer/english-premier-league"
+        }
+      }
+    }
+  },
+  "tracking": {
+    "picks": {
+      "auto-generator:mlb:snapshot:mlb:detroit tigers j flaherty vs baltimore orioles c bassitt:2026-05-22T23:16:00.000Z": {
+        "shortlistedAt": "2026-05-22T06:51:18.389Z",
+        "postedAt": "2026-05-22T06:51:18.389Z",
+        "status": "cancelled",
+        "nextCheckAt": "2026-05-22T23:16:00.000Z",
+        "lastCheckedAt": "2026-05-22T23:00:04.139Z",
+        "lastDecision": "cancellation_posted",
+        "cancellationPostedAt": "2026-05-22T23:00:04.139Z",
+        "lastCancellationReason": "Cancelled after the late pregame recheck: live price validation failed for Detroit Tigers J Flaherty +1.5: budget_guard; live price validation failed for Over 8.5: budget_guard"
+      },
+      "auto-generator:afl:snapshot:afl:port adelaide vs carlton:2026-05-23T09:35:18.000Z": {
+        "shortlistedAt": "2026-05-22T09:37:11.707Z",
+        "postedAt": "2026-05-22T09:37:11.707Z",
+        "status": "pregame_recheck_passed",
+        "nextCheckAt": "2026-05-23T09:35:18.000Z",
+        "lastCheckedAt": "2026-05-23T08:48:47.227Z",
+        "lastDecision": "replacement_posted",
+        "postedMessageId": "1507666777172344872",
+        "postedWebhookChannel": "picksAfl",
+        "activeReplacement": {
+          "id": "auto-generator:afl:snapshot:afl:port adelaide vs carlton:2026-05-23T09:35:18.000Z",
+          "status": "pending",
+          "sport": "afl",
+          "sportLabel": "AFL",
+          "eventId": "snapshot:afl:port adelaide vs carlton:2026-05-23T09:35:18.000Z",
+          "espnEventId": "1133579",
+          "event": "Port Adelaide vs Carlton",
+          "homeTeam": "Port Adelaide",
+          "homeTeamId": "7",
+          "awayTeam": "Carlton",
+          "awayTeamId": "9",
+          "startTime": "2026-05-23T09:35:18.000Z",
+          "venue": {
+            "id": "81",
+            "name": "Adelaide Oval",
+            "city": "",
+            "state": "",
+            "country": "",
+            "indoor": false,
+            "roofType": ""
+          },
+          "summary": "Billy Wilson 15+ Disposals + Brodie Kemp 10+ Disposals + Christian Moraes 15+ Disposals",
+          "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+          "betType": "sgm",
+          "modelProbability": 0.405224,
+          "supportScore": 10,
+          "confidenceTier": "high",
+          "supportProjection": "strong",
+          "dataConfidence": "medium",
+          "correlationRisk": "medium",
+          "correlationJustified": true,
+          "exceptionalSupport": true,
+          "strongSupport": true,
+          "stakeUnits": 1,
+          "source": "auto-generator",
+          "analysisEngine": "rules",
+          "legs": [
+            {
+              "id": "leg-1",
+              "label": "Billy Wilson 15+ Disposals",
+              "modelProbability": 0.74,
+              "status": "active",
+              "locked": false,
+              "rationale": "Rules engine kept Billy Wilson 15+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+              "source": {
+                "type": "web-scrape",
+                "market": "player_disposals",
+                "booksChecked": 1,
+                "outcomeName": "15+ Disposals",
+                "description": "Billy Wilson",
+                "point": null
+              }
+            },
+            {
+              "id": "leg-2",
+              "label": "Brodie Kemp 10+ Disposals",
+              "modelProbability": 0.74,
+              "status": "active",
+              "locked": false,
+              "rationale": "Rules engine kept Brodie Kemp 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+              "source": {
+                "type": "web-scrape",
+                "market": "player_disposals",
+                "booksChecked": 1,
+                "outcomeName": "10+ Disposals",
+                "description": "Brodie Kemp",
+                "point": null
+              }
+            },
+            {
+              "id": "leg-3",
+              "label": "Christian Moraes 15+ Disposals",
+              "modelProbability": 0.74,
+              "status": "active",
+              "locked": false,
+              "rationale": "Rules engine kept Christian Moraes 15+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+              "source": {
+                "type": "web-scrape",
+                "market": "player_disposals",
+                "booksChecked": 1,
+                "outcomeName": "15+ Disposals",
+                "description": "Christian Moraes",
+                "point": null
+              }
+            }
+          ],
+          "replacementTemplate": {
+            "candidateLegs": [],
+            "maxOptions": 1
+          },
+          "analysisChecklist": {
+            "actionableSlate": "pass",
+            "marketDepth": "pass",
+            "selectionSupport": "pass",
+            "playerAvailability": "not_applicable",
+            "roleStability": "not_applicable",
+            "externalConditions": "not_applicable",
+            "researchConfidence": "pass",
+            "correlation": "pass",
+            "ticketIntegrity": "pass",
+            "bankrollFit": "pass"
+          },
+          "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+          "benchmark": {
+            "accepted": true,
+            "reasons": [],
+            "betType": "sgm",
+            "modelProbability": 0.405224,
+            "supportScore": 10
+          },
+          "publicationValidation": {
+            "status": "ok",
+            "reasons": [],
+            "holdRecommended": false,
+            "totalOdds": 2.814014,
+            "matchedLegPrices": [
+              {
+                "legId": "leg-1",
+                "label": "Billy Wilson 15+ Disposals",
+                "bestOdds": 1.33,
+                "bestBookmaker": "Sportsbet Web",
+                "source": "snapshot"
+              },
+              {
+                "legId": "leg-2",
+                "label": "Brodie Kemp 10+ Disposals",
+                "bestOdds": 1.49,
+                "bestBookmaker": "Sportsbet Web",
+                "source": "snapshot"
+              },
+              {
+                "legId": "leg-3",
+                "label": "Christian Moraes 15+ Disposals",
+                "bestOdds": 1.42,
+                "bestBookmaker": "Sportsbet Web",
+                "source": "snapshot"
+              }
+            ],
+            "lateAvailabilityStatus": "ok",
+            "lateWeatherStatus": "geocode_error",
+            "mode": "generated"
+          },
+          "variantId": "fresh-snapshot-rebuild",
+          "replacementReason": "Rebuilt from the latest same-event market snapshot.",
+          "candidateId": "fresh-snapshot-rebuild",
+          "originalSummary": "Aliir Aliir 11+ Disposals + Ben Ainsworth 13+ Disposals + Brodie Kemp 10+ Disposals",
+          "legPublicationValidations": [
+            {
+              "legId": "leg-1",
+              "label": "Billy Wilson 15+ Disposals",
+              "status": "pass",
+              "reasons": []
+            },
+            {
+              "legId": "leg-2",
+              "label": "Brodie Kemp 10+ Disposals",
+              "status": "pass",
+              "reasons": []
+            },
+            {
+              "legId": "leg-3",
+              "label": "Christian Moraes 15+ Disposals",
+              "status": "pass",
+              "reasons": []
+            }
+          ]
+        },
+        "replacementPostedAt": "2026-05-23T08:48:47.227Z",
+        "lastReplacementOptionId": "fresh-snapshot-rebuild",
+        "pregameRecheckedAt": "2026-05-23T08:48:47.227Z"
+      },
+      "auto-generator:mlb:snapshot:mlb:st louis cardinals a pallante vs cincinnati reds c paddack:2026-05-23T17:11:00.000Z": {
+        "shortlistedAt": "2026-05-22T23:45:14.479Z",
+        "postedAt": "2026-05-22T23:45:14.479Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T16:11:00.000Z",
+        "lastCheckedAt": "2026-05-22T23:45:14.479Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619917367742536",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:mlb:snapshot:mlb:tampa bay rays d rasmussen vs new york yankees r weathers:2026-05-23T17:36:00.000Z": {
+        "shortlistedAt": "2026-05-22T23:45:14.479Z",
+        "postedAt": "2026-05-22T23:45:14.479Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T16:36:00.000Z",
+        "lastCheckedAt": "2026-05-22T23:45:14.479Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619919481671720",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:nba:snapshot:nba:new york knicks vs cleveland cavaliers:2026-05-24T00:10:00.000Z": {
+        "shortlistedAt": "2026-05-23T00:15:15.811Z",
+        "postedAt": "2026-05-23T00:15:15.811Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T23:10:00.000Z",
+        "lastCheckedAt": "2026-05-23T00:15:15.811Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619935353045196",
+        "postedWebhookChannel": "picksNba"
+      },
+      "auto-generator:mlb:snapshot:mlb:houston astros k teng vs chicago cubs c rea:2026-05-23T18:21:00.000Z": {
+        "shortlistedAt": "2026-05-23T00:45:22.178Z",
+        "postedAt": "2026-05-23T00:45:22.178Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T17:21:00.000Z",
+        "lastCheckedAt": "2026-05-23T00:45:22.178Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619921893396552",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:mlb:snapshot:mlb:pittsburgh pirates p skenes vs toronto blue jays p corbin:2026-05-23T19:08:00.000Z": {
+        "shortlistedAt": "2026-05-23T00:45:22.178Z",
+        "postedAt": "2026-05-23T00:45:22.178Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T18:08:00.000Z",
+        "lastCheckedAt": "2026-05-23T00:45:22.178Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619923856457920",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:afl:snapshot:afl:gws giants vs brisbane lions:2026-05-24T02:30:07.000Z": {
+        "shortlistedAt": "2026-05-23T02:30:29.556Z",
+        "postedAt": "2026-05-23T02:30:29.556Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-24T01:30:07.000Z",
+        "lastCheckedAt": "2026-05-23T02:30:29.556Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619937328435200",
+        "postedWebhookChannel": "picksAfl"
+      },
+      "auto-generator:mlb:snapshot:mlb:chicago white sox e fedde vs san francisco giants a houser:2026-05-23T20:06:00.000Z": {
+        "shortlistedAt": "2026-05-23T02:45:44.790Z",
+        "postedAt": "2026-05-23T02:45:44.790Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T19:06:00.000Z",
+        "lastCheckedAt": "2026-05-23T02:45:44.790Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619925877981265",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:mlb:snapshot:mlb:cleveland guardians s cecconi vs philadelphia phillies z wheeler:2026-05-23T20:06:00.000Z": {
+        "shortlistedAt": "2026-05-23T02:45:44.790Z",
+        "postedAt": "2026-05-23T02:45:44.790Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T19:06:00.000Z",
+        "lastCheckedAt": "2026-05-23T02:45:44.790Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619928264675439",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:mlb:snapshot:mlb:detroit tigers f valdez vs baltimore orioles b young:2026-05-23T20:06:00.000Z": {
+        "shortlistedAt": "2026-05-23T02:45:44.790Z",
+        "postedAt": "2026-05-23T02:45:44.790Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T19:06:00.000Z",
+        "lastCheckedAt": "2026-05-23T02:45:44.790Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619930051444886",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:mlb:snapshot:mlb:new york mets f peralta vs miami marlins m meyer:2026-05-23T20:11:00.000Z": {
+        "shortlistedAt": "2026-05-23T02:45:44.790Z",
+        "postedAt": "2026-05-23T02:45:44.790Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T19:11:00.000Z",
+        "lastCheckedAt": "2026-05-23T02:45:44.790Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619933960405063",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:mlb:snapshot:mlb:minnesota twins t bradley vs boston red sox j moran:2026-05-23T20:11:00.000Z": {
+        "shortlistedAt": "2026-05-23T03:45:57.247Z",
+        "postedAt": "2026-05-23T03:45:57.247Z",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T19:11:00.000Z",
+        "lastCheckedAt": "2026-05-23T03:45:57.247Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck",
+        "postedMessageId": "1507619931955400765",
+        "postedWebhookChannel": "picksMlb"
+      },
+      "auto-generator:nrl:snapshot:nrl:st george illawarra dragons vs new zealand warriors:2026-05-23T07:30:00.000Z": {
+        "shortlistedAt": "2026-05-23T04:10:39.704Z",
+        "postedAt": "2026-05-23T04:10:39.704Z",
+        "postedMessageId": "1507619911202115608",
+        "status": "pregame_recheck_passed",
+        "nextCheckAt": "2026-05-23T07:30:00.000Z",
+        "lastCheckedAt": "2026-05-23T06:45:28.547Z",
+        "lastDecision": "pregame_recheck_passed",
+        "pregameRecheckedAt": "2026-05-23T06:45:28.547Z",
+        "lastValidationStatus": "ok",
+        "postedWebhookChannel": "picksNrl"
+      },
+      "auto-generator:nrl:snapshot:nrl:manly sea eagles vs gold coast titans:2026-05-23T09:35:00.000Z": {
+        "shortlistedAt": "2026-05-23T04:10:39.704Z",
+        "postedAt": "2026-05-23T04:10:39.704Z",
+        "postedMessageId": null,
+        "status": "cancelled",
+        "nextCheckAt": "2026-05-23T09:35:00.000Z",
+        "lastCheckedAt": "2026-05-23T08:48:47.227Z",
+        "lastDecision": "cancellation_posted",
+        "postedWebhookChannel": null,
+        "pregameRecheckedAt": null,
+        "lastValidationStatus": "ok",
+        "cancellationPostedAt": "2026-05-23T08:48:47.227Z",
+        "lastCancellationReason": "Cancelled after the late pregame recheck: live price validation failed for 1st Half Under 24.5: budget_guard"
+      },
+      "auto-generator:afl:snapshot:afl:western bulldogs vs melbourne:2026-05-24T05:15:50.000Z": {
+        "shortlistedAt": "2026-05-23T05:28:04.591Z",
+        "postedAt": "2026-05-23T05:28:04.591Z",
+        "postedMessageId": "1507616357175267349",
+        "postedWebhookChannel": "picksAfl",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-23T23:15:50.000Z",
+        "lastCheckedAt": "2026-05-23T05:28:04.591Z",
+        "lastDecision": "posted_waiting_for_pregame_recheck"
+      },
+      "auto-generator:nrl:snapshot:nrl:nth queensland cowboys vs south sydney rabbitohs:2026-05-24T06:05:00.000Z": {
+        "shortlistedAt": "2026-05-23T06:13:45.344Z",
+        "postedAt": "2026-05-23T06:13:45.344Z",
+        "postedMessageId": "1507627580491038732",
+        "postedWebhookChannel": "picksNrl",
+        "status": "posted_waiting_for_pregame_recheck",
+        "nextCheckAt": "2026-05-24T00:05:00.000Z",
+        "lastCheckedAt": "2026-05-23T06:13:45.344Z",
+        "benchmark": {
+          "accepted": true,
+          "reasons": [],
+          "betType": "sgm",
+          "modelProbability": 0.26934,
+          "supportScore": 7.22
+        },
+        "publicationValidation": {
+          "status": "ok",
+          "reasons": [],
+          "holdRecommended": false,
+          "totalOdds": 3.2119999999999997,
+          "matchedLegPrices": [
+            {
+              "legId": "leg-1",
+              "label": "Jake Clifford 8+ Points",
+              "bestOdds": 1.46,
+              "bestBookmaker": "Sportsbet Web",
+              "source": "snapshot"
+            },
+            {
+              "legId": "leg-2",
+              "label": "Latrell Siegwalt 6+ Points",
+              "bestOdds": 1.25,
+              "bestBookmaker": "Sportsbet Web",
+              "source": "snapshot"
+            },
+            {
+              "legId": "leg-3",
+              "label": "1st Half Under 26.5",
+              "bestOdds": 1.76,
+              "bestBookmaker": "Sportsbet Web",
+              "source": "snapshot"
+            }
+          ],
+          "lateAvailabilityStatus": "unsupported_sport",
+          "lateWeatherStatus": "skipped",
+          "mode": "generated"
+        },
+        "totalOdds": 3.2119999999999997,
+        "priceDecimal": 3.2119999999999997,
+        "lastDecision": "posted_waiting_for_pregame_recheck"
+      }
+    }
+  }
+}

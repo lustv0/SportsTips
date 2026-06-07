@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="1600" viewBox="0 0 2600 1600" role="img" aria-labelledby="title desc">
+  <title id="title">SportsTips AI Workflow</title>
+  <desc id="desc">Landscape workflow diagram showing how SportsTips turns a request into a cleaner pick, checks the basics, shares the result, and improves over time.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f1e8"/>
+      <stop offset="100%" stop-color="#eef5f3"/>
+    </linearGradient>
+    <linearGradient id="cardFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fbfdfc"/>
+    </linearGradient>
+    <linearGradient id="bluePill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e6e79"/>
+      <stop offset="100%" stop-color="#204d58"/>
+    </linearGradient>
+    <linearGradient id="greenPill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f8f6b"/>
+      <stop offset="100%" stop-color="#246145"/>
+    </linearGradient>
+    <linearGradient id="goldPill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d79f42"/>
+      <stop offset="100%" stop-color="#ad772b"/>
+    </linearGradient>
+    <linearGradient id="redPill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cb6b48"/>
+      <stop offset="100%" stop-color="#a84c33"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#17313b" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#355a62"/>
+    </marker>
+    <style>
+      .title { font: 700 58px 'Segoe UI', Arial, sans-serif; fill: #18333d; }
+      .subtitle { font: 400 24px 'Segoe UI', Arial, sans-serif; fill: #516f78; }
+      .brand { font: 700 18px 'Segoe UI', Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; fill: #2f5964; }
+      .eyebrow { font: 700 15px 'Segoe UI', Arial, sans-serif; letter-spacing: 3px; text-transform: uppercase; fill: #68848c; }
+      .pill { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .section-label { font: 700 16px 'Segoe UI', Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; fill: #6e8a92; }
+      .step-title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #19343d; }
+      .step-body { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #556f77; }
+      .step-note { font: 600 16px 'Segoe UI', Arial, sans-serif; fill: #2f5964; }
+      .decision-title { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #604a1f; }
+      .decision-body { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #6d5730; }
+      .badge { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect width="2600" height="1600" fill="url(#bg)"/>
+  <circle cx="2220" cy="180" r="260" fill="#ffffff" opacity="0.28"/>
+  <circle cx="320" cy="1420" r="220" fill="#ffffff" opacity="0.2"/>
+  <path d="M0 240 C500 160 840 300 1280 220 S2040 140 2600 220 L2600 0 L0 0 Z" fill="#ffffff" opacity="0.42"/>
+
+  <text x="1300" y="56" text-anchor="middle" class="brand">No Rest Solutions Product - Sports Tip Automation</text>
+  <text x="1300" y="108" text-anchor="middle" class="title">How SportsTips Works</text>
+  <text x="1300" y="150" text-anchor="middle" class="subtitle">Start with the game, check the facts, keep the bet simple, then track what happened.</text>
+  <text x="1300" y="202" text-anchor="middle" class="eyebrow">Simple Workflow Overview</text>
+
+  <g filter="url(#shadow)">
+    <rect x="200" y="225" width="1040" height="56" rx="28" fill="url(#bluePill)"/>
+    <rect x="1360" y="225" width="1040" height="56" rx="28" fill="url(#greenPill)"/>
+    <rect x="200" y="297" width="1040" height="56" rx="28" fill="url(#goldPill)"/>
+    <rect x="1360" y="297" width="1040" height="56" rx="28" fill="url(#redPill)"/>
+  </g>
+  <text x="720" y="260" text-anchor="middle" class="pill">Start With Real Support</text>
+  <text x="1880" y="260" text-anchor="middle" class="pill">Keep The Build Simple</text>
+  <text x="720" y="332" text-anchor="middle" class="pill">Avoid Linked Risks</text>
+  <text x="1880" y="332" text-anchor="middle" class="pill">Skip Weak Add-On Legs</text>
+
+  <text x="200" y="376" class="section-label">Start</text>
+  <text x="200" y="706" class="section-label">Key Checks</text>
+  <text x="200" y="1056" class="section-label">Results And Improvement</text>
+
+  <g fill="none" stroke="#355a62" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)">
+    <path d="M720 500 L760 500"/>
+    <path d="M1280 500 L1320 500"/>
+    <path d="M1840 500 L1880 500"/>
+    <path d="M2140 610 L2140 730"/>
+    <path d="M1880 825 L1690 825"/>
+    <path d="M1470 825 L1130 825"/>
+    <path d="M910 825 L570 825"/>
+    <path d="M460 935 L460 1070"/>
+    <path d="M720 1155 L760 1155"/>
+    <path d="M1280 1155 L1320 1155"/>
+    <path d="M1840 1155 L1880 1155"/>
+    <path d="M2400 1260 C2460 1260 2485 1260 2485 1140 L2485 560 C2485 450 2440 450 2400 450"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="200" y="390" width="520" height="220" rx="32" fill="url(#cardFill)" stroke="#bfd6dd" stroke-width="3"/>
+    <circle cx="255" cy="450" r="24" fill="#1e6e79"/>
+  </g>
+  <text x="255" y="457" text-anchor="middle" class="badge">1</text>
+  <text x="300" y="452" class="step-title">Your request</text>
+  <text x="300" y="492" class="step-body">
+    <tspan x="300" dy="0">You send the game, the available markets, and</tspan>
+    <tspan x="300" dy="28">any preferences on how simple or aggressive</tspan>
+    <tspan x="300" dy="28">you want the bet to be.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="760" y="390" width="520" height="220" rx="32" fill="url(#cardFill)" stroke="#bfd6dd" stroke-width="3"/>
+    <circle cx="815" cy="450" r="24" fill="#2f8f6b"/>
+  </g>
+  <text x="815" y="457" text-anchor="middle" class="badge">2</text>
+  <text x="860" y="452" class="step-title">Understand the job</text>
+  <text x="860" y="492" class="step-body">
+    <tspan x="860" dy="0">SportsTips works out whether this is a big slate</tspan>
+    <tspan x="860" dy="28">scan, a daily shortlist, or one specific game.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="1320" y="390" width="520" height="220" rx="32" fill="url(#cardFill)" stroke="#bfd6dd" stroke-width="3"/>
+    <circle cx="1375" cy="450" r="24" fill="#d79f42"/>
+  </g>
+  <text x="1375" y="457" text-anchor="middle" class="badge">3</text>
+  <text x="1420" y="452" class="step-title">Choose the right path</text>
+  <text x="1420" y="492" class="step-body">
+    <tspan x="1420" dy="0">Big slate requests go through a board scan.</tspan>
+    <tspan x="1420" dy="28">Single-game requests go straight to a build review.</tspan>
+    <tspan x="1420" dy="28">Either way, it narrows down to one clean spot.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="1880" y="390" width="520" height="220" rx="32" fill="url(#cardFill)" stroke="#d6c48f" stroke-width="3"/>
+    <circle cx="1935" cy="450" r="24" fill="#cb6b48"/>
+  </g>
+  <text x="1935" y="457" text-anchor="middle" class="badge">4</text>
+  <text x="1980" y="452" class="step-title">Check the facts</text>
+  <text x="1980" y="492" class="step-body">
+    <tspan x="1980" dy="0">Look at player status, role changes, matchup,</tspan>
+    <tspan x="1980" dy="28">weather, public hype, and whether the legs</tspan>
+    <tspan x="1980" dy="28">depend too heavily on the same game script.</tspan>
+  </text>
+  <text x="1980" y="586" class="step-note">Rule: avoid linked bets and weak add-on legs.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1880" y="730" width="520" height="190" rx="30" fill="url(#cardFill)" stroke="#d6c48f" stroke-width="3"/>
+    <circle cx="1935" cy="785" r="24" fill="#1e6e79"/>
+  </g>
+  <text x="1935" y="792" text-anchor="middle" class="badge">5</text>
+  <text x="1980" y="788" class="step-title">Build the ticket</text>
+  <text x="1980" y="828" class="step-body">
+    <tspan x="1980" dy="0">Score the options, keep the ticket clean,</tspan>
+    <tspan x="1980" dy="28">and cut any extra leg that weakens the bet.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <polygon points="1580,715 1690,825 1580,935 1470,825" fill="#fff8e6" stroke="#d1b168" stroke-width="4"/>
+  </g>
+  <text x="1580" y="796" text-anchor="middle" class="decision-title">6. Enough</text>
+  <text x="1580" y="826" text-anchor="middle" class="decision-title">support?</text>
+  <text x="1580" y="866" text-anchor="middle" class="decision-body">No -&gt; skip</text>
+
+  <g filter="url(#shadow)">
+    <polygon points="1020,715 1130,825 1020,935 910,825" fill="#fff8e6" stroke="#d1b168" stroke-width="4"/>
+  </g>
+  <text x="1020" y="790" text-anchor="middle" class="decision-title">7. Still a</text>
+  <text x="1020" y="820" text-anchor="middle" class="decision-title">clean ticket?</text>
+  <text x="1020" y="858" text-anchor="middle" class="decision-body">No -&gt; trim</text>
+  <text x="1020" y="884" text-anchor="middle" class="decision-body">or skip</text>
+
+  <g filter="url(#shadow)">
+    <polygon points="460,715 570,825 460,935 350,825" fill="#fff8e6" stroke="#d1b168" stroke-width="4"/>
+  </g>
+  <text x="460" y="790" text-anchor="middle" class="decision-title">8. Final</text>
+  <text x="460" y="820" text-anchor="middle" class="decision-title">checks pass?</text>
+  <text x="460" y="860" text-anchor="middle" class="decision-body">No -&gt; reject</text>
+
+  <g filter="url(#shadow)">
+    <rect x="200" y="1070" width="520" height="170" rx="28" fill="url(#cardFill)" stroke="#77a898" stroke-width="3"/>
+    <circle cx="255" cy="1120" r="24" fill="#2f8f6b"/>
+  </g>
+  <text x="255" y="1127" text-anchor="middle" class="badge">9</text>
+  <text x="300" y="1122" class="step-title">Set the stake size</text>
+  <text x="300" y="1162" class="step-body">
+    <tspan x="300" dy="0">Adjust the stake based on confidence, overlap,</tspan>
+    <tspan x="300" dy="28">and overall risk instead of forcing one size.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="760" y="1070" width="520" height="170" rx="28" fill="url(#cardFill)" stroke="#77a898" stroke-width="3"/>
+    <circle cx="815" cy="1120" r="24" fill="#1e6e79"/>
+  </g>
+  <text x="815" y="1127" text-anchor="middle" class="badge">10</text>
+  <text x="860" y="1122" class="step-title">Share the pick</text>
+  <text x="860" y="1162" class="step-body">
+    <tspan x="860" dy="0">Qualified picks are prepared and posted.</tspan>
+    <tspan x="860" dy="28">Settled results are shared later.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="1320" y="1070" width="520" height="170" rx="28" fill="url(#cardFill)" stroke="#77a898" stroke-width="3"/>
+    <circle cx="1375" cy="1120" r="24" fill="#d79f42"/>
+  </g>
+  <text x="1375" y="1127" text-anchor="middle" class="badge">11</text>
+  <text x="1420" y="1122" class="step-title">Track the result</text>
+  <text x="1420" y="1162" class="step-body">
+    <tspan x="1420" dy="0">Wins, losses, and returns are logged so the</tspan>
+    <tspan x="1420" dy="28">running record stays honest.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="1880" y="1070" width="520" height="170" rx="28" fill="url(#cardFill)" stroke="#77a898" stroke-width="3"/>
+    <circle cx="1935" cy="1120" r="24" fill="#cb6b48"/>
+  </g>
+  <text x="1935" y="1127" text-anchor="middle" class="badge">12</text>
+  <text x="1980" y="1122" class="step-title">Improve over time</text>
+  <text x="1980" y="1162" class="step-body">
+    <tspan x="1980" dy="0">Loss reviews help remove weak patterns and</tspan>
+    <tspan x="1980" dy="28">tighten future picks.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="200" y="1310" width="2200" height="170" rx="32" fill="url(#cardFill)" stroke="#bfd6dd" stroke-width="3"/>
+  </g>
+  <text x="260" y="1378" class="step-title">Operating principle</text>
+  <text x="260" y="1420" class="step-body">
+    <tspan x="260" dy="0">If a bet only works by adding a weak extra leg, SportsTips cuts it back or passes on it.</tspan>
+    <tspan x="260" dy="28">The goal is better decisions over time, not forcing more bets.</tspan>
+  </text>
+</svg>

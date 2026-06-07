@@ -1,0 +1,53 @@
+{
+  "picks": [
+    {
+      "id": "valid-manual-pick",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "event": "Test Away vs Test Home",
+      "startTime": "2026-05-18T07:49:48.513Z",
+      "summary": "Player A 1+ hit + Player B 1+ hit",
+      "rationale": "Manual queue test.",
+      "betType": "sgm",
+      "stakeUnits": 1,
+      "supportScore": 6,
+      "confidenceTier": "high",
+      "supportProjection": "moderate",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "source": "manual placement"
+    },
+    {
+      "id": "invalid-generated-pick",
+      "status": "pending",
+      "sport": "nrl",
+      "sportLabel": "NRL",
+      "event": "Bad Away vs Bad Home",
+      "startTime": "2026-05-18T07:49:48.514Z",
+      "summary": "",
+      "rationale": "Broken generated pick test.",
+      "betType": "sgm",
+      "stakeUnits": 1,
+      "supportScore": 7,
+      "confidenceTier": "high",
+      "supportProjection": "moderate",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "source": "auto-generator",
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "pass",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "legs": []
+    }
+  ]
+}

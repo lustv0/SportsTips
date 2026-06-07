@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+
+# Local configuration (contains API keys and Webhooks)
+automation/discord-webhooks/config.json
+automation/discord-webhooks/.env
+
+# Local state and databases
+automation/discord-webhooks/state.json
+automation/discord-webhooks/picks-feed.json
+automation/discord-webhooks/runtime-status.json
+automation/discord-webhooks/bookmaker-snapshots.json
+automation/discord-webhooks/referrals-catalog.json
+automation/discord-webhooks/referrals-history.json
+automation/discord-webhooks/bot-bankroll-tracker.csv
+
+# Personal betting history
+30-day-profit-tracker.md
+loss-tracking/
+sports/*/bets.csv
+
+# Logs and build output
+*.log
+dist/
+
+# Internal Design Docs
+PROMO_SYSTEM_IMPLEMENTATION.md

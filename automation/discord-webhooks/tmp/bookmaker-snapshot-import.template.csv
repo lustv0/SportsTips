@@ -1,0 +1,9 @@
+sportKey,homeTeam,awayTeam,startTime,market,outcomeName,description,point,bookmakerKey,bookmakerTitle,price,fetchedAt
+rugbyleague_nrl,Brisbane Broncos,Melbourne Storm,2026-05-09T10:00:00Z,h2h,Melbourne Storm,,,tab,TAB,2.05,2026-05-09T07:58:00Z
+rugbyleague_nrl,Brisbane Broncos,Melbourne Storm,2026-05-09T10:00:00Z,h2h,Melbourne Storm,,,sportsbet,Sportsbet,2.10,2026-05-09T07:58:00Z
+rugbyleague_nrl,Brisbane Broncos,Melbourne Storm,2026-05-09T10:00:00Z,player_points,Over,Harry Grant,7.5,tab,TAB,1.72,2026-05-09T07:58:00Z
+rugbyleague_nrl,Brisbane Broncos,Melbourne Storm,2026-05-09T10:00:00Z,player_points,Over,Harry Grant,7.5,sportsbet,Sportsbet,1.75,2026-05-09T07:58:00Z
+rugbyleague_nrl,Brisbane Broncos,Melbourne Storm,2026-05-09T10:00:00Z,player_points,Over,Cameron Munster,7.5,tab,TAB,1.68,2026-05-09T07:58:00Z
+rugbyleague_nrl,Brisbane Broncos,Melbourne Storm,2026-05-09T10:00:00Z,player_points,Over,Cameron Munster,7.5,sportsbet,Sportsbet,1.71,2026-05-09T07:58:00Z
+baseball_mlb,Philadelphia Phillies,Colorado Rockies,2026-05-09T12:40:00Z,batter_hits_alternate,Over,Brandon Marsh,0.5,tab,TAB,1.42,2026-05-09T08:00:00Z
+baseball_mlb,Philadelphia Phillies,Colorado Rockies,2026-05-09T12:40:00Z,batter_hits_alternate,Over,Bryce Harper,0.5,tab,TAB,1.48,2026-05-09T08:00:00Z

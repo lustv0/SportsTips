@@ -1,0 +1,24 @@
+{
+  "timezone": "Australia/Sydney",
+  "dryRun": true,
+  "openai": {
+    "enabled": false,
+    "apiKey": "PASTE_OPENAI_KEY_HERE"
+  },
+  "analysis": {
+    "engine": "rules_priority"
+  },
+  "discord": {
+    "username": "Tipping Bot",
+    "webhooks": {
+      "slates": "WEBHOOK_URL",
+      "picks": "WEBHOOK_URL",
+      "picksNba": "WEBHOOK_URL",
+      "picksMlb": "WEBHOOK_URL",
+      "picksAfl": "WEBHOOK_URL",
+      "picksNrl": "WEBHOOK_URL",
+      "unitTracking": "WEBHOOK_URL",
+      "unitReport": "WEBHOOK_URL"
+    }
+  }
+}

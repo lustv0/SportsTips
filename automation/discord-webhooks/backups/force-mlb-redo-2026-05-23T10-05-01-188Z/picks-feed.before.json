@@ -1,0 +1,4032 @@
+{
+  "picks": [
+    {
+      "id": "auto-generator:afl:snapshot:afl:richmond vs essendon:2026-05-22T09:45:07.000Z",
+      "status": "loss",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:richmond vs essendon:2026-05-22T09:45:07.000Z",
+      "espnEventId": "1133574",
+      "event": "Richmond vs Essendon",
+      "homeTeam": "Richmond",
+      "homeTeamId": "12",
+      "awayTeam": "Essendon",
+      "awayTeamId": "16",
+      "startTime": "2026-05-22T09:45:07.000Z",
+      "venue": {
+        "id": "78",
+        "name": "MCG",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Archer Day-Wicks 10+ Disposals + Archie Perkins 13+ Disposals + Ben Miller 12+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Archer Day-Wicks 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Archer Day-Wicks 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Archer Day-Wicks",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Archie Perkins 13+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Archie Perkins 13+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "13+ Disposals",
+            "description": "Archie Perkins",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Ben Miller 12+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Ben Miller 12+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "12+ Disposals",
+            "description": "Ben Miller",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Archie Perkins 14+ Disposals",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Archie Perkins 14+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_disposals",
+              "booksChecked": 1,
+              "outcomeName": "14+ Disposals",
+              "description": "Archie Perkins",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-22T20:12:05.510Z",
+      "returnUnits": 0,
+      "netUnits": -1,
+      "priceDecimal": 2.21,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Essendon 56 - Richmond 74.",
+      "failedLegs": [
+        "Archer Day-Wicks 10+ Disposals"
+      ]
+    },
+    {
+      "id": "auto-generator:nrl:snapshot:nrl:canterbury bulldogs vs melbourne storm:2026-05-22T10:00:00.000Z",
+      "status": "win",
+      "sport": "nrl",
+      "sportLabel": "NRL",
+      "eventId": "snapshot:nrl:canterbury bulldogs vs melbourne storm:2026-05-22T10:00:00.000Z",
+      "espnEventId": "",
+      "event": "Canterbury Bulldogs vs Melbourne Storm",
+      "homeTeam": "Canterbury Bulldogs",
+      "homeTeamId": "",
+      "awayTeam": "Melbourne Storm",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T10:00:00.000Z",
+      "venue": null,
+      "summary": "Matt Burton 6+ Points + Nick Meaney 4+ Points + 1st Half Over 23.5",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.26934,
+      "supportScore": 7.22,
+      "confidenceTier": "high",
+      "supportProjection": "moderate",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Matt Burton 6+ Points",
+          "modelProbability": 0.67,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Matt Burton 6+ Points because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_points",
+            "booksChecked": 1,
+            "outcomeName": "6+ Points",
+            "description": "Matt Burton",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Nick Meaney 4+ Points",
+          "modelProbability": 0.67,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Nick Meaney 4+ Points because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_points",
+            "booksChecked": 1,
+            "outcomeName": "4+ Points",
+            "description": "Nick Meaney",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "1st Half Over 23.5",
+          "modelProbability": 0.6,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept 1st Half Over 23.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "first_half_totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 23.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-5",
+            "label": "Nick Meaney 6+ Points",
+            "modelProbability": 0.67,
+            "rationale": "Rules engine kept Nick Meaney 6+ Points because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_points",
+              "booksChecked": 1,
+              "outcomeName": "6+ Points",
+              "description": "Nick Meaney",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-22T20:13:56.025Z",
+      "returnUnits": 2.46,
+      "netUnits": 1.46,
+      "priceDecimal": 2.46,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Storm 20 - Bulldogs 30."
+    },
+    {
+      "id": "auto-generator:afl:snapshot:afl:fremantle vs st kilda:2026-05-22T10:30:37.000Z",
+      "status": "win",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:fremantle vs st kilda:2026-05-22T10:30:37.000Z",
+      "espnEventId": "1133575",
+      "event": "Fremantle vs ST Kilda",
+      "homeTeam": "Fremantle",
+      "homeTeamId": "1",
+      "awayTeam": "ST Kilda",
+      "awayTeamId": "18",
+      "startTime": "2026-05-22T10:30:37.000Z",
+      "venue": {
+        "id": "77",
+        "name": "Optus Stadium",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Anthony Caminiti 10+ Disposals + Brennan Cox 10+ Disposals + Charlie Banfield 11+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Anthony Caminiti 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Anthony Caminiti 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Anthony Caminiti",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Brennan Cox 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Brennan Cox 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Brennan Cox",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Charlie Banfield 11+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Charlie Banfield 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "11+ Disposals",
+            "description": "Charlie Banfield",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-6",
+            "label": "Charlie Banfield 10+ Disposals",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Charlie Banfield 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_disposals",
+              "booksChecked": 1,
+              "outcomeName": "10+ Disposals",
+              "description": "Charlie Banfield",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-22T20:12:05.510Z",
+      "returnUnits": 2.08,
+      "netUnits": 1.08,
+      "priceDecimal": 2.08,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: St Kilda 74 - Fremantle 104."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:houston astros s arrighetti vs chicago cubs j taillon:2026-05-22T18:21:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:houston astros s arrighetti vs chicago cubs j taillon:2026-05-22T18:21:00.000Z",
+      "espnEventId": "",
+      "event": "Houston Astros S Arrighetti vs Chicago Cubs J Taillon",
+      "homeTeam": "Chicago Cubs J Taillon",
+      "homeTeamId": "",
+      "awayTeam": "Houston Astros S Arrighetti",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T18:21:00.000Z",
+      "venue": null,
+      "summary": "Alex Bregman 1+ Hit + Braden Shewmake 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Alex Bregman 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Alex Bregman 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Alex Bregman",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Braden Shewmake 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Braden Shewmake 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Braden Shewmake",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Cam Smith 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Cam Smith 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Cam Smith",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 0,
+      "netUnits": -1,
+      "priceDecimal": 2.39,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Houston Astros 4 - Chicago Cubs 2."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:cleveland guardians g williams vs philadelphia phillies c sanchez:2026-05-22T22:41:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:cleveland guardians g williams vs philadelphia phillies c sanchez:2026-05-22T22:41:00.000Z",
+      "espnEventId": "",
+      "event": "Cleveland Guardians G Williams vs Philadelphia Phillies C Sanchez",
+      "homeTeam": "Philadelphia Phillies C Sanchez",
+      "homeTeamId": "",
+      "awayTeam": "Cleveland Guardians G Williams",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T22:41:00.000Z",
+      "venue": null,
+      "summary": "Adolis Garcia 1+ Hit + Alec Bohm 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Adolis Garcia 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Adolis Garcia 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Adolis Garcia",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Alec Bohm 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Alec Bohm 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Alec Bohm",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Brandon Marsh 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Brandon Marsh 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Brandon Marsh",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 0,
+      "netUnits": -2,
+      "priceDecimal": 2.52,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Cleveland Guardians 1 - Philadelphia Phillies 0."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:st louis cardinals k leahy vs cincinnati reds c paddack:2026-05-22T22:41:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:st louis cardinals k leahy vs cincinnati reds c paddack:2026-05-22T22:41:00.000Z",
+      "espnEventId": "",
+      "event": "ST Louis Cardinals K Leahy vs Cincinnati Reds C Paddack",
+      "homeTeam": "Cincinnati Reds C Paddack",
+      "homeTeamId": "",
+      "awayTeam": "ST Louis Cardinals K Leahy",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T22:41:00.000Z",
+      "venue": null,
+      "summary": "JJ Bleday 1+ Hit + Nathaniel Lowe 1+ Hit + Tyler Stephenson 1+ Hit",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.456533,
+      "supportScore": 7.9,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "JJ Bleday 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept JJ Bleday 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "JJ Bleday",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Nathaniel Lowe 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Nathaniel Lowe 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Nathaniel Lowe",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Tyler Stephenson 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Tyler Stephenson 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Tyler Stephenson",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-9",
+            "label": "Alec Burleson 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Alec Burleson 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Alec Burleson",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T08:17:47.764Z",
+      "returnUnits": 0,
+      "netUnits": -1,
+      "priceDecimal": 3.15,
+      "failedLeg": "N/A",
+      "failedLegLabel": "N/A",
+      "failedLegs": [
+        "N/A"
+      ],
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: St. Louis Cardinals 0 - Cincinnati Reds 0. Failed legs: N/A. Final event detected but these supported prop legs could not be graded safely: No settlement source produced a safe grade for JJ Bleday 1+ Hit. No settlement source produced a safe grade for Nathaniel Lowe 1+ Hit. No settlement source produced a safe grade for Tyler Stephenson 1+ Hit."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:tampa bay rays n martinez vs new york yankees g cole:2026-05-22T23:06:00.000Z",
+      "status": "win",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:tampa bay rays n martinez vs new york yankees g cole:2026-05-22T23:06:00.000Z",
+      "espnEventId": "",
+      "event": "Tampa BAY Rays N Martinez vs NEW York Yankees G Cole",
+      "homeTeam": "NEW York Yankees G Cole",
+      "homeTeamId": "",
+      "awayTeam": "Tampa BAY Rays N Martinez",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:06:00.000Z",
+      "venue": null,
+      "summary": "Austin Wells 1+ Hit + Cedric Mullins 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Austin Wells 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Austin Wells 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Austin Wells",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Cedric Mullins 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Cedric Mullins 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Cedric Mullins",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-4",
+            "label": "Jazz Chisholm 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Jazz Chisholm 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Jazz Chisholm",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 6.9,
+      "netUnits": 4.9,
+      "priceDecimal": 3.45,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Tampa Bay Rays 4 - New York Yankees 2."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:pittsburgh pirates b chandler vs toronto blue jays k gausman:2026-05-22T23:08:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:pittsburgh pirates b chandler vs toronto blue jays k gausman:2026-05-22T23:08:00.000Z",
+      "espnEventId": "",
+      "event": "Pittsburgh Pirates B Chandler vs Toronto Blue Jays K Gausman",
+      "homeTeam": "Toronto Blue Jays K Gausman",
+      "homeTeamId": "",
+      "awayTeam": "Pittsburgh Pirates B Chandler",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:08:00.000Z",
+      "venue": null,
+      "summary": "Andres Gimenez 1+ Hit + Brandon Lowe 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Andres Gimenez 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Andres Gimenez 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Andres Gimenez",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Brandon Lowe 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Brandon Lowe 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Brandon Lowe",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Bryan Reynolds 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Bryan Reynolds 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Bryan Reynolds",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 0,
+      "netUnits": -2,
+      "priceDecimal": 2.35,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Pittsburgh Pirates 2 - Toronto Blue Jays 6."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:minnesota twins c prielipp vs boston red sox p tolle:2026-05-22T23:11:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:minnesota twins c prielipp vs boston red sox p tolle:2026-05-22T23:11:00.000Z",
+      "espnEventId": "",
+      "event": "Minnesota Twins C Prielipp vs Boston RED SOX P Tolle",
+      "homeTeam": "Boston RED SOX P Tolle",
+      "homeTeamId": "",
+      "awayTeam": "Minnesota Twins C Prielipp",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:11:00.000Z",
+      "venue": null,
+      "summary": "Alex Jackson 1+ Hit + Andruw Monasterio 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Alex Jackson 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Alex Jackson 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Alex Jackson",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Andruw Monasterio 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Andruw Monasterio 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Andruw Monasterio",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Brooks Lee 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Brooks Lee 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Brooks Lee",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 0,
+      "netUnits": -2,
+      "priceDecimal": 3.07,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Minnesota Twins 8 - Boston Red Sox 6."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:new york mets t myers vs miami marlins e perez:2026-05-22T23:11:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:new york mets t myers vs miami marlins e perez:2026-05-22T23:11:00.000Z",
+      "espnEventId": "",
+      "event": "NEW York Mets T Myers vs Miami Marlins E Perez",
+      "homeTeam": "Miami Marlins E Perez",
+      "homeTeamId": "",
+      "awayTeam": "NEW York Mets T Myers",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:11:00.000Z",
+      "venue": null,
+      "summary": "A.J. Ewing 1+ Hit + Brett Baty 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "A.J. Ewing 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept A.J. Ewing 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "A.J. Ewing",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Brett Baty 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Brett Baty 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Brett Baty",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Connor Norby 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Connor Norby 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Connor Norby",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 0,
+      "netUnits": -2,
+      "priceDecimal": 2.69,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: New York Mets 1 - Miami Marlins 2."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:detroit tigers j flaherty vs baltimore orioles c bassitt:2026-05-22T23:16:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:detroit tigers j flaherty vs baltimore orioles c bassitt:2026-05-22T23:16:00.000Z",
+      "espnEventId": "",
+      "event": "Detroit Tigers J Flaherty vs Baltimore Orioles C Bassitt",
+      "homeTeam": "Baltimore Orioles C Bassitt",
+      "homeTeamId": "",
+      "awayTeam": "Detroit Tigers J Flaherty",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:16:00.000Z",
+      "venue": null,
+      "summary": "Detroit Tigers J Flaherty +1.5 + Over 8.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Detroit Tigers J Flaherty +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Detroit Tigers J Flaherty +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Detroit Tigers J Flaherty",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 8.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 8.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 8.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 8.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 8.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 8.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:detroit tigers j flaherty vs baltimore orioles k akin:2026-05-22T23:16:00.000Z",
+      "status": "win",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:detroit tigers j flaherty vs baltimore orioles k akin:2026-05-22T23:16:00.000Z",
+      "espnEventId": "",
+      "event": "Detroit Tigers J Flaherty vs Baltimore Orioles K Akin",
+      "homeTeam": "Baltimore Orioles K Akin",
+      "homeTeamId": "",
+      "awayTeam": "Detroit Tigers J Flaherty",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:16:00.000Z",
+      "venue": null,
+      "summary": "Adley Rutschman 1+ Hit + Coby Mayo 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Adley Rutschman 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Adley Rutschman 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Adley Rutschman",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Coby Mayo 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Coby Mayo 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Coby Mayo",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Colton Cowser 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Colton Cowser 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Colton Cowser",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 5.48,
+      "netUnits": 3.48,
+      "priceDecimal": 2.74,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Detroit Tigers 4 - Baltimore Orioles 7."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:washington nationals r lovelady vs atlanta braves b elder:2026-05-22T23:16:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:washington nationals r lovelady vs atlanta braves b elder:2026-05-22T23:16:00.000Z",
+      "espnEventId": "",
+      "event": "Washington Nationals R Lovelady vs Atlanta Braves B Elder",
+      "homeTeam": "Atlanta Braves B Elder",
+      "homeTeamId": "",
+      "awayTeam": "Washington Nationals R Lovelady",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:16:00.000Z",
+      "venue": null,
+      "summary": "Austin Riley 1+ Hit + C.J. Abrams 1+ Hit + Curtis Mead 1+ Hit",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.456533,
+      "supportScore": 7.9,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Austin Riley 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Austin Riley 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Austin Riley",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "C.J. Abrams 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept C.J. Abrams 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "C.J. Abrams",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Curtis Mead 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Curtis Mead 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Curtis Mead",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-4",
+            "label": "Daylen Lile 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Daylen Lile 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Daylen Lile",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T08:17:47.764Z",
+      "returnUnits": 0,
+      "netUnits": -2,
+      "priceDecimal": 3.13,
+      "failedLeg": "N/A",
+      "failedLegLabel": "N/A",
+      "failedLegs": [
+        "N/A"
+      ],
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Washington Nationals 4 - Atlanta Braves 5. Failed legs: N/A. Final event detected but these supported prop legs could not be graded safely: No settlement source produced a safe grade for C.J. Abrams 1+ Hit."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:los angeles dodgers j wrobleski vs milwaukee brewers l henderson:2026-05-22T23:41:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:los angeles dodgers j wrobleski vs milwaukee brewers l henderson:2026-05-22T23:41:00.000Z",
+      "espnEventId": "",
+      "event": "LOS Angeles Dodgers J Wrobleski vs Milwaukee Brewers L Henderson",
+      "homeTeam": "Milwaukee Brewers L Henderson",
+      "homeTeamId": "",
+      "awayTeam": "LOS Angeles Dodgers J Wrobleski",
+      "awayTeamId": "",
+      "startTime": "2026-05-22T23:41:00.000Z",
+      "venue": null,
+      "summary": "Andy Pages 1+ Hit + Dalton Rushing 1+ Hit",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5929,
+      "supportScore": 9.1,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Andy Pages 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Andy Pages 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Andy Pages",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Dalton Rushing 1+ Hit",
+          "modelProbability": 0.77,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Dalton Rushing 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "batter_hits",
+            "booksChecked": 1,
+            "outcomeName": "1+ Hit",
+            "description": "Dalton Rushing",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Hyeseong Kim 1+ Hit",
+            "modelProbability": 0.77,
+            "rationale": "Rules engine kept Hyeseong Kim 1+ Hit because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "batter_hits",
+              "booksChecked": 1,
+              "outcomeName": "1+ Hit",
+              "description": "Hyeseong Kim",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T03:50:02.906Z",
+      "returnUnits": 0,
+      "netUnits": -2,
+      "priceDecimal": 2.63,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Los Angeles Dodgers 1 - Milwaukee Brewers 5."
+    },
+    {
+      "id": "auto-generator:nba:snapshot:nba:oklahoma city thunder vs san antonio spurs:2026-05-23T00:40:00.000Z",
+      "status": "win",
+      "sport": "nba",
+      "sportLabel": "NBA",
+      "eventId": "snapshot:nba:oklahoma city thunder vs san antonio spurs:2026-05-23T00:40:00.000Z",
+      "espnEventId": "",
+      "event": "Oklahoma City Thunder vs SAN Antonio Spurs",
+      "homeTeam": "SAN Antonio Spurs",
+      "homeTeamId": "",
+      "awayTeam": "Oklahoma City Thunder",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T00:40:00.000Z",
+      "venue": null,
+      "summary": "Ajay Mitchell 4+ Rebounds + Cason Wallace 2+ Assists",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.5476,
+      "supportScore": 8.7,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Ajay Mitchell 4+ Rebounds",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Ajay Mitchell 4+ Rebounds because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_rebounds",
+            "booksChecked": 1,
+            "outcomeName": "4+ Rebounds",
+            "description": "Ajay Mitchell",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Cason Wallace 2+ Assists",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Cason Wallace 2+ Assists because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_assists",
+            "booksChecked": 1,
+            "outcomeName": "2+ Assists",
+            "description": "Cason Wallace",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-2",
+            "label": "Alex Caruso 4+ Rebounds",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Alex Caruso 4+ Rebounds because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_rebounds",
+              "booksChecked": 1,
+              "outcomeName": "4+ Rebounds",
+              "description": "Alex Caruso",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T07:59:52.190Z",
+      "returnUnits": 6.48,
+      "netUnits": 4.48,
+      "priceDecimal": 3.24,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Oklahoma City Thunder 123 - San Antonio Spurs 108."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:texas rangers j degrom vs los angeles angels g rodriguez:2026-05-23T01:39:00.000Z",
+      "status": "win",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:texas rangers j degrom vs los angeles angels g rodriguez:2026-05-23T01:39:00.000Z",
+      "espnEventId": "",
+      "event": "Texas Rangers J Degrom vs LOS Angeles Angels G Rodriguez",
+      "homeTeam": "LOS Angeles Angels G Rodriguez",
+      "homeTeamId": "",
+      "awayTeam": "Texas Rangers J Degrom",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T01:39:00.000Z",
+      "venue": null,
+      "summary": "LOS Angeles Angels G Rodriguez +1.5 + Over 7.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "LOS Angeles Angels G Rodriguez +1.5",
+          "modelProbability": 0.57,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept LOS Angeles Angels G Rodriguez +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "LOS Angeles Angels G Rodriguez",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 7.5",
+          "modelProbability": 0.6,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Over 7.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 7.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-5",
+            "label": "Texas Rangers J Degrom H2H",
+            "modelProbability": 0.54,
+            "rationale": "Rules engine kept Texas Rangers J Degrom H2H because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "h2h",
+              "booksChecked": 1,
+              "outcomeName": "Texas Rangers J Degrom",
+              "description": "",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only.",
+      "settledAt": "2026-05-23T04:40:25.417Z",
+      "returnUnits": 1.6,
+      "netUnits": 1.1,
+      "priceDecimal": 3.2,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Texas Rangers 6 - Los Angeles Angels 9."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:athletics j springs vs san diego padres w buehler:2026-05-23T01:41:00.000Z",
+      "status": "win",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:athletics j springs vs san diego padres w buehler:2026-05-23T01:41:00.000Z",
+      "espnEventId": "",
+      "event": "Athletics J Springs vs SAN Diego Padres W Buehler",
+      "homeTeam": "SAN Diego Padres W Buehler",
+      "homeTeamId": "",
+      "awayTeam": "Athletics J Springs",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T01:41:00.000Z",
+      "venue": null,
+      "summary": "SAN Diego Padres W Buehler +1.5 + Over 7.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "SAN Diego Padres W Buehler +1.5",
+          "modelProbability": 0.57,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept SAN Diego Padres W Buehler +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "SAN Diego Padres W Buehler",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 7.5",
+          "modelProbability": 0.6,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Over 7.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 7.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 7.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 7.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 7.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only.",
+      "settledAt": "2026-05-23T04:55:27.101Z",
+      "returnUnits": 1.37,
+      "netUnits": 0.87,
+      "priceDecimal": 2.73,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Athletics 3 - San Diego Padres 7."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:colorado rockies t sugano vs arizona diamondbacks m soroka:2026-05-23T01:41:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:colorado rockies t sugano vs arizona diamondbacks m soroka:2026-05-23T01:41:00.000Z",
+      "espnEventId": "",
+      "event": "Colorado Rockies T Sugano vs Arizona Diamondbacks M Soroka",
+      "homeTeam": "Arizona Diamondbacks M Soroka",
+      "homeTeamId": "",
+      "awayTeam": "Colorado Rockies T Sugano",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T01:41:00.000Z",
+      "venue": null,
+      "summary": "Over 9 + Arizona Diamondbacks M Soroka H2H",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.324,
+      "supportScore": 4.1,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": false,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Over 9",
+          "modelProbability": 0.6,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Over 9 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 9
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Arizona Diamondbacks M Soroka H2H",
+          "modelProbability": 0.54,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Arizona Diamondbacks M Soroka H2H because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "h2h",
+            "booksChecked": 1,
+            "outcomeName": "Arizona Diamondbacks M Soroka",
+            "description": "",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-4",
+            "label": "Under 9",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 9 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 9
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only.",
+      "settledAt": "2026-05-23T04:55:27.101Z",
+      "returnUnits": 0,
+      "netUnits": -0.5,
+      "priceDecimal": 2.79,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Colorado Rockies 3 - Arizona Diamondbacks 2."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:chicago white sox d martin vs san francisco giants t mcdonald:2026-05-23T02:16:00.000Z",
+      "status": "loss",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:chicago white sox d martin vs san francisco giants t mcdonald:2026-05-23T02:16:00.000Z",
+      "espnEventId": "",
+      "event": "Chicago White SOX D Martin vs SAN Francisco Giants T Mcdonald",
+      "homeTeam": "SAN Francisco Giants T Mcdonald",
+      "homeTeamId": "",
+      "awayTeam": "Chicago White SOX D Martin",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T02:16:00.000Z",
+      "venue": null,
+      "summary": "SAN Francisco Giants T Mcdonald +1.5 + Under 7.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "SAN Francisco Giants T Mcdonald +1.5",
+          "modelProbability": 0.57,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept SAN Francisco Giants T Mcdonald +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "SAN Francisco Giants T Mcdonald",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Under 7.5",
+          "modelProbability": 0.6,
+          "status": "loss",
+          "locked": false,
+          "rationale": "Rules engine kept Under 7.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Under",
+            "description": "",
+            "point": 7.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Over 7.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Over 7.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Over",
+              "description": "",
+              "point": 7.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only.",
+      "settledAt": "2026-05-23T05:27:02.187Z",
+      "returnUnits": 0,
+      "netUnits": -0.5,
+      "priceDecimal": 2.74,
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: Chicago White Sox 9 - San Francisco Giants 4."
+    },
+    {
+      "id": "auto-generator:afl:snapshot:afl:north melbourne vs gold coast suns:2026-05-23T03:15:07.000Z",
+      "status": "win",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:north melbourne vs gold coast suns:2026-05-23T03:15:07.000Z",
+      "espnEventId": "1133576",
+      "event": "North Melbourne vs Gold Coast Suns",
+      "homeTeam": "North Melbourne",
+      "homeTeamId": "5",
+      "awayTeam": "Gold Coast Suns",
+      "awayTeamId": "10",
+      "startTime": "2026-05-23T03:15:07.000Z",
+      "venue": {
+        "id": "79",
+        "name": "Marvel Stadium",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Bailey Humphrey 10+ Disposals + Cameron Zurhaar 14+ Disposals + Charlie Comben 11+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Bailey Humphrey 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Bailey Humphrey 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Bailey Humphrey",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Cameron Zurhaar 14+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Cameron Zurhaar 14+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "14+ Disposals",
+            "description": "Cameron Zurhaar",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Charlie Comben 11+ Disposals",
+          "modelProbability": 0.74,
+          "status": "win",
+          "locked": false,
+          "rationale": "Rules engine kept Charlie Comben 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "11+ Disposals",
+            "description": "Charlie Comben",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-4",
+            "label": "Cameron Zurhaar 13+ Disposals",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Cameron Zurhaar 13+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_disposals",
+              "booksChecked": 1,
+              "outcomeName": "13+ Disposals",
+              "description": "Cameron Zurhaar",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T06:28:29.889Z",
+      "returnUnits": 5.84,
+      "netUnits": 3.84,
+      "priceDecimal": 2.92,
+      "resultNotes": "Auto-settled from consensus sources (ESPN, Official AFL) final score: Gold Coast SUNS 105 - North Melbourne 111."
+    },
+    {
+      "id": "auto-generator:afl:snapshot:afl:geelong cats vs sydney swans:2026-05-23T06:15:55.000Z",
+      "status": "win",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:geelong cats vs sydney swans:2026-05-23T06:15:55.000Z",
+      "espnEventId": "1133577",
+      "event": "Geelong Cats vs Sydney Swans",
+      "homeTeam": "Geelong Cats",
+      "homeTeamId": "14",
+      "awayTeam": "Sydney Swans",
+      "awayTeamId": "4",
+      "startTime": "2026-05-23T06:15:55.000Z",
+      "venue": {
+        "id": "82",
+        "name": "GMHBA Stadium",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Caiden Cleary 11+ Disposals + Charlie Curnow 11+ Disposals + Connor O'Sullivan 12+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Caiden Cleary 11+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Caiden Cleary 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "11+ Disposals",
+            "description": "Caiden Cleary",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Charlie Curnow 11+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Charlie Curnow 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "11+ Disposals",
+            "description": "Charlie Curnow",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Connor O'Sullivan 12+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Connor O'Sullivan 12+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "12+ Disposals",
+            "description": "Connor O'Sullivan",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-6",
+            "label": "Connor O'Sullivan 11+ Disposals",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Connor O'Sullivan 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_disposals",
+              "booksChecked": 1,
+              "outcomeName": "11+ Disposals",
+              "description": "Connor O'Sullivan",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T09:23:59.714Z",
+      "returnUnits": 2.62,
+      "netUnits": 1.62,
+      "priceDecimal": 2.6242560000000004,
+      "resultNotes": "Auto-settled from consensus sources (ESPN, Official AFL) final score: Sydney Swans 80 - Geelong Cats 107."
+    },
+    {
+      "id": "auto-generator:afl:snapshot:afl:collingwood vs west coast eagles:2026-05-23T06:35:36.000Z",
+      "status": "loss",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:collingwood vs west coast eagles:2026-05-23T06:35:36.000Z",
+      "espnEventId": "1133578",
+      "event": "Collingwood vs West Coast Eagles",
+      "homeTeam": "Collingwood",
+      "homeTeamId": "17",
+      "awayTeam": "West Coast Eagles",
+      "awayTeamId": "3",
+      "startTime": "2026-05-23T06:35:36.000Z",
+      "venue": {
+        "id": "78",
+        "name": "MCG",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Bailey J. Williams 11+ Disposals + Beau McCreery 13+ Disposals + Billy Frampton 11+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Bailey J. Williams 11+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Bailey J. Williams 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "11+ Disposals",
+            "description": "Bailey J. Williams",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Beau McCreery 13+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Beau McCreery 13+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "13+ Disposals",
+            "description": "Beau McCreery",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Billy Frampton 11+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Billy Frampton 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "11+ Disposals",
+            "description": "Billy Frampton",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-2",
+            "label": "Bailey J. Williams 12+ Disposals",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Bailey J. Williams 12+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_disposals",
+              "booksChecked": 1,
+              "outcomeName": "12+ Disposals",
+              "description": "Bailey J. Williams",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "settledAt": "2026-05-23T09:39:03.868Z",
+      "returnUnits": 0,
+      "netUnits": -1,
+      "priceDecimal": 2.09664,
+      "failedLeg": "N/A",
+      "failedLegLabel": "N/A",
+      "failedLegs": [
+        "N/A"
+      ],
+      "resultNotes": "Auto-settled from ESPN scoreboard final score: West Coast Eagles 82 - Collingwood 92. Failed legs: N/A. Final event detected but these supported prop legs could not be graded safely: Only 1 source confirmed Bailey J. Williams 10+ Disposals; 2 agreeing sources are required for auto-settlement. ESPN: win. Only 1 source confirmed Billy Frampton 10+ Disposals; 2 agreeing sources are required for auto-settlement. ESPN: win. Only 1 source confirmed Brady Hough 10+ Disposals; 2 agreeing sources are required for auto-settlement. ESPN: win."
+    },
+    {
+      "id": "auto-generator:nrl:snapshot:nrl:st george illawarra dragons vs new zealand warriors:2026-05-23T07:30:00.000Z",
+      "status": "pending",
+      "sport": "nrl",
+      "sportLabel": "NRL",
+      "eventId": "snapshot:nrl:st george illawarra dragons vs new zealand warriors:2026-05-23T07:30:00.000Z",
+      "espnEventId": "",
+      "event": "ST George Illawarra Dragons vs NEW Zealand Warriors",
+      "homeTeam": "ST George Illawarra Dragons",
+      "homeTeamId": "",
+      "awayTeam": "NEW Zealand Warriors",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T07:30:00.000Z",
+      "venue": null,
+      "summary": "Valentine Holmes 6+ Points + 1st Half Over 24.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.402,
+      "supportScore": 6.35,
+      "confidenceTier": "medium",
+      "supportProjection": "moderate",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 1,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Valentine Holmes 6+ Points",
+          "modelProbability": 0.67,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Valentine Holmes 6+ Points because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_points",
+            "booksChecked": 1,
+            "outcomeName": "6+ Points",
+            "description": "Valentine Holmes",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "1st Half Over 24.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept 1st Half Over 24.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "first_half_totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 24.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-2",
+            "label": "Valentine Holmes 4+ Points",
+            "modelProbability": 0.67,
+            "rationale": "Rules engine kept Valentine Holmes 4+ Points because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_points",
+              "booksChecked": 1,
+              "outcomeName": "4+ Points",
+              "description": "Valentine Holmes",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified."
+    },
+    {
+      "id": "auto-generator:nrl:snapshot:nrl:manly sea eagles vs gold coast titans:2026-05-23T09:35:00.000Z",
+      "status": "pending",
+      "sport": "nrl",
+      "sportLabel": "NRL",
+      "eventId": "snapshot:nrl:manly sea eagles vs gold coast titans:2026-05-23T09:35:00.000Z",
+      "espnEventId": "",
+      "event": "Manly SEA Eagles vs Gold Coast Titans",
+      "homeTeam": "Manly SEA Eagles",
+      "homeTeamId": "",
+      "awayTeam": "Gold Coast Titans",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T09:35:00.000Z",
+      "venue": null,
+      "summary": "Jayden Campbell 6+ Points + 1st Half Under 24.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.402,
+      "supportScore": 6.35,
+      "confidenceTier": "medium",
+      "supportProjection": "moderate",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 1,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Jayden Campbell 6+ Points",
+          "modelProbability": 0.67,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Jayden Campbell 6+ Points because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_points",
+            "booksChecked": 1,
+            "outcomeName": "6+ Points",
+            "description": "Jayden Campbell",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "1st Half Under 24.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept 1st Half Under 24.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "first_half_totals",
+            "booksChecked": 1,
+            "outcomeName": "Under",
+            "description": "",
+            "point": 24.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-2",
+            "label": "Jayden Campbell 4+ Points",
+            "modelProbability": 0.67,
+            "rationale": "Rules engine kept Jayden Campbell 4+ Points because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_points",
+              "booksChecked": 1,
+              "outcomeName": "4+ Points",
+              "description": "Jayden Campbell",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified."
+    },
+    {
+      "id": "auto-generator:afl:snapshot:afl:port adelaide vs carlton:2026-05-23T09:35:18.000Z",
+      "status": "pending",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:port adelaide vs carlton:2026-05-23T09:35:18.000Z",
+      "espnEventId": "1133579",
+      "event": "Port Adelaide vs Carlton",
+      "homeTeam": "Port Adelaide",
+      "homeTeamId": "7",
+      "awayTeam": "Carlton",
+      "awayTeamId": "9",
+      "startTime": "2026-05-23T09:35:18.000Z",
+      "venue": {
+        "id": "81",
+        "name": "Adelaide Oval",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Aliir Aliir 11+ Disposals + Ben Ainsworth 13+ Disposals + Brodie Kemp 10+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 1,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Aliir Aliir 11+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Aliir Aliir 11+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "11+ Disposals",
+            "description": "Aliir Aliir",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Ben Ainsworth 13+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Ben Ainsworth 13+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "13+ Disposals",
+            "description": "Ben Ainsworth",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Brodie Kemp 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Brodie Kemp 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Brodie Kemp",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-2",
+            "label": "Aliir Aliir 12+ Disposals",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Aliir Aliir 12+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_disposals",
+              "booksChecked": 1,
+              "outcomeName": "12+ Disposals",
+              "description": "Aliir Aliir",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:st louis cardinals a pallante vs cincinnati reds c paddack:2026-05-23T17:11:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:st louis cardinals a pallante vs cincinnati reds c paddack:2026-05-23T17:11:00.000Z",
+      "espnEventId": "",
+      "event": "ST Louis Cardinals A Pallante vs Cincinnati Reds C Paddack",
+      "homeTeam": "Cincinnati Reds C Paddack",
+      "homeTeamId": "",
+      "awayTeam": "ST Louis Cardinals A Pallante",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T17:11:00.000Z",
+      "venue": null,
+      "summary": "Cincinnati Reds C Paddack +1.5 + Under 9.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Cincinnati Reds C Paddack +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Cincinnati Reds C Paddack +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Cincinnati Reds C Paddack",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Under 9.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Under 9.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Under",
+            "description": "",
+            "point": 9.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-4",
+            "label": "Over 9.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Over 9.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Over",
+              "description": "",
+              "point": 9.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:tampa bay rays d rasmussen vs new york yankees r weathers:2026-05-23T17:36:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:tampa bay rays d rasmussen vs new york yankees r weathers:2026-05-23T17:36:00.000Z",
+      "espnEventId": "",
+      "event": "Tampa BAY Rays D Rasmussen vs NEW York Yankees R Weathers",
+      "homeTeam": "NEW York Yankees R Weathers",
+      "homeTeamId": "",
+      "awayTeam": "Tampa BAY Rays D Rasmussen",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T17:36:00.000Z",
+      "venue": null,
+      "summary": "Tampa BAY Rays D Rasmussen +1.5 + Over 7",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Tampa BAY Rays D Rasmussen +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Tampa BAY Rays D Rasmussen +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Tampa BAY Rays D Rasmussen",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 7",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 7 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 7
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 7",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 7 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 7
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:houston astros k teng vs chicago cubs c rea:2026-05-23T18:21:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:houston astros k teng vs chicago cubs c rea:2026-05-23T18:21:00.000Z",
+      "espnEventId": "",
+      "event": "Houston Astros K Teng vs Chicago Cubs C REA",
+      "homeTeam": "Chicago Cubs C REA",
+      "homeTeamId": "",
+      "awayTeam": "Houston Astros K Teng",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T18:21:00.000Z",
+      "venue": null,
+      "summary": "Houston Astros K Teng +1.5 + Over 7.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Houston Astros K Teng +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Houston Astros K Teng +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Houston Astros K Teng",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 7.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 7.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 7.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 7.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 7.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 7.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:pittsburgh pirates p skenes vs toronto blue jays p corbin:2026-05-23T19:08:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:pittsburgh pirates p skenes vs toronto blue jays p corbin:2026-05-23T19:08:00.000Z",
+      "espnEventId": "",
+      "event": "Pittsburgh Pirates P Skenes vs Toronto Blue Jays P Corbin",
+      "homeTeam": "Toronto Blue Jays P Corbin",
+      "homeTeamId": "",
+      "awayTeam": "Pittsburgh Pirates P Skenes",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T19:08:00.000Z",
+      "venue": null,
+      "summary": "Toronto Blue Jays P Corbin +1.5 + Under 7.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Toronto Blue Jays P Corbin +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Toronto Blue Jays P Corbin +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Toronto Blue Jays P Corbin",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Under 7.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Under 7.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Under",
+            "description": "",
+            "point": 7.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-5",
+            "label": "Pittsburgh Pirates P Skenes H2H",
+            "modelProbability": 0.54,
+            "rationale": "Rules engine kept Pittsburgh Pirates P Skenes H2H because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "h2h",
+              "booksChecked": 1,
+              "outcomeName": "Pittsburgh Pirates P Skenes",
+              "description": "",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:chicago white sox e fedde vs san francisco giants a houser:2026-05-23T20:06:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:chicago white sox e fedde vs san francisco giants a houser:2026-05-23T20:06:00.000Z",
+      "espnEventId": "",
+      "event": "Chicago White SOX E Fedde vs SAN Francisco Giants A Houser",
+      "homeTeam": "SAN Francisco Giants A Houser",
+      "homeTeamId": "",
+      "awayTeam": "Chicago White SOX E Fedde",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T20:06:00.000Z",
+      "venue": null,
+      "summary": "Chicago White SOX E Fedde +1.5 + Over 8.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Chicago White SOX E Fedde +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Chicago White SOX E Fedde +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Chicago White SOX E Fedde",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 8.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 8.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 8.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 8.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 8.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 8.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:cleveland guardians s cecconi vs philadelphia phillies z wheeler:2026-05-23T20:06:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:cleveland guardians s cecconi vs philadelphia phillies z wheeler:2026-05-23T20:06:00.000Z",
+      "espnEventId": "",
+      "event": "Cleveland Guardians S Cecconi vs Philadelphia Phillies Z Wheeler",
+      "homeTeam": "Philadelphia Phillies Z Wheeler",
+      "homeTeamId": "",
+      "awayTeam": "Cleveland Guardians S Cecconi",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T20:06:00.000Z",
+      "venue": null,
+      "summary": "Cleveland Guardians S Cecconi +1.5 + Over 7",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Cleveland Guardians S Cecconi +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Cleveland Guardians S Cecconi +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Cleveland Guardians S Cecconi",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 7",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 7 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 7
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-5",
+            "label": "Philadelphia Phillies Z Wheeler H2H",
+            "modelProbability": 0.54,
+            "rationale": "Rules engine kept Philadelphia Phillies Z Wheeler H2H because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "h2h",
+              "booksChecked": 1,
+              "outcomeName": "Philadelphia Phillies Z Wheeler",
+              "description": "",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:detroit tigers f valdez vs baltimore orioles b young:2026-05-23T20:06:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:detroit tigers f valdez vs baltimore orioles b young:2026-05-23T20:06:00.000Z",
+      "espnEventId": "",
+      "event": "Detroit Tigers F Valdez vs Baltimore Orioles B Young",
+      "homeTeam": "Baltimore Orioles B Young",
+      "homeTeamId": "",
+      "awayTeam": "Detroit Tigers F Valdez",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T20:06:00.000Z",
+      "venue": null,
+      "summary": "Baltimore Orioles B Young +1.5 + Over 8",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Baltimore Orioles B Young +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Baltimore Orioles B Young +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Baltimore Orioles B Young",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 8",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 8 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 8
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 8",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 8 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 8
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:new york mets f peralta vs miami marlins m meyer:2026-05-23T20:11:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:new york mets f peralta vs miami marlins m meyer:2026-05-23T20:11:00.000Z",
+      "espnEventId": "",
+      "event": "NEW York Mets F Peralta vs Miami Marlins M Meyer",
+      "homeTeam": "Miami Marlins M Meyer",
+      "homeTeamId": "",
+      "awayTeam": "NEW York Mets F Peralta",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T20:11:00.000Z",
+      "venue": null,
+      "summary": "Miami Marlins M Meyer +1.5 + Over 7.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Miami Marlins M Meyer +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Miami Marlins M Meyer +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Miami Marlins M Meyer",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 7.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 7.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 7.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 7.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 7.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 7.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:mlb:snapshot:mlb:minnesota twins t bradley vs boston red sox j moran:2026-05-23T20:11:00.000Z",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "eventId": "snapshot:mlb:minnesota twins t bradley vs boston red sox j moran:2026-05-23T20:11:00.000Z",
+      "espnEventId": "",
+      "event": "Minnesota Twins T Bradley vs Boston RED SOX J Moran",
+      "homeTeam": "Boston RED SOX J Moran",
+      "homeTeamId": "",
+      "awayTeam": "Minnesota Twins T Bradley",
+      "awayTeamId": "",
+      "startTime": "2026-05-23T20:11:00.000Z",
+      "venue": null,
+      "summary": "Boston RED SOX J Moran +1.5 + Over 8.5",
+      "rationale": "Rules engine approved a 2-leg build from market depth, structural fit, and benchmark acceptance. Rules mode used market structure, support signals, and benchmark filters only.",
+      "betType": "sgm",
+      "modelProbability": 0.34199999999999997,
+      "supportScore": 5.25,
+      "confidenceTier": "low",
+      "supportProjection": "weak",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 0.5,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Boston RED SOX J Moran +1.5",
+          "modelProbability": 0.57,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Boston RED SOX J Moran +1.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "spreads",
+            "booksChecked": 1,
+            "outcomeName": "Boston RED SOX J Moran",
+            "description": "",
+            "point": 1.5
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Over 8.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Over 8.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "totals",
+            "booksChecked": 1,
+            "outcomeName": "Over",
+            "description": "",
+            "point": 8.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Under 8.5",
+            "modelProbability": 0.6,
+            "rationale": "Rules engine kept Under 8.5 because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "totals",
+              "booksChecked": 1,
+              "outcomeName": "Under",
+              "description": "",
+              "point": 8.5
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "pass",
+        "roleStability": "pass",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode used market structure, support signals, and benchmark filters only."
+    },
+    {
+      "id": "auto-generator:nba:snapshot:nba:new york knicks vs cleveland cavaliers:2026-05-24T00:10:00.000Z",
+      "status": "pending",
+      "sport": "nba",
+      "sportLabel": "NBA",
+      "eventId": "snapshot:nba:new york knicks vs cleveland cavaliers:2026-05-24T00:10:00.000Z",
+      "espnEventId": "",
+      "event": "NEW York Knicks vs Cleveland Cavaliers",
+      "homeTeam": "Cleveland Cavaliers",
+      "homeTeamId": "",
+      "awayTeam": "NEW York Knicks",
+      "awayTeamId": "",
+      "startTime": "2026-05-24T00:10:00.000Z",
+      "venue": null,
+      "summary": "Dean Wade 4+ Rebounds + Donovan Mitchell 4+ Rebounds + Evan Mobley 2+ Assists",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 7.85,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Dean Wade 4+ Rebounds",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Dean Wade 4+ Rebounds because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_rebounds",
+            "booksChecked": 1,
+            "outcomeName": "4+ Rebounds",
+            "description": "Dean Wade",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Donovan Mitchell 4+ Rebounds",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Donovan Mitchell 4+ Rebounds because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_rebounds",
+            "booksChecked": 1,
+            "outcomeName": "4+ Rebounds",
+            "description": "Donovan Mitchell",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Evan Mobley 2+ Assists",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Evan Mobley 2+ Assists because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_assists",
+            "booksChecked": 1,
+            "outcomeName": "2+ Assists",
+            "description": "Evan Mobley",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Max Strus 2+ Assists",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Max Strus 2+ Assists because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_assists",
+              "booksChecked": 1,
+              "outcomeName": "2+ Assists",
+              "description": "Max Strus",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified."
+    },
+    {
+      "id": "auto-generator:afl:snapshot:afl:gws giants vs brisbane lions:2026-05-24T02:30:07.000Z",
+      "status": "pending",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:gws giants vs brisbane lions:2026-05-24T02:30:07.000Z",
+      "espnEventId": "1133580",
+      "event": "GWS Giants vs Brisbane Lions",
+      "homeTeam": "GWS Giants",
+      "homeTeamId": "8",
+      "awayTeam": "Brisbane Lions",
+      "awayTeamId": "11",
+      "startTime": "2026-05-24T02:30:07.000Z",
+      "venue": {
+        "id": "85",
+        "name": "ENGIE Stadium",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Aaron Cadman 10+ Disposals + Brent Daniels 14+ Disposals + Bruce Reville 15+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 2,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Aaron Cadman 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Aaron Cadman 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Aaron Cadman",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Brent Daniels 14+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Brent Daniels 14+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "14+ Disposals",
+            "description": "Brent Daniels",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Bruce Reville 15+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Bruce Reville 15+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "15+ Disposals",
+            "description": "Bruce Reville",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-3",
+            "label": "Brent Daniels 13+ Disposals",
+            "modelProbability": 0.74,
+            "rationale": "Rules engine kept Brent Daniels 13+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_disposals",
+              "booksChecked": 1,
+              "outcomeName": "13+ Disposals",
+              "description": "Brent Daniels",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified."
+    },
+    {
+      "id": "auto-generator:afl:snapshot:afl:western bulldogs vs melbourne:2026-05-24T05:15:50.000Z",
+      "status": "pending",
+      "sport": "afl",
+      "sportLabel": "AFL",
+      "eventId": "snapshot:afl:western bulldogs vs melbourne:2026-05-24T05:15:50.000Z",
+      "espnEventId": "1133581",
+      "event": "Western Bulldogs vs Melbourne",
+      "homeTeam": "Western Bulldogs",
+      "homeTeamId": "6",
+      "awayTeam": "Melbourne",
+      "awayTeamId": "2",
+      "startTime": "2026-05-24T05:15:50.000Z",
+      "venue": {
+        "id": "79",
+        "name": "Marvel Stadium",
+        "city": "",
+        "state": "",
+        "country": "",
+        "indoor": false,
+        "roofType": ""
+      },
+      "summary": "Arthur Jones 10+ Disposals + Blake Howes 15+ Disposals + Buku Khamis 10+ Disposals",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.405224,
+      "supportScore": 10,
+      "confidenceTier": "high",
+      "supportProjection": "strong",
+      "dataConfidence": "medium",
+      "correlationRisk": "medium",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": true,
+      "stakeUnits": 1,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Arthur Jones 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Arthur Jones 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Arthur Jones",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Blake Howes 15+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Blake Howes 15+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "15+ Disposals",
+            "description": "Blake Howes",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "Buku Khamis 10+ Disposals",
+          "modelProbability": 0.74,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Buku Khamis 10+ Disposals because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_disposals",
+            "booksChecked": 1,
+            "outcomeName": "10+ Disposals",
+            "description": "Buku Khamis",
+            "point": null
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified."
+    },
+    {
+      "id": "auto-generator:nrl:snapshot:nrl:nth queensland cowboys vs south sydney rabbitohs:2026-05-24T06:05:00.000Z",
+      "status": "pending",
+      "sport": "nrl",
+      "sportLabel": "NRL",
+      "eventId": "snapshot:nrl:nth queensland cowboys vs south sydney rabbitohs:2026-05-24T06:05:00.000Z",
+      "espnEventId": "",
+      "event": "NTH Queensland Cowboys vs South Sydney Rabbitohs",
+      "homeTeam": "NTH Queensland Cowboys",
+      "homeTeamId": "",
+      "awayTeam": "South Sydney Rabbitohs",
+      "awayTeamId": "",
+      "startTime": "2026-05-24T06:05:00.000Z",
+      "venue": null,
+      "summary": "Jake Clifford 8+ Points + Latrell Siegwalt 6+ Points + 1st Half Under 26.5",
+      "rationale": "Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified.",
+      "betType": "sgm",
+      "modelProbability": 0.26934,
+      "supportScore": 7.22,
+      "confidenceTier": "high",
+      "supportProjection": "moderate",
+      "dataConfidence": "medium",
+      "correlationRisk": "low",
+      "correlationJustified": true,
+      "exceptionalSupport": true,
+      "strongSupport": false,
+      "stakeUnits": 1,
+      "source": "auto-generator",
+      "analysisEngine": "rules",
+      "legs": [
+        {
+          "id": "leg-1",
+          "label": "Jake Clifford 8+ Points",
+          "modelProbability": 0.67,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Jake Clifford 8+ Points because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_points",
+            "booksChecked": 1,
+            "outcomeName": "8+ Points",
+            "description": "Jake Clifford",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-2",
+          "label": "Latrell Siegwalt 6+ Points",
+          "modelProbability": 0.67,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept Latrell Siegwalt 6+ Points because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "player_points",
+            "booksChecked": 1,
+            "outcomeName": "6+ Points",
+            "description": "Latrell Siegwalt",
+            "point": null
+          }
+        },
+        {
+          "id": "leg-3",
+          "label": "1st Half Under 26.5",
+          "modelProbability": 0.6,
+          "status": "active",
+          "locked": false,
+          "rationale": "Rules engine kept 1st Half Under 26.5 because it matched the preferred market shape and showed support across 1 books.",
+          "source": {
+            "type": "web-scrape",
+            "market": "first_half_totals",
+            "booksChecked": 1,
+            "outcomeName": "Under",
+            "description": "",
+            "point": 26.5
+          }
+        }
+      ],
+      "replacementTemplate": {
+        "candidateLegs": [
+          {
+            "id": "backup-candidate-4",
+            "label": "Jake Clifford 6+ Points",
+            "modelProbability": 0.67,
+            "rationale": "Rules engine kept Jake Clifford 6+ Points because it matched the preferred market shape and showed support across 1 books.",
+            "source": {
+              "type": "web-scrape",
+              "market": "player_points",
+              "booksChecked": 1,
+              "outcomeName": "6+ Points",
+              "description": "Jake Clifford",
+              "point": null
+            }
+          }
+        ],
+        "maxOptions": 1
+      },
+      "analysisChecklist": {
+        "actionableSlate": "pass",
+        "marketDepth": "pass",
+        "selectionSupport": "pass",
+        "playerAvailability": "not_applicable",
+        "roleStability": "not_applicable",
+        "externalConditions": "not_applicable",
+        "researchConfidence": "pass",
+        "correlation": "pass",
+        "ticketIntegrity": "pass",
+        "bankrollFit": "pass"
+      },
+      "analysisNotes": "Rules mode inferred structural checks from market data only; player, role, and external-condition checks remain unverified."
+    }
+  ]
+}

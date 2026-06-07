@@ -1,0 +1,56 @@
+{
+  "promos": [
+    {
+      "id": "afl-promo-1",
+      "sport": "afl",
+      "type": "same-game-multi",
+      "legCount": 4,
+      "minOdds": 2.0,
+      "maxOdds": 5.0,
+      "site": "TAB",
+      "market": "player-props",
+      "active": true,
+      "daysActive": [],
+      "notes": "AFL same-game multi promo"
+    },
+    {
+      "id": "nrl-promo-1",
+      "sport": "nrl",
+      "type": "same-game-multi",
+      "legCount": 3,
+      "minOdds": 2.0,
+      "maxOdds": 5.0,
+      "site": "TAB",
+      "market": "player-props",
+      "active": true,
+      "daysActive": [],
+      "notes": "NRL same-game multi promo"
+    },
+    {
+      "id": "tab-tennis-h2h",
+      "sport": "tennis",
+      "type": "h2h-multi",
+      "legCount": 4,
+      "minOdds": 2.0,
+      "maxOdds": 5.0,
+      "site": "TAB",
+      "market": "head2head",
+      "active": true,
+      "daysActive": [],
+      "notes": "TAB Tennis H2H 4-leg multi daily"
+    },
+    {
+      "id": "tab-soccer-h2h",
+      "sport": "soccer",
+      "type": "h2h-multi",
+      "legCount": 4,
+      "minOdds": 2.0,
+      "maxOdds": 5.0,
+      "site": "TAB",
+      "market": "head2head",
+      "active": true,
+      "daysActive": [],
+      "notes": "TAB Soccer H2H 4-leg multi daily"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "updatedAt": "2026-05-08T20:04:16.999Z",
+  "quotes": [
+    {
+      "sportKey": "rugbyleague_nrl",
+      "homeTeam": "Brisbane Broncos",
+      "awayTeam": "Melbourne Storm",
+      "startTime": "2026-05-09T10:00:00.000Z",
+      "market": "h2h",
+      "outcomeName": "Melbourne Storm",
+      "description": "",
+      "point": null,
+      "fetchedAt": "2026-05-09T07:58:00.000Z",
+      "prices": [
+        {
+          "bookmakerKey": "sportsbet",
+          "bookmakerTitle": "Sportsbet",
+          "price": 2.1
+        },
+        {
+          "bookmakerKey": "tab",
+          "bookmakerTitle": "TAB",
+          "price": 2.05
+        }
+      ]
+    },
+    {
+      "sportKey": "rugbyleague_nrl",
+      "homeTeam": "Brisbane Broncos",
+      "awayTeam": "Melbourne Storm",
+      "startTime": "2026-05-09T10:00:00.000Z",
+      "market": "player_points",
+      "outcomeName": "Over",
+      "description": "Cameron Munster",
+      "point": 7.5,
+      "fetchedAt": "2026-05-09T07:58:00.000Z",
+      "prices": [
+        {
+          "bookmakerKey": "sportsbet",
+          "bookmakerTitle": "Sportsbet",
+          "price": 1.71
+        },
+        {
+          "bookmakerKey": "tab",
+          "bookmakerTitle": "TAB",
+          "price": 1.68
+        }
+      ]
+    },
+    {
+      "sportKey": "rugbyleague_nrl",
+      "homeTeam": "Brisbane Broncos",
+      "awayTeam": "Melbourne Storm",
+      "startTime": "2026-05-09T10:00:00.000Z",
+      "market": "player_points",
+      "outcomeName": "Over",
+      "description": "Harry Grant",
+      "point": 7.5,
+      "fetchedAt": "2026-05-09T07:58:00.000Z",
+      "prices": [
+        {
+          "bookmakerKey": "sportsbet",
+          "bookmakerTitle": "Sportsbet",
+          "price": 1.75
+        },
+        {
+          "bookmakerKey": "tab",
+          "bookmakerTitle": "TAB",
+          "price": 1.72
+        }
+      ]
+    },
+    {
+      "sportKey": "baseball_mlb",
+      "homeTeam": "Philadelphia Phillies",
+      "awayTeam": "Colorado Rockies",
+      "startTime": "2026-05-09T12:40:00.000Z",
+      "market": "batter_hits_alternate",
+      "outcomeName": "Over",
+      "description": "Brandon Marsh",
+      "point": 0.5,
+      "fetchedAt": "2026-05-09T08:00:00.000Z",
+      "prices": [
+        {
+          "bookmakerKey": "tab",
+          "bookmakerTitle": "TAB",
+          "price": 1.42
+        }
+      ]
+    },
+    {
+      "sportKey": "baseball_mlb",
+      "homeTeam": "Philadelphia Phillies",
+      "awayTeam": "Colorado Rockies",
+      "startTime": "2026-05-09T12:40:00.000Z",
+      "market": "batter_hits_alternate",
+      "outcomeName": "Over",
+      "description": "Bryce Harper",
+      "point": 0.5,
+      "fetchedAt": "2026-05-09T08:00:00.000Z",
+      "prices": [
+        {
+          "bookmakerKey": "tab",
+          "bookmakerTitle": "TAB",
+          "price": 1.48
+        }
+      ]
+    }
+  ]
+}

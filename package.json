@@ -1,0 +1,17 @@
+{
+  "name": "sportstips-discord-webhooks",
+  "version": "1.0.0",
+  "description": "Tipping Bot desktop automation for SportsTips Discord webhooks.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win --portable",
+    "discord:gui": "electron .",
+    "discord:gui:smoke": "electron . --smoke-test"
+  },
+  "main": "automation/discord-webhooks/desktop/bootstrap.cjs",
+  "engines": {
+    "node": ">=22"
+  }
+}

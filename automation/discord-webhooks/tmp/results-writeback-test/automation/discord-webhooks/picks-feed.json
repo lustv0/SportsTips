@@ -1,0 +1,49 @@
+{
+  "picks": [
+    {
+      "id": "settled-win",
+      "status": "win",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "event": "Temp Winners vs Temp Visitors",
+      "startTime": "2026-05-18T04:56:35.219Z",
+      "settledAt": "2026-05-18T06:56:35.220Z",
+      "summary": "Batter A 1+ hit + Batter B 1+ hit",
+      "rationale": "Temporary settlement writeback win test.",
+      "stakeUnits": 1,
+      "returnUnits": 2.1,
+      "netUnits": 1.1,
+      "betType": "sgm",
+      "resultNotes": "Both hit legs landed.",
+      "bookmaker": "Test Book"
+    },
+    {
+      "id": "settled-loss",
+      "status": "loss",
+      "sport": "nba",
+      "sportLabel": "NBA",
+      "event": "Temp Home vs Temp Away",
+      "startTime": "2026-05-18T05:26:35.220Z",
+      "settledAt": "2026-05-18T06:56:35.220Z",
+      "summary": "Player C 15+ points + Player D 6+ rebounds",
+      "rationale": "Temporary settlement writeback loss test.",
+      "stakeUnits": 1,
+      "returnUnits": 0,
+      "netUnits": -1,
+      "betType": "sgm",
+      "resultNotes": "Exact failed leg not yet supplied.",
+      "bookmaker": "Test Book"
+    },
+    {
+      "id": "pending-remaining",
+      "status": "pending",
+      "sport": "mlb",
+      "sportLabel": "MLB",
+      "event": "Pending Home vs Pending Away",
+      "startTime": "2026-05-18T08:56:35.220Z",
+      "summary": "Batter E 1+ hit + Batter F 1+ hit",
+      "stakeUnits": 1,
+      "betType": "sgm"
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipping Bot</title>
+  <link rel="stylesheet" href="./renderer.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero panel">
+      <div>
+        <p class="eyebrow">Discord Automation</p>
+        <h1>Tipping Bot</h1>
+        <p class="subcopy">One switch for the daemon, one place to see whether it is live, and one workspace for live replacement rebuilds before the bot posts them.</p>
+      </div>
+      <button id="toggle-button" class="power-button" type="button">Loading...</button>
+    </section>
+
+    <section class="grid">
+      <article class="panel stat-panel accent">
+        <p class="label">Daemon</p>
+        <p id="daemon-state" class="value">Checking...</p>
+        <p id="daemon-meta" class="meta">Waiting for status...</p>
+      </article>
+
+      <article class="panel stat-panel">
+        <p class="label">Scraped Quotes</p>
+        <p id="credits-value" class="value">Unknown</p>
+        <p class="meta">Latest scraped market count from the active sportsbook snapshot refresh.</p>
+      </article>
+
+      <article id="active-picks-panel" class="panel stat-panel stat-panel-interactive" role="button" tabindex="0" aria-expanded="false" aria-controls="active-picks-details">
+        <p class="label">Active Picks</p>
+        <p id="watched-picks" class="value">0</p>
+        <p id="watched-picks-meta" class="meta">Picks currently tracked by the daemon, including posted slips waiting for pregame recheck.</p>
+      </article>
+
+      <article class="panel stat-panel">
+        <p class="label">Timezone</p>
+        <p id="timezone-value" class="value">-</p>
+        <p id="dry-run-value" class="meta">-</p>
+      </article>
+
+      <article class="panel stat-panel">
+        <p class="label">Tracked Units</p>
+        <p id="tracker-units-value" class="value">0.00u</p>
+        <p id="tracker-units-meta" class="meta">Current bankroll, open exposure, and 30-day ROI from the bankroll tracker.</p>
+        <p id="tracker-sport-breakdown" class="stat-breakdown">No tracked bankroll performance yet.</p>
+      </article>
+
+      <article class="panel stat-panel quick-actions-panel">
+        <p class="label">Quick Actions</p>
+        <div class="quick-actions-grid">
+          <button id="force-daily-check" class="secondary-button" type="button">Force Daily Check</button>
+          <button id="force-post-slates" class="secondary-button" type="button">Force Post Slate</button>
+          <button id="force-post-picks" class="secondary-button" type="button">Force Post Picks</button>
+          <button id="run-referrals-now" class="secondary-button" type="button">Run Referrals Now</button>
+          <button id="review-results" class="secondary-button" type="button">Review Results</button>
+          <button id="open-config" class="secondary-button" type="button">Open Config</button>
+          <button id="open-folder" class="secondary-button" type="button">Open Folder</button>
+        </div>
+        <p id="quick-actions-feedback" class="meta quick-actions-feedback">Run manual daemon actions here without opening the larger sections below.</p>
+      </article>
+    </section>
+
+    <section id="active-picks-details" class="panel active-picks-section" hidden>
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Tracking</p>
+          <h2>Watched Slip Details</h2>
+        </div>
+      </div>
+      <div id="active-picks-list" class="active-picks-list">
+        <p class="meta">No picks currently under watch.</p>
+      </div>
+    </section>
+
+    <details class="panel accordion-panel webhooks-panel">
+      <summary class="accordion-summary">
+        <div class="accordion-heading">
+          <p class="eyebrow">Discord</p>
+          <h2>Webhook Readiness</h2>
+        </div>
+      </summary>
+
+      <div class="accordion-content">
+        <div class="webhook-groups">
+          <section class="webhook-group">
+            <div class="webhook-group-header">
+              <h3>Core Posting</h3>
+              <p class="meta">Main slate routing and the shared picks fallback channel.</p>
+            </div>
+            <div class="webhook-list">
+              <div class="webhook-item"><span>Slates</span><strong id="webhook-slates">Unknown</strong></div>
+              <div class="webhook-item"><span>Shared Picks</span><strong id="webhook-picks">Unknown</strong></div>
+            </div>
+          </section>
+
+          <section class="webhook-group">
+            <div class="webhook-group-header">
+              <h3>Sport Overrides</h3>
+              <p class="meta">Sport-specific pick channels that override the shared fallback when configured.</p>
+            </div>
+            <div class="webhook-list">
+              <div class="webhook-item"><span>NBA Picks</span><strong id="webhook-picks-nba">Unknown</strong></div>
+              <div class="webhook-item"><span>MLB Picks</span><strong id="webhook-picks-mlb">Unknown</strong></div>
+              <div class="webhook-item"><span>AFL Picks</span><strong id="webhook-picks-afl">Unknown</strong></div>
+              <div class="webhook-item"><span>NRL Picks</span><strong id="webhook-picks-nrl">Unknown</strong></div>
+              <div class="webhook-item"><span>NFL Picks</span><strong id="webhook-picks-nfl">Unknown</strong></div>
+              <div class="webhook-item"><span>EPL Picks</span><strong id="webhook-picks-epl">Unknown</strong></div>
+              <div class="webhook-item"><span>Other Picks</span><strong id="webhook-picks-other">Unknown</strong></div>
+            </div>
+          </section>
+
+          <section class="webhook-group">
+            <div class="webhook-group-header">
+              <h3>Referral Monitor</h3>
+              <p class="meta">Separate Discord surfaces for new offers, terms changes, cancellations, and the full ladder.</p>
+            </div>
+            <div class="webhook-list">
+              <div class="webhook-item"><span>New Referrals</span><strong id="webhook-referrals-new">Unknown</strong></div>
+              <div class="webhook-item"><span>Updated Terms</span><strong id="webhook-referrals-updated-terms">Unknown</strong></div>
+              <div class="webhook-item"><span>Cancelled Referrals</span><strong id="webhook-referrals-cancelled">Unknown</strong></div>
+              <div class="webhook-item"><span>Referral Masterlist</span><strong id="webhook-referrals-masterlist">Unknown</strong></div>
+            </div>
+            <div class="quick-webhook-editor">
+              <p class="meta">Paste each referral webhook into the matching daemon slot here, then save without leaving this section.</p>
+              <div class="settings-form settings-form-nested">
+                <label class="field compact" for="quick-webhook-referrals-new">
+                  <span>New Referrals Webhook URL</span>
+                  <input id="quick-webhook-referrals-new" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                </label>
+
+                <label class="field compact" for="quick-webhook-referrals-updated-terms">
+                  <span>Updated Terms Webhook URL</span>
+                  <input id="quick-webhook-referrals-updated-terms" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                </label>
+
+                <label class="field compact" for="quick-webhook-referrals-cancelled">
+                  <span>Cancelled Referrals Webhook URL</span>
+                  <input id="quick-webhook-referrals-cancelled" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                </label>
+
+                <label class="field compact" for="quick-webhook-referrals-masterlist">
+                  <span>Referral Masterlist Webhook URL</span>
+                  <input id="quick-webhook-referrals-masterlist" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                </label>
+              </div>
+              <div class="quick-webhook-toolbar">
+                <button id="save-referral-webhooks" class="secondary-button compact-action" type="button">Save Referral Webhooks</button>
+                <p id="referral-webhook-feedback" class="meta quick-webhook-feedback">Paste matching referral webhook URLs here and save.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="webhook-group">
+            <div class="webhook-group-header">
+              <h3>Bankroll Reporting</h3>
+              <p class="meta">Settlement feed and the higher-level bankroll summary channel.</p>
+            </div>
+            <div class="webhook-list">
+              <div class="webhook-item"><span>Results / Unit Tracking</span><strong id="webhook-unit-tracking">Unknown</strong></div>
+              <div class="webhook-item"><span>Unit Report</span><strong id="webhook-unit-report">Unknown</strong></div>
+            </div>
+          </section>
+        </div>
+        <p id="config-path" class="path-text"></p>
+      </div>
+    </details>
+
+    <details class="panel accordion-panel referrals-panel">
+      <summary class="accordion-summary">
+        <div class="accordion-heading">
+          <p class="eyebrow">Referrals</p>
+          <h2>Scaling Plan</h2>
+        </div>
+      </summary>
+
+      <div class="accordion-content">
+        <section class="settings-group">
+          <div class="settings-group-header">
+            <h3>Pending Verification</h3>
+            <p id="referral-review-summary" class="meta">New referrals wait here until you verify them and promote them into the masterlist.</p>
+          </div>
+          <div id="referral-review-list" class="plan-list">
+            <p class="meta">No pending referrals right now.</p>
+          </div>
+          <p id="referral-review-feedback" class="meta quick-webhook-feedback">Verify a referral here to remove it from New Referrals and refresh the masterlist.</p>
+        </section>
+
+        <section class="settings-group">
+          <div class="settings-group-header">
+            <h3>Start With $10 AUD</h3>
+            <p id="referral-plan-summary" class="meta">Run the referrals job once to build the current ladder.</p>
+          </div>
+          <div id="referral-plan-steps" class="plan-list">
+            <p class="meta">No referral capital plan available yet.</p>
+          </div>
+        </section>
+
+        <section class="settings-group">
+          <div class="settings-group-header">
+            <h3>Deferred Or Manual Review</h3>
+            <p id="referral-plan-deferred-summary" class="meta">Offers land here when value is unclear, capital is still too high, or the public-sharing policy is restrictive.</p>
+          </div>
+          <div id="referral-plan-deferred" class="plan-list">
+            <p class="meta">No deferred offers yet.</p>
+          </div>
+        </section>
+      </div>
+    </details>
+
+    <details class="panel accordion-panel settings-panel">
+      <summary class="accordion-summary">
+        <div class="accordion-heading">
+          <p class="eyebrow">Settings</p>
+          <h2>Editable In App</h2>
+        </div>
+      </summary>
+
+      <div class="accordion-content">
+        <div class="accordion-toolbar">
+          <button id="save-settings" class="secondary-button" type="button">Save Settings</button>
+        </div>
+
+        <div class="settings-groups">
+          <section class="settings-group">
+            <div class="settings-group-header">
+              <h3>General</h3>
+              <p class="meta">Core daemon behavior and analysis mode.</p>
+            </div>
+            <div class="settings-form settings-form-nested">
+              <label class="field toggle-field" for="setting-dry-run">
+                <span>Dry Run</span>
+                <input id="setting-dry-run" type="checkbox" />
+              </label>
+
+              <label class="field" for="setting-analysis-engine">
+                <span>Analysis Engine</span>
+                <select id="setting-analysis-engine" class="select-input">
+                  <option value="rules">Rules Only</option>
+                  <option value="auto">Auto</option>
+                  <option value="openai">OpenAI Only</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <section class="settings-group">
+            <div class="settings-group-header">
+              <h3>Webhooks</h3>
+              <p class="meta">Edit every routed Discord webhook from one place.</p>
+            </div>
+            <div class="settings-form settings-form-nested">
+              <div class="settings-subgroups">
+                <section class="settings-subgroup">
+                  <h4>Core Posting</h4>
+                  <label class="field" for="setting-webhook-slates">
+                    <span>Slates Webhook URL</span>
+                    <input id="setting-webhook-slates" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-picks">
+                    <span>Shared Picks Fallback Webhook URL</span>
+                    <input id="setting-webhook-picks" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+                </section>
+
+                <section class="settings-subgroup">
+                  <h4>Sport Overrides</h4>
+                  <label class="field" for="setting-webhook-picks-nba">
+                    <span>NBA Picks Webhook URL</span>
+                    <input id="setting-webhook-picks-nba" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-picks-mlb">
+                    <span>MLB Picks Webhook URL</span>
+                    <input id="setting-webhook-picks-mlb" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-picks-afl">
+                    <span>AFL Picks Webhook URL</span>
+                    <input id="setting-webhook-picks-afl" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-picks-nrl">
+                    <span>NRL Picks Webhook URL</span>
+                    <input id="setting-webhook-picks-nrl" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-picks-nfl">
+                    <span>NFL Picks Webhook URL</span>
+                    <input id="setting-webhook-picks-nfl" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-picks-epl">
+                    <span>EPL Picks Webhook URL</span>
+                    <input id="setting-webhook-picks-epl" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-picks-other">
+                    <span>Other Picks Webhook URL</span>
+                    <input id="setting-webhook-picks-other" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+                </section>
+
+                <section class="settings-subgroup">
+                  <h4>Referral Monitor</h4>
+                  <label class="field" for="setting-webhook-referrals-new">
+                    <span>New Referrals Webhook URL</span>
+                    <input id="setting-webhook-referrals-new" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-referrals-updated-terms">
+                    <span>Updated Terms Webhook URL</span>
+                    <input id="setting-webhook-referrals-updated-terms" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-referrals-cancelled">
+                    <span>Cancelled Referrals Webhook URL</span>
+                    <input id="setting-webhook-referrals-cancelled" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-referrals-masterlist">
+                    <span>Referral Masterlist Webhook URL</span>
+                    <input id="setting-webhook-referrals-masterlist" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+                </section>
+
+                <section class="settings-subgroup">
+                  <h4>Bankroll Reporting</h4>
+                  <label class="field" for="setting-webhook-unit-tracking">
+                    <span>Results / Unit Tracking Webhook URL</span>
+                    <input id="setting-webhook-unit-tracking" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+
+                  <label class="field" for="setting-webhook-unit-report">
+                    <span>Unit Report Webhook URL</span>
+                    <input id="setting-webhook-unit-report" type="text" placeholder="https://discord.com/api/webhooks/..." />
+                  </label>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section class="settings-group">
+            <div class="settings-group-header">
+              <h3>Role Mentions</h3>
+              <p class="meta">Sport overrides and shared role routing for message content pings.</p>
+            </div>
+            <div class="settings-form settings-form-nested">
+              <label class="field toggle-field" for="setting-role-enabled">
+                <span>Enable Role Mentions</span>
+                <input id="setting-role-enabled" type="checkbox" />
+              </label>
+
+              <label class="field" for="setting-role-text">
+                <span>Daily Slate Role Mention</span>
+                <input id="setting-role-text" type="text" placeholder="123456789012345678 or <@&...>" />
+              </label>
+
+              <label class="field" for="setting-role-slates">
+                <span>Shared Picks Role Mention</span>
+                <input id="setting-role-slates" type="text" placeholder="123456789012345678 or <@&...>" />
+              </label>
+
+              <label class="field" for="setting-role-picks-nba">
+                <span>NBA Picks Role Override</span>
+                <input id="setting-role-picks-nba" type="text" placeholder="Optional override" />
+              </label>
+
+              <label class="field" for="setting-role-picks-mlb">
+                <span>MLB Picks Role Override</span>
+                <input id="setting-role-picks-mlb" type="text" placeholder="Optional override" />
+              </label>
+
+              <label class="field" for="setting-role-picks-afl">
+                <span>AFL Picks Role Override</span>
+                <input id="setting-role-picks-afl" type="text" placeholder="Optional override" />
+              </label>
+
+              <label class="field" for="setting-role-picks-nrl">
+                <span>NRL Picks Role Override</span>
+                <input id="setting-role-picks-nrl" type="text" placeholder="Optional override" />
+              </label>
+
+              <label class="field" for="setting-role-picks-nfl">
+                <span>NFL Picks Role Override</span>
+                <input id="setting-role-picks-nfl" type="text" placeholder="Optional override" />
+              </label>
+
+              <label class="field" for="setting-role-picks-epl">
+                <span>EPL Picks Role Override</span>
+                <input id="setting-role-picks-epl" type="text" placeholder="Optional override" />
+              </label>
+
+              <label class="field" for="setting-role-picks-other">
+                <span>Other Picks Role Override</span>
+                <input id="setting-role-picks-other" type="text" placeholder="Optional override" />
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <p id="settings-feedback" class="path-text settings-feedback"></p>
+      </div>
+    </details>
+
+    <details class="panel accordion-panel replacement-panel">
+      <summary class="accordion-summary">
+        <div class="accordion-heading">
+          <p class="eyebrow">Replacements</p>
+          <h2>Replacement Builder</h2>
+        </div>
+      </summary>
+
+      <div class="accordion-content">
+        <div class="accordion-toolbar actions">
+          <button id="reload-picks-feed" class="secondary-button" type="button">Reload Feed</button>
+          <button id="generate-replacements" class="secondary-button" type="button">Generate Candidates</button>
+          <button id="save-replacement" class="secondary-button" type="button">Save Replacement Setup</button>
+        </div>
+
+        <div class="settings-form replacement-form">
+        <label class="field" for="replacement-pick-select">
+          <span>Pick</span>
+          <select id="replacement-pick-select" class="select-input"></select>
+        </label>
+
+        <p id="replacement-pick-meta" class="meta pick-meta">Load a pick from the feed to edit its replacement setup. AFL and NRL generated slips are hard-locked to same-game multis.</p>
+        <p id="picks-feed-path" class="path-text compact"></p>
+
+        <label class="field" for="replacement-status">
+          <span>Replacement Status</span>
+          <select id="replacement-status" class="select-input">
+            <option value="">No replacement needed</option>
+            <option value="replacement_needed">Replacement needed</option>
+            <option value="leg_refunded">Leg refunded</option>
+            <option value="leg_cancelled">Leg cancelled</option>
+            <option value="leg_canceled">Leg canceled</option>
+          </select>
+        </label>
+
+        <label class="field" for="replacement-reason">
+          <span>Replacement Reason</span>
+          <textarea id="replacement-reason" rows="3" placeholder="Example: player leg voided after lineup change."></textarea>
+        </label>
+
+        <label class="field" for="replacement-max-options">
+          <span>Backup Legs To Keep</span>
+          <input id="replacement-max-options" type="number" min="1" max="12" step="1" value="1" />
+        </label>
+
+        <section class="collection-card">
+          <div class="collection-header">
+            <div>
+              <h3>Current Slip Legs</h3>
+              <p class="meta">Mark refunded or cancelled legs so the generator can remove them.</p>
+            </div>
+            <button id="add-current-leg" class="ghost-button" type="button">Add Leg</button>
+          </div>
+          <div id="current-legs-list" class="collection-list"></div>
+        </section>
+
+        <section class="collection-card">
+          <div class="collection-header">
+            <div>
+              <h3>Candidate Replacement Legs</h3>
+              <p class="meta">Same-event legs the generator is allowed to swap in.</p>
+            </div>
+            <button id="add-candidate-leg" class="ghost-button" type="button">Add Candidate</button>
+          </div>
+          <div id="candidate-legs-list" class="collection-list"></div>
+        </section>
+
+        <section class="collection-card">
+          <div class="collection-header">
+            <div>
+              <h3>Replacement Options</h3>
+              <p class="meta">Manual options are supported, or you can overwrite this list from the generator.</p>
+            </div>
+            <button id="add-replacement-option" class="ghost-button" type="button">Add Option</button>
+          </div>
+          <div id="replacement-options-list" class="collection-list"></div>
+        </section>
+        </div>
+
+        <p id="replacement-feedback" class="path-text"></p>
+      </div>
+    </details>
+  </main>
+
+  <script type="module" src="./renderer.js"></script>
+</body>
+</html>
