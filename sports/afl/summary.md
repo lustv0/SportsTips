@@ -4,12 +4,12 @@
 
 | Metric | Value |
 | --- | ---: |
-| Wins | 12 |
+| Wins | 13 |
 | Losses | 10 |
 | Returns/Voided | 0 |
-| Settled Bets | 22 |
-| Win % | 54.55% |
-| Net Units | 9.78 |
+| Settled Bets | 23 |
+| Win % | 56.52% |
+| Net Units | 10.04 |
 | Last Updated | 05/10/2026 AEDT |
 
 ## Notes
@@ -24,5 +24,5 @@
 - 05/08/2026 | Brisbane Lions vs Carlton | Win | +1.10u | Disposal-led safer Brisbane same-game multi placed via TAB.
 - 05/08/2026 | Port Adelaide vs Western Bulldogs | Win | +1.10u | Exact return confirmed at $21.00 AUD.
 - 05/08/2026 | Brisbane Lions vs Carlton | Loss | -0.50u | Higher-variance disposal-only ladder lost.
+- 11/06/2026 | Western Bulldogs vs Adelaide Crows | Win | +0.26u | Auto-settled from consensus sources (ESPN, Official AFL) final score: Adelaide Crows 121 - Western Bulldogs 64. Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Pre-pick research cleared the selected legs with fallback context: Pre-pick ESPN injury research is not configured for this event. | Official AFL player profile confirms Bailey Dale is currently listed for Western Bulldogs. | Outdoor weather research could not be fully verified before pick generation.000Z.
 - 08/06/2026 | Collingwood vs Melbourne | Loss | -1.00u | Auto-settled from consensus sources (ESPN, Official AFL) final score: Melbourne 83 - Collingwood 75. Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Pre-pick research cleared the selected legs with fallback context: Pre-pick ESPN injury research is not configured for this event. | Official AFL player profile confirms Billy Frampton is currently listed for Collingwood. | Outdoor weather research could not be fully verified before pick generation.000Z.
-- 07/06/2026 | Sydney Swans vs St Kilda | Loss | -1.00u | Auto-settled from consensus sources (ESPN, Official AFL) final score: St Kilda 102 - Sydney Swans 104. Rules engine approved a 3-leg build from market depth, structural fit, and benchmark acceptance. Pre-pick research cleared the selected legs with fallback context: Pre-pick ESPN injury research is not configured for this event. | Official AFL player profile confirms Jai Serong is currently listed for Sydney Swans. | Outdoor weather research could not be fully verified before pick generation.000Z.

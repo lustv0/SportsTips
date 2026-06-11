@@ -237,7 +237,10 @@ function getAflDisposalProfileBonus(candidate) {
     return bestPrice > 1.95 ? -0.5 : 0.25;
   }
 
-  return bestPrice <= 1.35 ? -1.2 : -0.35;
+  // Line 10-14: scale penalty by price — cheaper = likely starter, pricier = bench/rotation risk
+  if (bestPrice <= 1.35) return -1.2;
+  if (bestPrice <= 1.55) return -2.5;
+  return -4.5;
 }
 
 function isTeamLikeCandidateDescription(candidate, eventContext) {
@@ -318,19 +321,16 @@ function isLikelyNrlKickerPointsCandidate(candidate, eventContext) {
   const line = getNrlPlayerPointsLine(candidate);
   const bestPrice = toNumber(candidate?.bestPrice);
 
-  if (line === null || bestPrice === null || line < 4 || line > 10) {
+  // Max line capped at 6 — lines 8-10 have ~40% hit rate and consistently lose
+  if (line === null || bestPrice === null || line < 4 || line > 6) {
     return false;
   }
 
-  if (line >= 8) {
-    return bestPrice <= 2.15;
-  }
-
   if (line >= 6) {
-    return bestPrice <= 1.95;
+    return bestPrice <= 1.75;
   }
 
-  return bestPrice <= 1.6;
+  return bestPrice <= 1.55;
 }
 
 function getNrlSpreadProtectionBonus(candidate) {
@@ -520,6 +520,21 @@ function computeCandidateScore(candidate, generatorConfig, eventContext = null) 
 
     if (candidate.market === 'h2h') {
       score -= 1.1;
+    }
+
+    // Score NRL totals by line quality — replaces the flat +1.0 from the base family bonus
+    if (candidate.family === 'total') {
+      const totalLine = toNumber(candidate?.point);
+      const totalDirection = normalizeText(candidate?.outcomeName);
+      const isFirstHalf = /first.half|1st.half/.test(normalizeText(candidate?.market));
+
+      if (isFirstHalf) {
+        if (totalDirection === 'over' && totalLine !== null && totalLine >= 23) {
+          score -= 8.0; // Statistically implausible — hard downrank
+        } else if (totalDirection === 'under' && totalLine !== null && totalLine >= 26.5) {
+          score += 1.0; // Conservative anchor bonus
+        }
+      }
     }
   }
 

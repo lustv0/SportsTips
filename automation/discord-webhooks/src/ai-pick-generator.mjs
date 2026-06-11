@@ -8,9 +8,12 @@ const PASSING_CHECKLIST_VALUES = new Set(['pass', 'not_applicable']);
 const MLB_STRUCTURE_PROFILE_LEGACY = 'mlb-hit-led-v1';
 const MLB_STRUCTURE_PROFILE_HIT_PRIORITY = 'mlb-hit-priority-v2';
 const MLB_SAFE_HIT_RUNG = 1;
-const MLB_SAFE_HIT_PRICE_MAX = 1.72;
-const MLB_SAFE_STRIKEOUT_LINE_MAX = 5.5;
-const MLB_SAFE_STRIKEOUT_PRICE_MAX = 1.85;
+// Tightened from 1.72: at 1.55, implied probability ≥65%, filtering out fringe batters.
+// A 2-leg hit multi at 1.55×1.55 ≈ 2.4x — still viable odds with much better hit rate.
+const MLB_SAFE_HIT_PRICE_MAX = 1.55;
+// Tightened from 5.5: quality starters in 5-6 innings average 4-5 Ks; 5.5+ is a stretch line.
+const MLB_SAFE_STRIKEOUT_LINE_MAX = 4.5;
+const MLB_SAFE_STRIKEOUT_PRICE_MAX = 1.75;
 
 function normalizeText(value) {
   return String(value || '')
@@ -466,19 +469,16 @@ function isAllowedNrlPlayerPointsCandidate(candidate, eventContext) {
   const playerPointsLine = getNrlPlayerPointsLine(candidate);
   const bestPrice = toNumber(candidate?.bestPrice);
 
-  if (playerPointsLine === null || bestPrice === null || playerPointsLine < 4 || playerPointsLine > 10) {
+  // Max line capped at 6: NRL scorers average 4-8ppg, 8+ line hits ~40% of the time — too risky.
+  if (playerPointsLine === null || bestPrice === null || playerPointsLine < 4 || playerPointsLine > 6) {
     return false;
   }
 
-  if (playerPointsLine >= 8) {
-    return bestPrice <= 2.15;
-  }
-
   if (playerPointsLine >= 6) {
-    return bestPrice <= 1.95;
+    return bestPrice <= 1.75;
   }
 
-  return bestPrice <= 1.6;
+  return bestPrice <= 1.55;
 }
 
 function isAllowedNrlSpreadPoint(candidate) {
@@ -535,13 +535,33 @@ function getNrlComboProfile(candidates) {
   };
 }
 
+function isAllowedNrlTotalCandidate(candidate) {
+  const line = toNumber(candidate?.point);
+  const direction = normalizeText(candidate?.outcomeName);
+
+  if (isFirstHalfTotalCandidate(candidate)) {
+    // NRL 1st half averages ~20-23 combined points.
+    // OVER 22.5+ is ≤48% probability — too low for a reliable anchor.
+    // UNDER 26.5+ is ~72%+ probability — strong conservative anchor.
+    if (direction === 'over') return line !== null && line <= 22.5;
+    if (direction === 'under') return line !== null && line >= 26.5;
+    return false;
+  }
+
+  // Full game totals: NRL avg ~44 points.
+  // OVER 40.5+ has <55% probability; UNDER below 44 is too easy to miss.
+  if (direction === 'over') return line !== null && line <= 40.5;
+  if (direction === 'under') return line !== null && line >= 44;
+  return true;
+}
+
 function isAllowedNrlCandidate(candidate, eventContext) {
   if (isRaceToPointsCandidate(candidate)) {
     return false;
   }
 
   if (candidate.family === 'total') {
-    return true;
+    return isAllowedNrlTotalCandidate(candidate);
   }
 
   if (isSpreadMarket(candidate.market)) {
@@ -593,7 +613,9 @@ function isAllowedAflCandidate(candidate) {
       return bestPrice <= 1.95;
     }
 
-    return bestPrice <= 1.8;
+    // Line 10-14: only allow at prices that imply a confirmed starter role (≤1.55)
+    // Prices above 1.55 typically indicate bench/rotation players who are far too volatile
+    return bestPrice <= 1.55;
   }
 
   if (subtype === 'goal') {
@@ -601,6 +623,47 @@ function isAllowedAflCandidate(candidate) {
   }
 
   return false;
+}
+
+function getNbaStatLine(candidate, subtype) {
+  if (getNbaPropSubtype(candidate) !== subtype) return null;
+  const point = toNumber(candidate?.point);
+  if (point !== null) return point;
+  const text = ` ${getCandidateRawSearchText(candidate)} `;
+  const match = text.match(/\b(\d+)\s*\+\s*(?:rebounds?|assists?|points?|blocks?|steals?)\b/i);
+  return match ? toNumber(match[1]) : null;
+}
+
+function isAllowedNbaCandidate(candidate) {
+  if (candidate?.family !== 'prop') return false;
+  const subtype = getNbaPropSubtype(candidate);
+  if (!subtype) return false;
+
+  const bestPrice = toNumber(candidate?.bestPrice);
+  if (bestPrice === null) return false;
+
+  // Block highly volatile props — threes/steals/blocks have <40% hit rates in most contexts
+  if (subtype === 'three' || subtype === 'steal' || subtype === 'block') return false;
+
+  if (subtype === 'rebound') {
+    const line = getNbaStatLine(candidate, 'rebound');
+    // Hard cap at 8: lines above this occur <30% of the time for most players
+    if (line !== null && line > 8) return false;
+    // Line 7-8 still requires a tight price to confirm it's a big-man prop
+    if (line !== null && line >= 7 && bestPrice > 1.55) return false;
+    return true;
+  }
+
+  if (subtype === 'assist') {
+    const line = getNbaStatLine(candidate, 'assist');
+    // 4+ assists: only trust PGs/primary handlers priced as strong favorites (≤1.75)
+    // 5+ assists: even stricter — only elite ball-handlers consistently hit this
+    if (line !== null && line >= 5 && bestPrice > 1.60) return false;
+    if (line !== null && line >= 4 && bestPrice > 1.75) return false;
+    return true;
+  }
+
+  return true;
 }
 
 function isAllowedMlbCandidate(candidate) {
@@ -638,6 +701,10 @@ function filterCandidatePoolForSport(eventContext, candidatePool) {
 
   if (isSport(eventContext, 'nrl')) {
     return candidatePool.filter((candidate) => isAllowedNrlCandidate(candidate, eventContext));
+  }
+
+  if (isSport(eventContext, 'nba')) {
+    return candidatePool.filter((candidate) => isAllowedNbaCandidate(candidate));
   }
 
   return candidatePool;
@@ -1132,7 +1199,8 @@ function capAflCandidatePool(candidatePool, candidateLimit) {
 
   reserveDisposals((candidate) => isPreferredAflHighVolumeCandidate(candidate), Math.min(6, candidateLimit));
   reserveDisposals((candidate) => getAflDisposalLine(candidate) === 15, Math.max(0, candidateLimit - selectedIds.size));
-  reserveDisposals((candidate) => getAflDisposalLine(candidate) === 10, Math.max(0, Math.min(4, candidateLimit - selectedIds.size)));
+  // Line=10 candidates no longer get reserved slots — they compete on raw score only.
+  // Reserved slots were causing bench/rotation players to crowd out higher-quality picks.
 
   const selectedCandidates = candidatePool.filter((candidate) => selectedIds.has(candidate.candidateId));
 
@@ -1303,9 +1371,35 @@ function passesSportSpecificComboRules(eventContext, candidates) {
     if (comboProfile.aflGoalCount > 1) {
       return false;
     }
+
+    // Reject all-disposal combos where every leg is line ≤12 (all-10 problem).
+    // At least one leg must be at line ≥15 to ensure we're targeting starters.
+    if (comboProfile.aflDisposalsCount === candidates.length) {
+      const maxLine = getAflMaxDisposalLine(candidates);
+      if (maxLine !== null && maxLine < 15) {
+        return false;
+      }
+    }
+  }
+
+  if (isSport(eventContext, 'nba') && candidates.length >= 3) {
+    // All-same-stat 3-leg combos (e.g. 3 assist legs) are highly correlated:
+    // when the game script suppresses one player's stat, it tends to suppress all of them.
+    const subtypes = candidates.map((c) => getNbaPropSubtype(c)).filter(Boolean);
+    if (subtypes.length === candidates.length && new Set(subtypes).size === 1) {
+      return false;
+    }
   }
 
   return true;
+}
+
+function getAflMaxDisposalLine(candidates) {
+  const lines = candidates
+    .filter((c) => getAflPropSubtype(c) === 'disposal')
+    .map((c) => getAflDisposalLine(c))
+    .filter((v) => v !== null);
+  return lines.length ? Math.max(...lines) : null;
 }
 
 function buildCandidateCombinations(candidates, minSize, maxSize) {

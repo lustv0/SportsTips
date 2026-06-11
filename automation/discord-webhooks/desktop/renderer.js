@@ -1,4 +1,4 @@
-const elements = {
+﻿const elements = {
   toggleButton: document.getElementById('toggle-button'),
   daemonState: document.getElementById('daemon-state'),
   daemonMeta: document.getElementById('daemon-meta'),
@@ -42,11 +42,21 @@ const elements = {
   referralPlanDeferredSummary: document.getElementById('referral-plan-deferred-summary'),
   referralPlanDeferred: document.getElementById('referral-plan-deferred'),
   forceDailyCheck: document.getElementById('force-daily-check'),
-  forcePostSlates: document.getElementById('force-post-slates'),
   forcePostPicks: document.getElementById('force-post-picks'),
-  runReferralsNow: document.getElementById('run-referrals-now'),
   reviewResults: document.getElementById('review-results'),
+  reanalyzeSlipBtn: document.getElementById('reanalyze-slip-btn'),
+  testWebhookBtn: document.getElementById('test-webhook-btn'),
+  runReferralsNow: document.getElementById('run-referrals-now'),
+  runReferralsFeedback: document.getElementById('run-referrals-feedback'),
   quickActionsFeedback: document.getElementById('quick-actions-feedback'),
+  reanalyzePickSelect: document.getElementById('reanalyze-pick-select'),
+  reanalyzeRunBtn: document.getElementById('reanalyze-run-btn'),
+  reanalyzeResult: document.getElementById('reanalyze-result'),
+  reanalyzeCurrentPick: document.getElementById('reanalyze-current-pick'),
+  reanalyzeNewPick: document.getElementById('reanalyze-new-pick'),
+  reanalyzeRationale: document.getElementById('reanalyze-rationale'),
+  applyReanalyzedPickBtn: document.getElementById('apply-reanalyzed-pick-btn'),
+  reanalyzeFeedback: document.getElementById('reanalyze-feedback'),
   configPath: document.getElementById('config-path'),
   saveSettings: document.getElementById('save-settings'),
   settingsFeedback: document.getElementById('settings-feedback'),
@@ -78,34 +88,22 @@ const elements = {
   settingRolePicksEpl: document.getElementById('setting-role-picks-epl'),
   settingRolePicksOther: document.getElementById('setting-role-picks-other'),
   openConfig: document.getElementById('open-config'),
-  openFolder: document.getElementById('open-folder'),
-  reloadPicksFeed: document.getElementById('reload-picks-feed'),
-  generateReplacements: document.getElementById('generate-replacements'),
-  saveReplacement: document.getElementById('save-replacement'),
-  replacementPickSelect: document.getElementById('replacement-pick-select'),
-  replacementPickMeta: document.getElementById('replacement-pick-meta'),
-  picksFeedPath: document.getElementById('picks-feed-path'),
-  replacementStatus: document.getElementById('replacement-status'),
-  replacementReason: document.getElementById('replacement-reason'),
-  replacementMaxOptions: document.getElementById('replacement-max-options'),
-  currentLegsList: document.getElementById('current-legs-list'),
-  candidateLegsList: document.getElementById('candidate-legs-list'),
-  replacementOptionsList: document.getElementById('replacement-options-list'),
-  addCurrentLeg: document.getElementById('add-current-leg'),
-  addCandidateLeg: document.getElementById('add-candidate-leg'),
-  addReplacementOption: document.getElementById('add-replacement-option'),
-  replacementFeedback: document.getElementById('replacement-feedback')
+  settlementPickSelect: document.getElementById('settlement-pick-select'),
+  settlementPickMeta: document.getElementById('settlement-pick-meta'),
+  settlementLegsList: document.getElementById('settlement-legs-list'),
+  settlementResult: document.getElementById('settlement-result'),
+  settlementNotes: document.getElementById('settlement-notes'),
+  submitSettlement: document.getElementById('submit-settlement'),
+  settlementFeedback: document.getElementById('settlement-feedback')
 };
 
 let busy = false;
 let settingsDirty = false;
 let settingsLoaded = false;
 let refreshTimer = null;
-let picksFeedState = null;
-let selectedPickId = '';
-let replacementDirty = false;
 let currentStatus = null;
 let activePicksExpanded = false;
+let settlementActivePicks = [];
 
 const referralWebhookInputPairs = [
   ['settingWebhookReferralsNew', 'quickWebhookReferralsNew'],
@@ -628,319 +626,96 @@ function renderSettings(settings) {
   settingsLoaded = true;
 }
 
-function createRowButton(label, onClick) {
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.className = 'ghost-button';
-  button.textContent = label;
-  button.addEventListener('click', onClick);
-  return button;
-}
+function renderSettlementPickSelect(activePicks) {
+  settlementActivePicks = Array.isArray(activePicks) ? activePicks : [];
+  clearNode(elements.settlementPickSelect);
 
-function createCurrentLegRow(leg = {}) {
-  const row = document.createElement('div');
-  row.className = 'editable-row';
-  row.innerHTML = `
-    <div class="row-grid row-grid-legs">
-      <label class="field compact"><span>Label</span><input data-field="label" type="text" /></label>
-      <label class="field compact"><span>Model Prob.</span><input data-field="modelProbability" type="number" min="0" max="1" step="0.001" /></label>
-      <label class="field compact"><span>Support /10</span><input data-field="supportScore" type="number" min="0" max="10" step="0.1" /></label>
-      <label class="field compact"><span>Confidence</span>
-        <select data-field="confidenceTier" class="select-input compact-select">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </label>
-      <label class="field compact"><span>Status</span>
-        <select data-field="status" class="select-input compact-select">
-          <option value="active">Active</option>
-          <option value="refunded">Refunded</option>
-          <option value="cancelled">Cancelled</option>
-          <option value="canceled">Canceled</option>
-          <option value="voided">Voided</option>
-        </select>
-      </label>
-      <label class="field compact toggle-inline"><span>Locked</span><input data-field="locked" type="checkbox" /></label>
-      <label class="field compact option-span"><span>Rationale</span><textarea data-field="rationale" rows="2"></textarea></label>
-    </div>
-  `;
-
-  row.querySelector('[data-field="label"]').value = leg.label || '';
-  row.querySelector('[data-field="modelProbability"]').value = leg.modelProbability ?? '';
-  row.querySelector('[data-field="supportScore"]').value = leg.supportScore ?? '';
-  row.querySelector('[data-field="confidenceTier"]').value = leg.confidenceTier || 'medium';
-  row.querySelector('[data-field="status"]').value = leg.status || 'active';
-  row.querySelector('[data-field="locked"]').checked = Boolean(leg.locked);
-  row.querySelector('[data-field="rationale"]').value = leg.rationale || '';
-  row.append(createRowButton('Remove', () => {
-    row.remove();
-    markReplacementDirty();
-  }));
-  wireDirtyInputs(row);
-  return row;
-}
-
-function createCandidateLegRow(leg = {}) {
-  const row = document.createElement('div');
-  row.className = 'editable-row';
-  row.innerHTML = `
-    <div class="row-grid row-grid-legs">
-      <label class="field compact"><span>Label</span><input data-field="label" type="text" /></label>
-      <label class="field compact"><span>Model Prob.</span><input data-field="modelProbability" type="number" min="0" max="1" step="0.001" /></label>
-      <label class="field compact"><span>Support /10</span><input data-field="supportScore" type="number" min="0" max="10" step="0.1" /></label>
-      <label class="field compact"><span>Confidence</span>
-        <select data-field="confidenceTier" class="select-input compact-select">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </label>
-      <label class="field compact toggle-inline"><span>Locked</span><input data-field="locked" type="checkbox" /></label>
-      <label class="field compact option-span"><span>Rationale</span><textarea data-field="rationale" rows="2"></textarea></label>
-    </div>
-  `;
-
-  row.querySelector('[data-field="label"]').value = leg.label || '';
-  row.querySelector('[data-field="modelProbability"]').value = leg.modelProbability ?? '';
-  row.querySelector('[data-field="supportScore"]').value = leg.supportScore ?? '';
-  row.querySelector('[data-field="confidenceTier"]').value = leg.confidenceTier || 'medium';
-  row.querySelector('[data-field="locked"]').checked = Boolean(leg.locked);
-  row.querySelector('[data-field="rationale"]').value = leg.rationale || '';
-  row.append(createRowButton('Remove', () => {
-    row.remove();
-    markReplacementDirty();
-  }));
-  wireDirtyInputs(row);
-  return row;
-}
-
-function createReplacementOptionRow(option = {}) {
-  const row = document.createElement('div');
-  row.className = 'editable-row';
-  row.dataset.optionLegs = JSON.stringify(Array.isArray(option.legs) ? option.legs : []);
-  row.dataset.generatedFromTemplate = option.generatedFromTemplate ? 'true' : 'false';
-  row.innerHTML = `
-    <div class="row-grid row-grid-options">
-      <label class="field compact option-span"><span>Summary</span><input data-field="summary" type="text" /></label>
-      <label class="field compact"><span>Bet Type</span>
-        <select data-field="betType" class="select-input compact-select">
-          <option value="sgm">SGM</option>
-          <option value="single">Single</option>
-        </select>
-      </label>
-      <label class="field compact"><span>Model Prob.</span><input data-field="modelProbability" type="number" min="0" max="1" step="0.001" /></label>
-      <label class="field compact"><span>Support /10</span><input data-field="supportScore" type="number" min="0" max="10" step="0.1" /></label>
-      <label class="field compact"><span>Projection</span>
-        <select data-field="supportProjection" class="select-input compact-select">
-          <option value="cautious">Cautious</option>
-          <option value="moderate">Moderate</option>
-          <option value="strong">Strong</option>
-        </select>
-      </label>
-      <label class="field compact"><span>Confidence</span>
-        <select data-field="confidenceTier" class="select-input compact-select">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </label>
-      <label class="field compact"><span>Data Confidence</span>
-        <select data-field="dataConfidence" class="select-input compact-select">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </label>
-      <label class="field compact option-span"><span>Rationale</span><textarea data-field="rationale" rows="2"></textarea></label>
-    </div>
-  `;
-
-  row.querySelector('[data-field="summary"]').value = option.summary || '';
-  row.querySelector('[data-field="betType"]').value = option.betType || 'sgm';
-  row.querySelector('[data-field="modelProbability"]').value = option.modelProbability ?? '';
-  row.querySelector('[data-field="supportScore"]').value = option.supportScore ?? '';
-  row.querySelector('[data-field="supportProjection"]').value = option.supportProjection || 'moderate';
-  row.querySelector('[data-field="confidenceTier"]').value = option.confidenceTier || 'medium';
-  row.querySelector('[data-field="dataConfidence"]').value = option.dataConfidence || 'medium';
-  row.querySelector('[data-field="rationale"]').value = option.rationale || '';
-  row.append(createRowButton('Remove', () => {
-    row.remove();
-    markReplacementDirty();
-  }));
-  wireDirtyInputs(row);
-  return row;
-}
-
-function wireDirtyInputs(container) {
-  for (const input of container.querySelectorAll('input, textarea, select')) {
-    input.addEventListener('input', markReplacementDirty);
-    input.addEventListener('change', markReplacementDirty);
-  }
-}
-
-function clearChildren(element) {
-  while (element.firstChild) {
-    element.removeChild(element.firstChild);
-  }
-}
-
-function markReplacementDirty() {
-  replacementDirty = true;
-  elements.replacementFeedback.textContent = 'Unsaved replacement changes.';
-}
-
-function parseNumber(value) {
-  if (value === '' || value === null || value === undefined) {
-    return null;
-  }
-
-  const numeric = Number(value);
-  return Number.isFinite(numeric) ? numeric : null;
-}
-
-function readLegRows(container, includeStatus = false) {
-  return [...container.querySelectorAll('.editable-row')].map((row, index) => {
-    const leg = {
-      id: `ui-${index + 1}`,
-      label: row.querySelector('[data-field="label"]').value.trim(),
-      modelProbability: parseNumber(row.querySelector('[data-field="modelProbability"]').value),
-      supportScore: parseNumber(row.querySelector('[data-field="supportScore"]').value),
-      confidenceTier: row.querySelector('[data-field="confidenceTier"]').value,
-      rationale: row.querySelector('[data-field="rationale"]').value.trim(),
-      locked: row.querySelector('[data-field="locked"]').checked
-    };
-
-    if (includeStatus) {
-      leg.status = row.querySelector('[data-field="status"]').value;
-    }
-
-    return leg;
-  }).filter((leg) => leg.label);
-}
-
-function readReplacementOptions() {
-  return [...elements.replacementOptionsList.querySelectorAll('.editable-row')].map((row, index) => ({
-    variantId: `ui-option-${index + 1}`,
-    summary: row.querySelector('[data-field="summary"]').value.trim(),
-    betType: row.querySelector('[data-field="betType"]').value,
-    modelProbability: parseNumber(row.querySelector('[data-field="modelProbability"]').value),
-    supportScore: parseNumber(row.querySelector('[data-field="supportScore"]').value),
-    supportProjection: row.querySelector('[data-field="supportProjection"]').value,
-    confidenceTier: row.querySelector('[data-field="confidenceTier"]').value,
-    dataConfidence: row.querySelector('[data-field="dataConfidence"]').value,
-    rationale: row.querySelector('[data-field="rationale"]').value.trim(),
-    generatedFromTemplate: row.dataset.generatedFromTemplate === 'true',
-    legs: parseJson(row.dataset.optionLegs || '[]', [])
-  })).filter((option) => option.summary);
-}
-
-function renderPickSelect() {
-  clearChildren(elements.replacementPickSelect);
-
-  const picks = picksFeedState?.picks || [];
-
-  if (!picks.length) {
-    const option = document.createElement('option');
-    option.value = '';
-    option.textContent = 'No picks in feed';
-    elements.replacementPickSelect.append(option);
-    selectedPickId = '';
+  if (!settlementActivePicks.length) {
+    const opt = document.createElement('option');
+    opt.value = '';
+    opt.textContent = 'No active slips to settle';
+    elements.settlementPickSelect.append(opt);
+    elements.settlementPickMeta.textContent = 'No active slips. Active slips appear here once the daemon has posted bets.';
+    clearNode(elements.settlementLegsList);
     return;
   }
 
-  if (!selectedPickId || !picks.some((pick) => pick.id === selectedPickId)) {
-    selectedPickId = picks[0].id;
+  const placeholder = document.createElement('option');
+  placeholder.value = '';
+  placeholder.textContent = 'Select a slip...';
+  elements.settlementPickSelect.append(placeholder);
+
+  for (const pick of settlementActivePicks) {
+    const opt = document.createElement('option');
+    opt.value = pick.id;
+    opt.textContent = `${pick.event || 'Unknown event'}${pick.sportLabel ? ` â€” ${pick.sportLabel}` : ''}`;
+    elements.settlementPickSelect.append(opt);
   }
 
-  for (const pick of picks) {
-    const option = document.createElement('option');
-    option.value = pick.id;
-    option.textContent = `${pick.id} | ${pick.summary || pick.event || 'Untitled pick'}`;
-    option.selected = pick.id === selectedPickId;
-    elements.replacementPickSelect.append(option);
-  }
+  renderSettlementPickInfo(elements.settlementPickSelect.value);
 }
 
-function renderReplacementEditor() {
-  const pick = picksFeedState?.picks?.find((candidate) => candidate.id === selectedPickId);
-
-  elements.picksFeedPath.textContent = picksFeedState?.picksFeedPath || '';
-
-  clearChildren(elements.currentLegsList);
-  clearChildren(elements.candidateLegsList);
-  clearChildren(elements.replacementOptionsList);
+function renderSettlementPickInfo(pickId) {
+  const pick = settlementActivePicks.find((p) => p.id === pickId);
+  clearNode(elements.settlementLegsList);
 
   if (!pick) {
-    elements.replacementPickMeta.textContent = 'Load a pick from the feed to edit its replacement setup.';
-    elements.replacementStatus.value = '';
-    elements.replacementReason.value = '';
-    elements.replacementMaxOptions.value = 1;
+    elements.settlementPickMeta.textContent = 'Select an active slip above.';
     return;
   }
 
-  elements.replacementPickMeta.textContent = `${pick.summary || pick.event || 'Untitled pick'} | ${pick.sport || 'Unknown sport'} | Starts ${formatDate(pick.startTime)}`;
-  elements.replacementStatus.value = pick.replacementStatus || '';
-  elements.replacementReason.value = pick.replacementReason || '';
-  elements.replacementMaxOptions.value = pick.replacementTemplate?.maxOptions || 1;
+  elements.settlementPickMeta.textContent = [
+    pick.summary || pick.event,
+    pick.postedAt ? `Posted ${formatDate(pick.postedAt)}` : '',
+    pick.stakeUnits ? `${formatUnits(pick.stakeUnits)} stake` : ''
+  ].filter(Boolean).join(' | ');
 
-  const currentLegs = Array.isArray(pick.legs) && pick.legs.length
-    ? pick.legs
-    : [];
-
-  const candidateLegs = Array.isArray(pick.replacementTemplate?.candidateLegs) && pick.replacementTemplate.candidateLegs.length
-    ? pick.replacementTemplate.candidateLegs
-    : [];
-
-  const replacementOptions = Array.isArray(pick.replacementOptions) && pick.replacementOptions.length
-    ? pick.replacementOptions
-    : (Array.isArray(pick.generatedReplacementOptions) ? pick.generatedReplacementOptions : []);
-
-  if (!currentLegs.length) {
-    elements.currentLegsList.append(createCurrentLegRow());
-  } else {
-    for (const leg of currentLegs) {
-      elements.currentLegsList.append(createCurrentLegRow(leg));
+  if (Array.isArray(pick.legs) && pick.legs.length) {
+    for (const leg of pick.legs) {
+      const row = document.createElement('div');
+      row.className = 'settlement-leg-row';
+      row.textContent = leg.label || 'Unnamed leg';
+      elements.settlementLegsList.append(row);
     }
   }
-
-  if (!candidateLegs.length) {
-    elements.candidateLegsList.append(createCandidateLegRow());
-  } else {
-    for (const leg of candidateLegs) {
-      elements.candidateLegsList.append(createCandidateLegRow(leg));
-    }
-  }
-
-  if (!replacementOptions.length) {
-    elements.replacementOptionsList.append(createReplacementOptionRow());
-  } else {
-    for (const option of replacementOptions) {
-      elements.replacementOptionsList.append(createReplacementOptionRow(option));
-    }
-  }
-
-  replacementDirty = false;
-  elements.replacementFeedback.textContent = 'Replacement setup loaded from picks-feed.json.';
 }
 
-function collectReplacementDraft() {
-  return {
-    pickId: selectedPickId,
-    replacementStatus: elements.replacementStatus.value,
-    replacementReason: elements.replacementReason.value.trim(),
-    maxOptions: parseNumber(elements.replacementMaxOptions.value) || 5,
-    legs: readLegRows(elements.currentLegsList, true),
-    candidateLegs: readLegRows(elements.candidateLegsList, false),
-    replacementOptions: readReplacementOptions()
-  };
-}
+async function submitSettlement() {
+  const pickId = elements.settlementPickSelect.value;
+  const result = elements.settlementResult.value;
 
-async function loadPicksFeed(pickId = selectedPickId) {
-  picksFeedState = await window.sportsTipsDesktop.getPicksFeed();
-  selectedPickId = pickId || picksFeedState.picks?.[0]?.id || '';
-  renderPickSelect();
-  renderReplacementEditor();
+  if (!pickId) {
+    elements.settlementFeedback.textContent = 'Select an active slip first.';
+    return;
+  }
+
+  if (!result) {
+    elements.settlementFeedback.textContent = 'Choose a result (Win, Loss, or Void) before submitting.';
+    return;
+  }
+
+  elements.submitSettlement.disabled = true;
+  elements.settlementFeedback.textContent = 'Settling...';
+
+  try {
+    const response = await window.sportsTipsDesktop.settlePickManually({
+      pickId,
+      result,
+      notes: elements.settlementNotes.value.trim()
+    });
+
+    elements.settlementFeedback.textContent = response.dryRun
+      ? 'Dry-run: settlement simulated but not written to disk.'
+      : 'Settlement recorded. The slip has been removed from the active list.';
+
+    elements.settlementResult.value = '';
+    elements.settlementNotes.value = '';
+    await refresh();
+  } catch (error) {
+    elements.settlementFeedback.textContent = error.message;
+  } finally {
+    elements.submitSettlement.disabled = false;
+  }
 }
 
 function collectSettings() {
@@ -1005,6 +780,8 @@ function render(status) {
   elements.dryRunValue.textContent = `${status.running ? 'Daemon' : 'Saved config'} ${status.dryRun ? 'dry run is ON' : 'dry run is OFF'}${status.settingsApplyRequiresRestart ? ' | Restart needed to apply saved webhook/live-mode changes' : ''} | Analysis ${String(status.analysisEngine || 'rules').toUpperCase()}${status.lastMarketRefreshAt ? ` | Scrape ${formatDate(status.lastMarketRefreshAt)}` : ''}`;
   renderActivePicks(status.activePicks || []);
   setActivePicksExpanded(activePicksExpanded);
+  renderSettlementPickSelect(status.activePicks || []);
+  renderReanalyzePickSelect(status.activePicks || []);
 
   if (status.trackerSummary) {
     elements.trackerUnitsValue.textContent = `Bankroll ${formatUnits(status.trackerSummary.currentUnits)}`;
@@ -1108,31 +885,6 @@ async function saveSettings(feedbackTargets = [elements.settingsFeedback]) {
   }
 }
 
-async function forcePostSlates() {
-  elements.forcePostSlates.disabled = true;
-  elements.quickActionsFeedback.textContent = 'Refreshing today\'s slate and posting now...';
-
-  try {
-    const result = await window.sportsTipsDesktop.forcePostSlates();
-
-    if (result.dryRun) {
-      elements.quickActionsFeedback.textContent = result.posted > 0
-        ? `Slate run completed in dry-run mode for ${result.targetDateKey || 'the next actionable slate'}. ${result.posted} message${result.posted === 1 ? '' : 's'} prepared, nothing posted.`
-        : 'No slate messages were posted. No actionable slate was found in the current lookahead window.';
-    } else {
-      elements.quickActionsFeedback.textContent = result.posted > 0
-        ? `Posted ${result.posted} slate message${result.posted === 1 ? '' : 's'} for ${result.targetDateKey || 'the next actionable slate'} from ${formatSlateSourceLabel(result.source)}.`
-        : 'No slate messages were posted. No actionable slate was found in the current lookahead window.';
-    }
-
-    await refresh();
-  } catch (error) {
-    elements.quickActionsFeedback.textContent = error.message;
-  } finally {
-    elements.forcePostSlates.disabled = false;
-  }
-}
-
 async function forceDailyCheck() {
   elements.forceDailyCheck.disabled = true;
   elements.quickActionsFeedback.textContent = 'Resetting today\'s generated state, refreshing the market snapshot, and running slates, analysis, and picks...';
@@ -1147,7 +899,6 @@ async function forceDailyCheck() {
     elements.quickActionsFeedback.textContent = `${result.dryRun ? 'Dry-run daily check completed.' : 'Force daily check completed.'} Cleared ${result.prepare.removedGeneratedFeedPicks} generated feed picks, ${result.prepare.removedPostedPickIds} posted pick ids, and ${result.prepare.removedTrackingPickIds} tracked generated entries. Slate messages: ${result.slates.posted}. Analysis generated ${result.analysis.generated} from ${result.analysis.considered} events. ${pickSummary}`;
 
     await refresh();
-    await loadPicksFeed();
   } catch (error) {
     elements.quickActionsFeedback.textContent = error.message;
   } finally {
@@ -1170,7 +921,6 @@ async function reviewResults() {
     elements.quickActionsFeedback.textContent = `${result.dryRun ? 'Dry-run results review complete.' : 'Results review complete.'} Settlements posted: ${result.settlementsPosted}. Auto-settled: ${result.autoSettled}. Pending review: ${result.pendingReview}. ${result.dryRun ? 'Prepared' : 'Posted'} ${result.unitReportPosted} unit report message${result.unitReportPosted === 1 ? '' : 's'} for ${dayLabel}. ${bankrollSummary}`;
 
     await refresh();
-    await loadPicksFeed();
   } catch (error) {
     elements.quickActionsFeedback.textContent = error.message;
   } finally {
@@ -1200,7 +950,7 @@ async function forcePostPicks() {
 
 async function runReferralsNow() {
   elements.runReferralsNow.disabled = true;
-  elements.quickActionsFeedback.textContent = 'Running the referrals monitor now, refreshing the ladder, and publishing any referral changes...';
+  elements.runReferralsFeedback.textContent = 'Running the referrals monitor now, refreshing the ladder, and publishing any referral changes...';
 
   try {
     const result = await window.sportsTipsDesktop.runReferralsNow();
@@ -1209,15 +959,122 @@ async function runReferralsNow() {
       ? ` ${result.fetchFailureCount} fetch failure${result.fetchFailureCount === 1 ? '' : 's'} need review.`
       : '';
 
-    elements.quickActionsFeedback.textContent = result.changes > 0
+    elements.runReferralsFeedback.textContent = result.changes > 0
       ? `${result.dryRun ? 'Prepared' : 'Processed'} ${result.changes} referral change${result.changes === 1 ? '' : 's'} across ${result.offers} tracked offer${result.offers === 1 ? '' : 's'} (${changeSummary}). ${result.dryRun ? 'Dry-run kept Discord unchanged.' : `Posted ${result.posted} referral webhook message${result.posted === 1 ? '' : 's'} and refreshed the masterlist.`}${fetchFailureSummary}`
       : `${result.dryRun ? 'Dry-run' : 'Referrals run'} completed. No referral changes were detected across ${result.offers} tracked offer${result.offers === 1 ? '' : 's'}; the masterlist was refreshed.${fetchFailureSummary}`;
 
     await refresh();
   } catch (error) {
-    elements.quickActionsFeedback.textContent = error.message;
+    elements.runReferralsFeedback.textContent = error.message;
   } finally {
     elements.runReferralsNow.disabled = false;
+  }
+}
+
+let reanalyzeLastResult = null;
+
+function renderReanalyzePickSelect(activePicks) {
+  const now = Date.now();
+  const pregame = (activePicks || []).filter((pick) => {
+    const start = pick.startTime ? new Date(pick.startTime).getTime() : Number.NaN;
+    return Number.isFinite(start) && start > now;
+  });
+
+  elements.reanalyzePickSelect.innerHTML = pregame.length === 0
+    ? '<option value="">No pre-game slips available</option>'
+    : ['<option value="">Select a pre-game slip...</option>',
+        ...pregame.map((pick) => {
+          const label = pick.event || pick.summary || pick.id;
+          const sport = pick.sport ? ` (${pick.sport.toUpperCase()})` : '';
+          return `<option value="${pick.id}">${label}${sport}</option>`;
+        })
+      ].join('');
+}
+
+async function reanalyzeSlip() {
+  const pickId = elements.reanalyzePickSelect.value;
+
+  if (!pickId) {
+    elements.reanalyzeFeedback.textContent = 'Select a pre-game slip first.';
+    return;
+  }
+
+  elements.reanalyzeRunBtn.disabled = true;
+  elements.reanalyzeResult.hidden = true;
+  elements.reanalyzeFeedback.textContent = 'Running rules engine against current snapshot data...';
+  reanalyzeLastResult = null;
+
+  try {
+    const result = await window.sportsTipsDesktop.reanalyzeSlip({ pickId });
+    reanalyzeLastResult = result;
+
+    elements.reanalyzeCurrentPick.textContent = result.originalSummary || '(no summary)';
+    elements.reanalyzeNewPick.textContent = result.newSummary || 'No qualifying pick found.';
+    elements.reanalyzeRationale.textContent = result.rationale || '';
+    elements.reanalyzeResult.hidden = false;
+
+    if (result.hasNewPick && result.newSummary !== result.originalSummary) {
+      elements.applyReanalyzedPickBtn.hidden = false;
+      elements.reanalyzeFeedback.textContent = 'New pick found — review and apply if it looks better.';
+    } else {
+      elements.applyReanalyzedPickBtn.hidden = true;
+      elements.reanalyzeFeedback.textContent = result.hasNewPick
+        ? 'Rules engine produced the same pick as the current one. No change needed.'
+        : 'Rules engine found no qualifying pick for this event.';
+    }
+  } catch (error) {
+    elements.reanalyzeFeedback.textContent = error.message;
+  } finally {
+    elements.reanalyzeRunBtn.disabled = false;
+  }
+}
+
+async function applyReanalyzedPick() {
+  if (!reanalyzeLastResult) {
+    elements.reanalyzeFeedback.textContent = 'Run a re-analysis first.';
+    return;
+  }
+
+  elements.applyReanalyzedPickBtn.disabled = true;
+  elements.reanalyzeFeedback.textContent = 'Applying new pick...';
+
+  try {
+    const response = await window.sportsTipsDesktop.applyReanalyzedPick({
+      pickId: reanalyzeLastResult.originalPickId,
+      newPick: reanalyzeLastResult.newPick
+    });
+
+    elements.reanalyzeFeedback.textContent = response.dryRun
+      ? 'Dry-run: new pick simulated, picks feed unchanged.'
+      : 'New pick applied. Picks feed updated.';
+
+    elements.applyReanalyzedPickBtn.hidden = true;
+    elements.reanalyzeResult.hidden = true;
+    reanalyzeLastResult = null;
+    await refresh();
+  } catch (error) {
+    elements.reanalyzeFeedback.textContent = error.message;
+  } finally {
+    elements.applyReanalyzedPickBtn.disabled = false;
+  }
+}
+
+async function testWebhook() {
+  elements.testWebhookBtn.disabled = true;
+  elements.quickActionsFeedback.textContent = 'Sending test ping to all configured Discord webhooks...';
+
+  try {
+    const result = await window.sportsTipsDesktop.testWebhook();
+    const { ok, failed, results } = result;
+    const failedLabels = (results || []).filter((r) => !r.ok).map((r) => r.label).join(', ');
+
+    elements.quickActionsFeedback.textContent = failed === 0
+      ? `All ${ok} configured webhook${ok === 1 ? '' : 's'} responded OK.`
+      : `${ok} webhook${ok === 1 ? '' : 's'} OK, ${failed} failed: ${failedLabels || 'unknown'}.`;
+  } catch (error) {
+    elements.quickActionsFeedback.textContent = error.message;
+  } finally {
+    elements.testWebhookBtn.disabled = false;
   }
 }
 
@@ -1236,50 +1093,6 @@ async function verifyReferral(offerId) {
     await refresh();
   } catch (error) {
     elements.referralReviewFeedback.textContent = error.message;
-  }
-}
-
-async function generateReplacements() {
-  elements.generateReplacements.disabled = true;
-  elements.replacementFeedback.textContent = 'Generating replacement candidates...';
-
-  try {
-    const preview = await window.sportsTipsDesktop.generateReplacementPreview(collectReplacementDraft());
-    clearChildren(elements.replacementOptionsList);
-
-    const options = Array.isArray(preview.options) ? preview.options : [];
-
-    if (!options.length) {
-      elements.replacementOptionsList.append(createReplacementOptionRow());
-      elements.replacementFeedback.textContent = 'No generated replacements. Add candidate legs or mark a leg as refunded/cancelled.';
-    } else {
-      for (const option of options) {
-        elements.replacementOptionsList.append(createReplacementOptionRow(option));
-      }
-
-      replacementDirty = true;
-      elements.replacementFeedback.textContent = `Generated ${options.length} candidate replacement ${options.length === 1 ? 'option' : 'options'}. Save to write them into the feed.`;
-    }
-  } catch (error) {
-    elements.replacementFeedback.textContent = error.message;
-  } finally {
-    elements.generateReplacements.disabled = false;
-  }
-}
-
-async function saveReplacementSetup() {
-  elements.saveReplacement.disabled = true;
-  elements.replacementFeedback.textContent = 'Saving replacement setup...';
-
-  try {
-    picksFeedState = await window.sportsTipsDesktop.savePickReplacement(collectReplacementDraft());
-    renderPickSelect();
-    renderReplacementEditor();
-    elements.replacementFeedback.textContent = 'Replacement setup saved to picks-feed.json.';
-  } catch (error) {
-    elements.replacementFeedback.textContent = error.message;
-  } finally {
-    elements.saveReplacement.disabled = false;
   }
 }
 
@@ -1351,20 +1164,36 @@ elements.openConfig.addEventListener('click', () => {
   window.sportsTipsDesktop.openConfig();
 });
 
-elements.openFolder.addEventListener('click', () => {
-  window.sportsTipsDesktop.openAutomationFolder();
-});
-
 elements.forceDailyCheck.addEventListener('click', () => {
   forceDailyCheck();
 });
 
-elements.forcePostSlates.addEventListener('click', () => {
-  forcePostSlates();
-});
-
 elements.forcePostPicks.addEventListener('click', () => {
   forcePostPicks();
+});
+
+elements.reviewResults.addEventListener('click', () => {
+  reviewResults();
+});
+
+elements.reanalyzeSlipBtn.addEventListener('click', () => {
+  const panel = elements.reanalyzeSlipBtn.closest('details');
+  if (panel && !panel.open) {
+    panel.open = true;
+  }
+  reanalyzeSlip();
+});
+
+elements.reanalyzeRunBtn.addEventListener('click', () => {
+  reanalyzeSlip();
+});
+
+elements.applyReanalyzedPickBtn.addEventListener('click', () => {
+  applyReanalyzedPick();
+});
+
+elements.testWebhookBtn.addEventListener('click', () => {
+  testWebhook();
 });
 
 elements.runReferralsNow.addEventListener('click', () => {
@@ -1381,55 +1210,16 @@ elements.referralReviewList.addEventListener('click', (event) => {
   verifyReferral(button.dataset.referralVerify);
 });
 
-elements.reviewResults.addEventListener('click', () => {
-  reviewResults();
+elements.settlementPickSelect.addEventListener('change', () => {
+  renderSettlementPickInfo(elements.settlementPickSelect.value);
 });
 
-elements.reloadPicksFeed.addEventListener('click', () => {
-  loadPicksFeed().catch((error) => {
-    elements.replacementFeedback.textContent = error.message;
-  });
+elements.submitSettlement.addEventListener('click', () => {
+  submitSettlement();
 });
-
-elements.generateReplacements.addEventListener('click', () => {
-  generateReplacements();
-});
-
-elements.saveReplacement.addEventListener('click', () => {
-  saveReplacementSetup();
-});
-
-elements.replacementPickSelect.addEventListener('change', () => {
-  selectedPickId = elements.replacementPickSelect.value;
-  renderReplacementEditor();
-});
-
-elements.addCurrentLeg.addEventListener('click', () => {
-  elements.currentLegsList.append(createCurrentLegRow());
-  markReplacementDirty();
-});
-
-elements.addCandidateLeg.addEventListener('click', () => {
-  elements.candidateLegsList.append(createCandidateLegRow());
-  markReplacementDirty();
-});
-
-elements.addReplacementOption.addEventListener('click', () => {
-  elements.replacementOptionsList.append(createReplacementOptionRow());
-  markReplacementDirty();
-});
-
-for (const input of [elements.replacementStatus, elements.replacementReason, elements.replacementMaxOptions]) {
-  input.addEventListener('input', markReplacementDirty);
-  input.addEventListener('change', markReplacementDirty);
-}
 
 refresh().catch((error) => {
   elements.daemonMeta.textContent = error.message;
-});
-
-loadPicksFeed().catch((error) => {
-  elements.replacementFeedback.textContent = error.message;
 });
 
 async function runRefreshLoop() {

@@ -6,7 +6,10 @@ import { fileURLToPath } from 'node:url';
 
 import { app, BrowserWindow, Menu, Tray, ipcMain, shell } from 'electron';
 
-import { buildDailyTrackerSummary } from '../src/bot-tracker.mjs';
+import { buildDailyTrackerSummary, appendSettlementTrackerEntries } from '../src/bot-tracker.mjs';
+import { writeSettlementsToWorkspace } from '../src/settlement-writeback.mjs';
+import { buildAnalysisCandidatePool, analyzeEventWithRules, buildPickFromAnalysisDecision } from '../src/ai-pick-generator.mjs';
+import { buildSnapshotEvents, loadSnapshotFile } from '../src/web-market-intake.mjs';
 import { loadConfig, loadRawConfigFile, saveRawConfigFile } from '../src/config.mjs';
 import { buildAutomatedMessage, sendWebhookMessage } from '../src/discord.mjs';
 import { runForcedDailyCheck } from '../src/forced-daily-check.mjs';
@@ -16,7 +19,6 @@ import { runPicksJob, resolvePickWebhookChannel } from '../src/jobs/picks.mjs';
 import { buildReferralCapitalPlan, runReferralsJob, setReferralVerification } from '../src/jobs/referrals.mjs';
 import { runResultsJob } from '../src/jobs/results.mjs';
 import { runTrackerSummaryJob } from '../src/jobs/tracker-summary.mjs';
-import { generateReplacementOptionsFromTemplate } from '../src/replacement-generator.mjs';
 import { runSlatesJob } from '../src/jobs/slates.mjs';
 import { loadRuntimeStatus } from '../src/runtime-status.mjs';
 import { getDateKey } from '../src/scheduler.mjs';
@@ -460,115 +462,51 @@ function sanitizeLegs(legs, { includeStatus = false } = {}) {
     .filter(Boolean);
 }
 
-function sanitizeReplacementOptions(options) {
-  if (!Array.isArray(options)) {
-    return [];
+async function settlePickManually(payload) {
+  const { pickId, result, notes } = payload || {};
+
+  if (!pickId) {
+    throw new Error('No pick ID provided.');
   }
 
-  return options
-    .map((option, index) => {
-      const summary = sanitizeText(option.summary);
-
-      if (!summary) {
-        return null;
-      }
-
-      return {
-        variantId: sanitizeText(option.variantId) || `manual-${index + 1}`,
-        summary,
-        betType: sanitizeText(option.betType || 'sgm').toLowerCase() || 'sgm',
-        modelProbability: sanitizeNumber(option.modelProbability),
-        supportScore: sanitizeNumber(option.supportScore),
-        supportProjection: sanitizeText(option.supportProjection || '').toLowerCase() || null,
-        confidenceTier: sanitizeText(option.confidenceTier || 'medium').toLowerCase() || 'medium',
-        dataConfidence: sanitizeText(option.dataConfidence || 'medium').toLowerCase() || 'medium',
-        rationale: sanitizeText(option.rationale),
-        generatedFromTemplate: Boolean(option.generatedFromTemplate),
-        legs: sanitizeLegs(option.legs, { includeStatus: true })
-      };
-    })
-    .filter(Boolean);
-}
-
-function toEditorPick(pick) {
-  return {
-    id: pick.id,
-    sport: pick.sport || '',
-    event: pick.event || '',
-    startTime: pick.startTime || null,
-    summary: pick.summary || '',
-    betType: pick.betType || '',
-    replacementStatus: pick.replacementStatus || '',
-    replacementReason: pick.replacementReason || '',
-    replacementOptions: sanitizeReplacementOptions(Array.isArray(pick.replacementOptions) ? pick.replacementOptions : []),
-    generatedReplacementOptions: sanitizeReplacementOptions(generateReplacementOptionsFromTemplate(pick)),
-    legs: sanitizeLegs(pick.legs, { includeStatus: true }),
-    replacementTemplate: pick.replacementTemplate && typeof pick.replacementTemplate === 'object'
-      ? {
-          ...pick.replacementTemplate,
-          candidateLegs: sanitizeLegs(pick.replacementTemplate.candidateLegs),
-          maxOptions: Math.max(1, Number(pick.replacementTemplate.maxOptions || 1))
-        }
-      : { candidateLegs: [], maxOptions: 1 }
-  };
-}
-
-async function getPicksEditorState() {
-  const config = await loadConfig();
-  const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
-
-  return {
-    picksFeedPath: config.__paths.picksFeedFile,
-    picks: feed.picks.map(toEditorPick)
-  };
-}
-
-function mergeReplacementDraft(existingPick, payload) {
-  const nextLegs = sanitizeLegs(payload?.legs, { includeStatus: true });
-  const candidateLegs = sanitizeLegs(payload?.candidateLegs);
-  const maxOptions = Math.max(1, Number(payload?.maxOptions || existingPick.replacementTemplate?.maxOptions || 1));
-
-  return {
-    ...existingPick,
-    replacementStatus: sanitizeText(payload?.replacementStatus),
-    replacementReason: sanitizeText(payload?.replacementReason),
-    replacementOptions: sanitizeReplacementOptions(payload?.replacementOptions),
-    legs: nextLegs,
-    replacementTemplate: {
-      ...(existingPick.replacementTemplate || {}),
-      candidateLegs,
-      maxOptions
-    }
-  };
-}
-
-async function generateReplacementPreview(payload) {
-  const config = await loadConfig();
-  const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
-  const pick = feed.picks.find((candidate) => candidate.id === payload?.pickId);
-
-  if (!pick) {
-    throw new Error('Pick not found in picks feed.');
+  if (!['win', 'loss', 'return'].includes(String(result || '').toLowerCase())) {
+    throw new Error('Result must be win, loss, or return.');
   }
 
-  const mergedPick = mergeReplacementDraft(pick, payload);
-  return {
-    options: generateReplacementOptionsFromTemplate(mergedPick)
-  };
-}
-
-async function savePickReplacement(payload) {
   const config = await loadConfig();
+  const state = await loadState(config.__paths.stateFile);
   const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
-  const pickIndex = feed.picks.findIndex((candidate) => candidate.id === payload?.pickId);
+  const pickIndex = feed.picks.findIndex((p) => p.id === pickId);
 
   if (pickIndex === -1) {
-    throw new Error('Pick not found in picks feed.');
+    throw new Error('Pick not found in active picks feed.');
   }
 
-  feed.picks[pickIndex] = mergeReplacementDraft(feed.picks[pickIndex], payload);
-  await saveRawPicksFeed(config.__paths.picksFeedFile, feed);
-  return getPicksEditorState();
+  const now = new Date().toISOString();
+  const settledPick = {
+    ...feed.picks[pickIndex],
+    status: result.toLowerCase(),
+    settledAt: now,
+    settlementNotes: notes || 'Manually settled from desktop app.'
+  };
+
+  if (!state.posts) { state.posts = {}; }
+  if (!state.posts.results) { state.posts.results = {}; }
+  state.posts.results[pickId] = now;
+
+  const context = { config, state, dryRun: Boolean(config.dryRun) };
+
+  if (!context.dryRun) {
+    await writeSettlementsToWorkspace(context, [settledPick], feed);
+    await appendSettlementTrackerEntries(config, [settledPick], now);
+    feed.picks.splice(pickIndex, 1);
+    await saveRawPicksFeed(config.__paths.picksFeedFile, feed);
+    await saveState(config.__paths.stateFile, state);
+  }
+
+  await refreshUi();
+
+  return { success: true, dryRun: context.dryRun };
 }
 
 async function getDesktopStatus() {
@@ -1125,6 +1063,162 @@ async function createTray() {
   await refreshUi();
 }
 
+async function reanalyzeSlip(payload) {
+  const { pickId } = payload || {};
+
+  if (!pickId) {
+    throw new Error('No pick ID provided.');
+  }
+
+  const config = await loadConfig();
+  const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
+  const pick = feed.picks.find((p) => p.id === pickId);
+
+  if (!pick) {
+    throw new Error('Pick not found in feed.');
+  }
+
+  const sport = (config.sports || []).find((s) => {
+    const sk = String(s.key || '').toLowerCase();
+    const pk = String(pick.sport || '').toLowerCase();
+    return sk === pk || String(s.marketKey || '').toLowerCase() === pk;
+  });
+
+  if (!sport) {
+    throw new Error(`No sport config found for sport "${pick.sport}".`);
+  }
+
+  const snapshot = await loadSnapshotFile(config.__paths.snapshotFile);
+  const now = new Date();
+  const snapshotEvents = buildSnapshotEvents(snapshot, config, sport, now);
+  const pickName = String(pick.event || pick.summary || '').toLowerCase().trim();
+  const matchedEvent = snapshotEvents.find((ev) => {
+    const evName = String(ev.displayName || `${ev.home_team} vs ${ev.away_team}`).toLowerCase().trim();
+    return evName === pickName || evName.includes(pickName) || pickName.includes(evName);
+  }) || snapshotEvents[0];
+
+  if (!matchedEvent) {
+    throw new Error('No matching event found in the current snapshot. The snapshot may be stale or the event may have started.');
+  }
+
+  const eventContext = {
+    sportKey: sport.key,
+    sportLabel: sport.label,
+    marketSportKey: sport.marketKey || sport.key,
+    eventId: matchedEvent.id,
+    espnEventId: matchedEvent.espnEventId || '',
+    eventName: matchedEvent.displayName || `${matchedEvent.away_team} vs ${matchedEvent.home_team}`,
+    homeTeam: matchedEvent.home_team,
+    homeTeamId: matchedEvent.homeTeamId || '',
+    awayTeam: matchedEvent.away_team,
+    awayTeamId: matchedEvent.awayTeamId || '',
+    startTime: matchedEvent.commence_time,
+    venue: matchedEvent.venue || null,
+    weather: pick.weather || null,
+    generatorConfig: config.analysis.generator
+  };
+
+  const allQuotes = matchedEvent.snapshotQuotes || [];
+  const candidatePool = buildAnalysisCandidatePool(eventContext, allQuotes, Number(config.analysis?.maxCandidateLegsPerEvent || 14));
+
+  if (candidatePool.length === 0) {
+    return {
+      originalPickId: pickId,
+      originalSummary: pick.summary || null,
+      hasNewPick: false,
+      newSummary: null,
+      rationale: 'No market-backed candidates found in the current snapshot.',
+      newPick: null
+    };
+  }
+
+  const context = { config, state: {}, dryRun: Boolean(config.dryRun) };
+  const decision = await analyzeEventWithRules(context, eventContext, candidatePool, {
+    availableUnits: pick.stakeUnits ? Number(pick.stakeUnits) : undefined
+  });
+  const newPick = buildPickFromAnalysisDecision(eventContext, candidatePool, decision);
+
+  return {
+    originalPickId: pickId,
+    originalSummary: pick.summary || null,
+    hasNewPick: Boolean(newPick?.summary),
+    newSummary: newPick?.summary || null,
+    rationale: decision?.rationale || decision?.summary || null,
+    newPick: newPick || null
+  };
+}
+
+async function applyReanalyzedPick(payload) {
+  const { pickId, newPick } = payload || {};
+
+  if (!pickId) {
+    throw new Error('No pick ID provided.');
+  }
+
+  if (!newPick?.summary) {
+    throw new Error('No new pick data to apply.');
+  }
+
+  const config = await loadConfig();
+  const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
+  const pickIndex = feed.picks.findIndex((p) => p.id === pickId);
+
+  if (pickIndex === -1) {
+    throw new Error('Pick not found in feed.');
+  }
+
+  const dryRun = Boolean(config.dryRun);
+
+  if (!dryRun) {
+    const existing = feed.picks[pickIndex];
+    feed.picks[pickIndex] = {
+      ...existing,
+      summary: newPick.summary,
+      rationale: newPick.rationale || existing.rationale,
+      legs: newPick.legs || existing.legs,
+      betType: newPick.betType || existing.betType,
+      modelProbability: newPick.modelProbability ?? existing.modelProbability,
+      supportScore: newPick.supportScore ?? existing.supportScore,
+      confidenceTier: newPick.confidenceTier || existing.confidenceTier,
+      reanalyzedAt: new Date().toISOString()
+    };
+    await saveRawPicksFeed(config.__paths.picksFeedFile, feed);
+  }
+
+  await refreshUi();
+  return { success: true, dryRun };
+}
+
+async function testWebhook() {
+  const config = await loadConfig();
+  const webhooks = config.discord?.webhooks || {};
+  const results = [];
+
+  for (const [key, url] of Object.entries(webhooks)) {
+    if (!url) {
+      continue;
+    }
+
+    const label = WEBHOOK_LABELS[key] || key;
+
+    try {
+      const response = await fetch(`${url}?wait=false`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: '✅ Webhook test ping from Tipping Bot Desktop.' })
+      });
+
+      results.push({ key, label, ok: response.ok, status: response.status });
+    } catch (error) {
+      results.push({ key, label, ok: false, status: null, error: error.message });
+    }
+  }
+
+  const ok = results.filter((r) => r.ok).length;
+  const failed = results.filter((r) => !r.ok).length;
+  return { ok, failed, results };
+}
+
 ipcMain.handle('desktop:get-status', () => getDesktopStatus());
 ipcMain.handle('desktop:start-daemon', () => startDaemon());
 ipcMain.handle('desktop:stop-daemon', () => stopDaemon());
@@ -1136,9 +1230,10 @@ ipcMain.handle('desktop:force-post-picks', () => forcePostApprovedPicks());
 ipcMain.handle('desktop:run-referrals-now', () => runReferralsNow());
 ipcMain.handle('desktop:verify-referral', (_, payload) => verifyReferralOffer(payload));
 ipcMain.handle('desktop:save-settings', (_, payload) => saveDesktopSettings(payload));
-ipcMain.handle('desktop:get-picks-feed', () => getPicksEditorState());
-ipcMain.handle('desktop:generate-replacement-preview', (_, payload) => generateReplacementPreview(payload));
-ipcMain.handle('desktop:save-pick-replacement', (_, payload) => savePickReplacement(payload));
+ipcMain.handle('desktop:settle-pick-manually', (_, payload) => settlePickManually(payload));
+ipcMain.handle('desktop:reanalyze-slip', (_, payload) => reanalyzeSlip(payload));
+ipcMain.handle('desktop:apply-reanalyzed-pick', (_, payload) => applyReanalyzedPick(payload));
+ipcMain.handle('desktop:test-webhook', () => testWebhook());
 ipcMain.handle('desktop:open-config', async () => {
   const status = await getDesktopStatus();
   return shell.openPath(status.configPath);

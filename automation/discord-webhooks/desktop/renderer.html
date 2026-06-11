@@ -12,7 +12,7 @@
       <div>
         <p class="eyebrow">Discord Automation</p>
         <h1>Tipping Bot</h1>
-        <p class="subcopy">One switch for the daemon, one place to see whether it is live, and one workspace for live replacement rebuilds before the bot posts them.</p>
+        <p class="subcopy">One switch to run the daemon. Monitor live status, manage active bets, settle results manually, and configure everything from here.</p>
       </div>
       <button id="toggle-button" class="power-button" type="button">Loading...</button>
     </section>
@@ -52,13 +52,12 @@
       <article class="panel stat-panel quick-actions-panel">
         <p class="label">Quick Actions</p>
         <div class="quick-actions-grid">
-          <button id="force-daily-check" class="secondary-button" type="button">Force Daily Check</button>
-          <button id="force-post-slates" class="secondary-button" type="button">Force Post Slate</button>
-          <button id="force-post-picks" class="secondary-button" type="button">Force Post Picks</button>
-          <button id="run-referrals-now" class="secondary-button" type="button">Run Referrals Now</button>
-          <button id="review-results" class="secondary-button" type="button">Review Results</button>
+          <button id="force-daily-check" class="secondary-button" type="button">Run Daily Check</button>
+          <button id="force-post-picks" class="secondary-button" type="button">Post Picks Now</button>
+          <button id="review-results" class="secondary-button" type="button">Grade Results</button>
+          <button id="reanalyze-slip-btn" class="secondary-button" type="button">Re-Analyze Slip</button>
+          <button id="test-webhook-btn" class="secondary-button" type="button">Test Webhook</button>
           <button id="open-config" class="secondary-button" type="button">Open Config</button>
-          <button id="open-folder" class="secondary-button" type="button">Open Folder</button>
         </div>
         <p id="quick-actions-feedback" class="meta quick-actions-feedback">Run manual daemon actions here without opening the larger sections below.</p>
       </article>
@@ -75,6 +74,96 @@
         <p class="meta">No picks currently under watch.</p>
       </div>
     </section>
+
+    <details class="panel accordion-panel settlement-panel">
+      <summary class="accordion-summary">
+        <div class="accordion-heading">
+          <p class="eyebrow">Manual</p>
+          <h2>Settle a Bet</h2>
+        </div>
+      </summary>
+
+      <div class="accordion-content">
+        <p class="meta">Use this when auto-settlement couldn't confirm a result. Select the active slip, choose the outcome, and submit.</p>
+
+        <div class="settings-form settings-form-nested">
+          <label class="field" for="settlement-pick-select">
+            <span>Active Slip</span>
+            <select id="settlement-pick-select" class="select-input">
+              <option value="">No active slips</option>
+            </select>
+          </label>
+          <p id="settlement-pick-meta" class="meta">No slip selected.</p>
+
+          <div id="settlement-legs-list" class="settlement-legs-list"></div>
+
+          <label class="field" for="settlement-result">
+            <span>Result</span>
+            <select id="settlement-result" class="select-input">
+              <option value="">Choose result...</option>
+              <option value="win">Win</option>
+              <option value="loss">Loss</option>
+              <option value="return">Void / Return</option>
+            </select>
+          </label>
+
+          <label class="field compact" for="settlement-notes">
+            <span>Notes (optional)</span>
+            <input id="settlement-notes" type="text" placeholder="e.g. ESPN confirmed final score 28-10" />
+          </label>
+        </div>
+
+        <div class="accordion-toolbar">
+          <button id="submit-settlement" class="secondary-button" type="button">Submit Settlement</button>
+        </div>
+        <p id="settlement-feedback" class="path-text"></p>
+      </div>
+    </details>
+
+    <details class="panel accordion-panel reanalyze-panel">
+      <summary class="accordion-summary">
+        <div class="accordion-heading">
+          <p class="eyebrow">Rules Engine</p>
+          <h2>Re-Analyze Slip</h2>
+        </div>
+      </summary>
+
+      <div class="accordion-content">
+        <p class="meta">Select a pre-game slip and re-run the rules engine against the latest snapshot data to see if a better build is available.</p>
+
+        <div class="settings-form settings-form-nested">
+          <label class="field" for="reanalyze-pick-select">
+            <span>Pre-Game Slip</span>
+            <select id="reanalyze-pick-select" class="select-input">
+              <option value="">No pre-game slips</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="accordion-toolbar">
+          <button id="reanalyze-run-btn" class="secondary-button" type="button">Re-Analyze</button>
+        </div>
+
+        <div id="reanalyze-result" class="reanalyze-result" hidden>
+          <div class="reanalyze-comparison">
+            <div class="reanalyze-col">
+              <p class="label">Current Pick</p>
+              <p id="reanalyze-current-pick" class="reanalyze-pick-text"></p>
+            </div>
+            <div class="reanalyze-col">
+              <p class="label">New Suggestion</p>
+              <p id="reanalyze-new-pick" class="reanalyze-pick-text"></p>
+            </div>
+          </div>
+          <p id="reanalyze-rationale" class="meta"></p>
+          <div class="accordion-toolbar">
+            <button id="apply-reanalyzed-pick-btn" class="secondary-button" type="button" hidden>Apply New Pick</button>
+          </div>
+        </div>
+
+        <p id="reanalyze-feedback" class="path-text"></p>
+      </div>
+    </details>
 
     <details class="panel accordion-panel webhooks-panel">
       <summary class="accordion-summary">
@@ -208,6 +297,11 @@
             <p class="meta">No deferred offers yet.</p>
           </div>
         </section>
+
+        <div class="accordion-toolbar">
+          <button id="run-referrals-now" class="secondary-button" type="button">Run Referrals</button>
+        </div>
+        <p id="run-referrals-feedback" class="path-text"></p>
       </div>
     </details>
 
@@ -407,88 +501,6 @@
       </div>
     </details>
 
-    <details class="panel accordion-panel replacement-panel">
-      <summary class="accordion-summary">
-        <div class="accordion-heading">
-          <p class="eyebrow">Replacements</p>
-          <h2>Replacement Builder</h2>
-        </div>
-      </summary>
-
-      <div class="accordion-content">
-        <div class="accordion-toolbar actions">
-          <button id="reload-picks-feed" class="secondary-button" type="button">Reload Feed</button>
-          <button id="generate-replacements" class="secondary-button" type="button">Generate Candidates</button>
-          <button id="save-replacement" class="secondary-button" type="button">Save Replacement Setup</button>
-        </div>
-
-        <div class="settings-form replacement-form">
-        <label class="field" for="replacement-pick-select">
-          <span>Pick</span>
-          <select id="replacement-pick-select" class="select-input"></select>
-        </label>
-
-        <p id="replacement-pick-meta" class="meta pick-meta">Load a pick from the feed to edit its replacement setup. AFL and NRL generated slips are hard-locked to same-game multis.</p>
-        <p id="picks-feed-path" class="path-text compact"></p>
-
-        <label class="field" for="replacement-status">
-          <span>Replacement Status</span>
-          <select id="replacement-status" class="select-input">
-            <option value="">No replacement needed</option>
-            <option value="replacement_needed">Replacement needed</option>
-            <option value="leg_refunded">Leg refunded</option>
-            <option value="leg_cancelled">Leg cancelled</option>
-            <option value="leg_canceled">Leg canceled</option>
-          </select>
-        </label>
-
-        <label class="field" for="replacement-reason">
-          <span>Replacement Reason</span>
-          <textarea id="replacement-reason" rows="3" placeholder="Example: player leg voided after lineup change."></textarea>
-        </label>
-
-        <label class="field" for="replacement-max-options">
-          <span>Backup Legs To Keep</span>
-          <input id="replacement-max-options" type="number" min="1" max="12" step="1" value="1" />
-        </label>
-
-        <section class="collection-card">
-          <div class="collection-header">
-            <div>
-              <h3>Current Slip Legs</h3>
-              <p class="meta">Mark refunded or cancelled legs so the generator can remove them.</p>
-            </div>
-            <button id="add-current-leg" class="ghost-button" type="button">Add Leg</button>
-          </div>
-          <div id="current-legs-list" class="collection-list"></div>
-        </section>
-
-        <section class="collection-card">
-          <div class="collection-header">
-            <div>
-              <h3>Candidate Replacement Legs</h3>
-              <p class="meta">Same-event legs the generator is allowed to swap in.</p>
-            </div>
-            <button id="add-candidate-leg" class="ghost-button" type="button">Add Candidate</button>
-          </div>
-          <div id="candidate-legs-list" class="collection-list"></div>
-        </section>
-
-        <section class="collection-card">
-          <div class="collection-header">
-            <div>
-              <h3>Replacement Options</h3>
-              <p class="meta">Manual options are supported, or you can overwrite this list from the generator.</p>
-            </div>
-            <button id="add-replacement-option" class="ghost-button" type="button">Add Option</button>
-          </div>
-          <div id="replacement-options-list" class="collection-list"></div>
-        </section>
-        </div>
-
-        <p id="replacement-feedback" class="path-text"></p>
-      </div>
-    </details>
   </main>
 
   <script type="module" src="./renderer.js"></script>
