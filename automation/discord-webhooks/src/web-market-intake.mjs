@@ -794,7 +794,10 @@ function isUnsupportedSportsbetPropContext(text) {
     return false;
   }
 
-  return /\b(quarter race|[1-4](st|nd|rd|th) quarter|[1-4](st|nd|rd|th) qtr|first quarter|second quarter|third quarter|fourth quarter|1st half|2nd half|first half|second half)\b/.test(normalized);
+  // Period/time-window novelty markets the engine can't grade as a clean full-game prop —
+  // includes "X+ Points in the First 3 Minutes" style markets that were crowding out the
+  // standard points board.
+  return /\b(quarter race|[1-4](st|nd|rd|th) quarter|[1-4](st|nd|rd|th) qtr|first quarter|second quarter|third quarter|fourth quarter|1st half|2nd half|first half|second half|first \d+ minutes?|first basket|first field goal|first point)\b/.test(normalized);
 }
 
 function isUnsupportedSportsbetPropLabel(text) {
@@ -909,7 +912,7 @@ function parseSportsbetOverUnderOutcome(outcomeName) {
   };
 }
 
-function mapSupportedPropMarketKey(label) {
+export function mapSupportedPropMarketKey(label) {
   const normalized = normalizeText(label);
 
   if (!normalized) {
@@ -922,6 +925,27 @@ function mapSupportedPropMarketKey(label) {
 
   if (normalized.includes('fantasy')) {
     return null;
+  }
+
+  // Combo props (Points+Rebounds+Assists and the 2-way pairs) must be detected BEFORE the
+  // individual points/rebounds/assists checks below — otherwise "Points, Rebounds & Assists"
+  // matches `assists` first and is mislabelled as a plain assists prop, losing the combo.
+  const hasComboPoints = /\b(points?|pts)\b/.test(normalized);
+  const hasComboRebounds = /\b(rebounds?|rebs?)\b/.test(normalized);
+  const hasComboAssists = /\b(assists?|asts?)\b/.test(normalized);
+  const comboStatCount = [hasComboPoints, hasComboRebounds, hasComboAssists].filter(Boolean).length;
+
+  if (comboStatCount >= 2) {
+    if (hasComboPoints && hasComboRebounds && hasComboAssists) {
+      return 'player_points_rebounds_assists';
+    }
+    if (hasComboPoints && hasComboAssists) {
+      return 'player_points_assists';
+    }
+    if (hasComboPoints && hasComboRebounds) {
+      return 'player_points_rebounds';
+    }
+    return 'player_rebounds_assists';
   }
 
   if (normalized.includes('passing touchdown')) {

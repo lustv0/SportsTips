@@ -96,5 +96,15 @@ export function getDueJobs(config, state, date = new Date()) {
     }
   }
 
+  // TAB market-menu refresh: once daily, only when the TAB feature is enabled.
+  if (config.jobs?.tabMenu?.enabled && config.tab?.enabled !== false) {
+    const scheduled = parseMinutes(config.jobs.tabMenu.time);
+    const alreadyRan = state.jobs?.tabMenu?.lastRunDate === dateKey;
+
+    if (!alreadyRan && currentMinutes >= scheduled) {
+      due.push('tabMenu');
+    }
+  }
+
   return due;
 }

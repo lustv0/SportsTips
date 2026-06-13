@@ -45,7 +45,7 @@
   forcePostPicks: document.getElementById('force-post-picks'),
   reviewResults: document.getElementById('review-results'),
   reanalyzeSlipBtn: document.getElementById('reanalyze-slip-btn'),
-  testWebhookBtn: document.getElementById('test-webhook-btn'),
+  analyzeAllSlipsBtn: document.getElementById('analyze-all-slips-btn'),
   runReferralsNow: document.getElementById('run-referrals-now'),
   runReferralsFeedback: document.getElementById('run-referrals-feedback'),
   quickActionsFeedback: document.getElementById('quick-actions-feedback'),
@@ -1059,22 +1059,39 @@ async function applyReanalyzedPick() {
   }
 }
 
-async function testWebhook() {
-  elements.testWebhookBtn.disabled = true;
-  elements.quickActionsFeedback.textContent = 'Sending test ping to all configured Discord webhooks...';
+async function analyzeAllSlips() {
+  elements.analyzeAllSlipsBtn.disabled = true;
+  elements.quickActionsFeedback.textContent = 'Re-analyzing all pre-game slips against the current rules...';
 
   try {
-    const result = await window.sportsTipsDesktop.testWebhook();
-    const { ok, failed, results } = result;
-    const failedLabels = (results || []).filter((r) => !r.ok).map((r) => r.label).join(', ');
+    const result = await window.sportsTipsDesktop.analyzeAllSlips();
+    const { total, changed, unchanged, noBet, failed, applied, dryRun, results } = result;
 
-    elements.quickActionsFeedback.textContent = failed === 0
-      ? `All ${ok} configured webhook${ok === 1 ? '' : 's'} responded OK.`
-      : `${ok} webhook${ok === 1 ? '' : 's'} OK, ${failed} failed: ${failedLabels || 'unknown'}.`;
+    if (!total) {
+      elements.quickActionsFeedback.textContent = 'No active pre-game slips to analyze (all current slips have already started or settled).';
+      return;
+    }
+
+    const verb = dryRun ? 'would be rebuilt' : 'rebuilt';
+    const parts = [
+      `Analyzed ${total} pre-game slip${total === 1 ? '' : 's'}:`,
+      `${changed} ${verb}`,
+      `${unchanged} unchanged`
+    ];
+    if (noBet) parts.push(`${noBet} no longer qualify`);
+    if (failed) parts.push(`${failed} failed`);
+    if (dryRun) parts.push('(dry run — nothing saved)');
+
+    const rebuilt = (results || []).filter((r) => r.changed);
+    const detail = rebuilt.length
+      ? ' ' + rebuilt.map((r) => `${r.sport}: "${r.originalSummary}" → "${r.newSummary}"`).join('; ')
+      : '';
+
+    elements.quickActionsFeedback.textContent = parts.join(', ') + '.' + detail;
   } catch (error) {
     elements.quickActionsFeedback.textContent = error.message;
   } finally {
-    elements.testWebhookBtn.disabled = false;
+    elements.analyzeAllSlipsBtn.disabled = false;
   }
 }
 
@@ -1192,8 +1209,8 @@ elements.applyReanalyzedPickBtn.addEventListener('click', () => {
   applyReanalyzedPick();
 });
 
-elements.testWebhookBtn.addEventListener('click', () => {
-  testWebhook();
+elements.analyzeAllSlipsBtn.addEventListener('click', () => {
+  analyzeAllSlips();
 });
 
 elements.runReferralsNow.addEventListener('click', () => {

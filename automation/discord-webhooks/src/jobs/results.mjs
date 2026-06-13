@@ -898,11 +898,33 @@ function getPlayerOutcomeLine(leg) {
   return null;
 }
 
+// NBA combo props settle by summing the component box-score stats (already fetched for the
+// single-stat markets), e.g. Points+Rebounds+Assists.
+function getNbaComboStatKeys(sportKey, market) {
+  if (String(sportKey || '').toLowerCase() !== 'nba') {
+    return [];
+  }
+
+  switch (String(market || '').toLowerCase()) {
+    case 'player_points_rebounds_assists':
+      return ['points', 'rebounds', 'assists'];
+    case 'player_points_assists':
+      return ['points', 'assists'];
+    case 'player_points_rebounds':
+      return ['points', 'rebounds'];
+    case 'player_rebounds_assists':
+      return ['rebounds', 'assists'];
+    default:
+      return [];
+  }
+}
+
 function gradePlayerMarketLeg(leg, pick, propContext) {
   const market = String(leg?.source?.market || '').toLowerCase();
+  const comboStatKeys = getNbaComboStatKeys(propContext?.sportKey, market);
   const statKey = getSupportedPlayerStatKey(propContext?.sportKey, market);
 
-  if (!statKey) {
+  if (!statKey && !comboStatKeys.length) {
     return {
       outcome: null,
       unresolvedReason: null
@@ -929,7 +951,16 @@ function gradePlayerMarketLeg(leg, pick, propContext) {
     };
   }
 
-  const statValue = toNumber(playerStats?.[statKey] ?? playerStats?.statValues?.[statKey]);
+  const readPlayerStat = (key) => toNumber(playerStats?.[key] ?? playerStats?.statValues?.[key]);
+  let statValue;
+
+  if (comboStatKeys.length) {
+    const parts = comboStatKeys.map(readPlayerStat);
+    // Need every component to settle a combo; a missing stat leaves it unresolved.
+    statValue = parts.some((value) => value === null) ? null : parts.reduce((sum, value) => sum + value, 0);
+  } else {
+    statValue = readPlayerStat(statKey);
+  }
 
   if (statValue === null) {
     return {

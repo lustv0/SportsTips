@@ -14,6 +14,7 @@ import { buildOpenMeteoEventWeatherSnapshot, fetchOpenMeteoForecast, geocodeOpen
 import { getDateKey } from '../scheduler.mjs';
 import { teamNamesMatch, textMentionsTeam } from '../team-name-matching.mjs';
 import { buildSnapshotEvents, ensureFreshScrapedSnapshot, fetchSportsbetEventTargetBetQuotes, getSnapshotEventQuotes } from '../web-market-intake.mjs';
+import { loadTabMarketMenu, getTabCanonicalMarkets } from '../providers/tab.mjs';
 
 const AVAILABLE_INJURY_STATUSES = new Set(['available', 'active', 'probable']);
 const NON_FATAL_INJURY_RESEARCH_STATUSES = new Set(['injury link missing']);
@@ -2289,6 +2290,11 @@ export async function runAnalysisJob(context, overrides = {}) {
     weather: new Map()
   };
 
+  // Cached TAB market menu (captured opportunistically) drives the soft "placeable on TAB" preference.
+  const tabMenu = config.tab?.enabled === false
+    ? null
+    : await loadTabMarketMenu(config.__paths.tabMarketMenuFile);
+
   for (const sport of config.sports.filter((item) => item.enabled && (item.marketKey || item.key))) {
     const isAfl = normalizeText(sport.key) === 'afl';
     const maxEvents = isAfl ? 10 : Number(config.analysis.maxEventsPerSport || 8);
@@ -2306,6 +2312,7 @@ export async function runAnalysisJob(context, overrides = {}) {
 
       const enrichedEvent = await enrichEventWithEspnMetadata(config, sport, event, scoreboardCache, overrides);
       const eventContext = buildEventContext(config, sport, enrichedEvent);
+      eventContext.tabMarkets = tabMenu ? getTabCanonicalMarkets(tabMenu, sport.key) : null;
       const eventKey = buildEventKey(sport.key, eventContext.eventName, event.commence_time);
 
       if (protectedManualEvents.has(eventKey)) {

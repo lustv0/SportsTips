@@ -13,6 +13,6 @@ contextBridge.exposeInMainWorld('sportsTipsDesktop', {
   settlePickManually: (payload) => ipcRenderer.invoke('desktop:settle-pick-manually', payload),
   reanalyzeSlip: (payload) => ipcRenderer.invoke('desktop:reanalyze-slip', payload),
   applyReanalyzedPick: (payload) => ipcRenderer.invoke('desktop:apply-reanalyzed-pick', payload),
-  testWebhook: () => ipcRenderer.invoke('desktop:test-webhook'),
+  analyzeAllSlips: () => ipcRenderer.invoke('desktop:analyze-all-slips'),
   openConfig: () => ipcRenderer.invoke('desktop:open-config')
 });

@@ -180,6 +180,19 @@ function appendWeatherLines(lines, pick) {
   }
 }
 
+function getTabAvailabilityLine(pick) {
+  switch (pick?.tabAvailability) {
+    case 'all':
+      return 'TAB: ✅ All legs available on TAB';
+    case 'partial':
+      return 'TAB: ⚠️ Partly on TAB — some legs Sportsbet-only';
+    case 'none':
+      return 'TAB: ❌ Sportsbet-only (not offered on TAB)';
+    default:
+      return null; // 'unknown' / uncaptured — show nothing rather than mislead.
+  }
+}
+
 function buildSlipDetailLines(pick, options = {}) {
   const lines = [];
   const totalOdds = getPickDisplayTotalOdds(pick);
@@ -198,6 +211,11 @@ function buildSlipDetailLines(pick, options = {}) {
   }
 
   lines.push(`${unitsLabel}: ${formatStake(pick?.stakeUnits)}`);
+
+  const tabLine = getTabAvailabilityLine(pick);
+  if (tabLine) {
+    lines.push(tabLine);
+  }
 
   if (legList) {
     lines.push('Legs:');

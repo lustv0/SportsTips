@@ -235,6 +235,15 @@ export async function loadConfig(configPathArg) {
     bookmakerTitle: config.marketScrape?.bookmakerTitle || 'Sportsbet Web'
   };
 
+  // TAB market-menu preference. The menu is captured opportunistically (npm run capture:tab)
+  // and the pick generator softly prefers markets TAB offers so tips stay placeable on TAB.
+  config.tab = {
+    enabled: config.tab?.enabled !== false,
+    menuFile: config.tab?.menuFile || 'automation/discord-webhooks/tab-market-menu.json',
+    jurisdiction: config.tab?.jurisdiction || 'NSW',
+    edgePath: config.tab?.edgePath || ''
+  };
+
   if (config.jobs?.slates?.enabled) {
     assertTime('jobs.slates.time', config.jobs.slates.time);
   }
@@ -253,6 +262,10 @@ export async function loadConfig(configPathArg) {
 
   if (config.bankrollTracker?.enabled !== false && config.bankrollTracker?.summaryTime) {
     assertTime('bankrollTracker.summaryTime', config.bankrollTracker.summaryTime);
+  }
+
+  if (config.jobs?.tabMenu?.enabled && config.jobs?.tabMenu?.time) {
+    assertTime('jobs.tabMenu.time', config.jobs.tabMenu.time);
   }
 
   config.referrals = {
@@ -291,6 +304,10 @@ export async function loadConfig(configPathArg) {
       enabled: Boolean(config.jobs?.results?.enabled),
       intervalMinutes: numberOrFallback(config.jobs?.results?.intervalMinutes, 15),
       settlementSweepHours: numberOrFallback(config.jobs?.results?.settlementSweepHours, 3)
+    },
+    tabMenu: {
+      enabled: config.jobs?.tabMenu?.enabled !== false && config.tab?.enabled !== false,
+      time: config.jobs?.tabMenu?.time || '05:00'
     }
   };
 
@@ -314,7 +331,7 @@ export async function loadConfig(configPathArg) {
     maxEventsPerSport: numberOrFallback(config.analysis?.maxEventsPerSport, 8),
     minCandidateLegsPerEvent: numberOrFallback(config.analysis?.minCandidateLegsPerEvent, 3),
     maxCandidateLegsPerEvent: numberOrFallback(config.analysis?.maxCandidateLegsPerEvent, 14),
-    maxPropMarketsPerEvent: numberOrFallback(config.analysis?.maxPropMarketsPerEvent, 6),
+    maxPropMarketsPerEvent: numberOrFallback(config.analysis?.maxPropMarketsPerEvent, 10),
     maxPropMarketsPerType: numberOrFallback(config.analysis?.maxPropMarketsPerType, 2),
     includeProps: config.analysis?.includeProps !== false,
     featuredMarkets: Array.isArray(config.analysis?.featuredMarkets) && config.analysis.featuredMarkets.length
@@ -332,6 +349,10 @@ export async function loadConfig(configPathArg) {
         'batter_hits',
         'pitcher_strikeouts',
         'batter_total_bases',
+        'player_points_rebounds_assists',
+        'player_points_assists',
+        'player_points_rebounds',
+        'player_rebounds_assists',
         'player_points',
         'player_rebounds',
         'player_assists',
@@ -366,6 +387,7 @@ export async function loadConfig(configPathArg) {
     picksFeedFile: resolveWorkspacePath(config.picksFeedFile || 'automation/discord-webhooks/picks-feed.json'),
     stateFile: resolveWorkspacePath(config.stateFile || 'automation/discord-webhooks/state.json'),
     snapshotFile: resolveWorkspacePath(config.marketScrape.snapshotFile),
+    tabMarketMenuFile: resolveWorkspacePath(config.tab?.menuFile || 'automation/discord-webhooks/tab-market-menu.json'),
     runtimeStatusFile: resolveWorkspacePath(config.runtimeStatusFile || 'automation/discord-webhooks/runtime-status.json'),
     profitTrackerFile: resolveWorkspacePath(config.profitTrackerFile || config.weeklyProfitTrackerFile || '30-day-profit-tracker.md'),
     weeklyProfitTrackerFile: resolveWorkspacePath(config.profitTrackerFile || config.weeklyProfitTrackerFile || '30-day-profit-tracker.md'),

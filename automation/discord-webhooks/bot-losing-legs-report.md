@@ -21,4 +21,7 @@ Repeat-miss threshold: 2.
 
 ## Recent Missed Legs
 
+- Port Adelaide vs Sydney Swans | Angus Sheldrick 20+ Disposals
+- North Melbourne vs West Coast Eagles | Hamish Davis 15+ Disposals
+- Melbourne vs Essendon | Archie Roberts 20+ Disposals
 - Philadelphia Phillies (T Banks) vs Milwaukee Brewers (J Misiorowski) | Alec Bohm 1+ Hit

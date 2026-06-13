@@ -5,6 +5,7 @@ import { runPicksJob } from './jobs/picks.mjs';
 import { runReferralsJob } from './jobs/referrals.mjs';
 import { runResultsJob } from './jobs/results.mjs';
 import { runSlatesJob } from './jobs/slates.mjs';
+import { runTabMenuJob } from './jobs/tab-menu.mjs';
 import { runTrackerSummaryJob } from './jobs/tracker-summary.mjs';
 import { loadRuntimeStatus, saveRuntimeStatus } from './runtime-status.mjs';
 import { getDueJobs } from './scheduler.mjs';
@@ -16,13 +17,14 @@ const JOBS = {
   picks: runPicksJob,
   referrals: runReferralsJob,
   results: runResultsJob,
-  trackerSummary: runTrackerSummaryJob
+  trackerSummary: runTrackerSummaryJob,
+  tabMenu: runTabMenuJob
 };
 const RESULT_TEAM_MARKET_SUMMARY = 'h2h, spreads, totals, double_chance, and first-half variants';
 const RESULT_PLAYER_MARKETS_BY_SPORT = {
   afl: ['player_disposals'],
   nrl: ['player_points'],
-  nba: ['player_points', 'player_rebounds', 'player_assists', 'player_threes'],
+  nba: ['player_points', 'player_rebounds', 'player_assists', 'player_threes', 'player_points_rebounds_assists', 'player_points_assists', 'player_points_rebounds', 'player_rebounds_assists'],
   mlb: ['batter_hits', 'pitcher_strikeouts'],
   nfl: ['player_pass_yds', 'player_rush_yds']
 };

@@ -840,7 +840,7 @@ function getNbaPropSubtype(candidate) {
 
   const text = ` ${getCandidateSearchText(candidate)} `;
 
-  if (/\b(pra|pa|ra|rp|points rebounds assists|points assists|rebounds assists|rebounds points)\b/.test(text)) {
+  if (/\b(pra|pa|ra|rp|points rebounds assists|points assists|points rebounds|rebounds assists|rebounds points)\b/.test(text)) {
     return 'combo';
   }
 
@@ -1923,6 +1923,42 @@ function buildRulesSelectionDecision(candidate, eventContext) {
   };
 }
 
+// Map a candidate to the canonical market key used in the cached TAB menu.
+function getCandidateTabMarketKey(candidate) {
+  const market = normalizeText(candidate?.market);
+
+  if (market === 'h2h') return 'h2h';
+  if (isFirstHalfTotalCandidate(candidate)) return 'first_half_totals';
+  if (isFirstHalfSpreadCandidate(candidate)) return 'first_half_spreads';
+  if (isFullGameTotalCandidate(candidate)) return 'totals';
+  if (isFullGameSpreadCandidate(candidate)) return 'spreads';
+
+  return market; // props keep their own key, e.g. 'player points', 'player disposals'
+}
+
+// Returns true/false if the candidate's market is/ isn't in TAB's menu, or null when the
+// TAB menu for this sport is unknown (uncaptured) — callers treat null as "don't penalise".
+function isCandidateOnTab(candidate, tabMarkets) {
+  if (!Array.isArray(tabMarkets) || !tabMarkets.length) {
+    return null;
+  }
+
+  const menu = new Set(tabMarkets.map((entry) => normalizeText(entry)));
+  return menu.has(normalizeText(getCandidateTabMarketKey(candidate)));
+}
+
+function getComboTabAvailability(candidates, tabMarkets) {
+  if (!Array.isArray(tabMarkets) || !tabMarkets.length) {
+    return 'unknown';
+  }
+
+  const flags = candidates.map((candidate) => isCandidateOnTab(candidate, tabMarkets));
+
+  if (flags.every((flag) => flag === true)) return 'all';
+  if (flags.some((flag) => flag === true)) return 'partial';
+  return 'none';
+}
+
 function evaluateRulesCandidateCombo(context, eventContext, candidates, indexByCandidateId) {
   if (!areComboCompatible(candidates, eventContext)) {
     return null;
@@ -2116,7 +2152,12 @@ function evaluateRulesCandidateCombo(context, eventContext, candidates, indexByC
   const oddsCeilingPenalty = observedComboOdds !== null && observedComboOdds > 5
     ? (extendedOddsSupported ? 2.5 : 5)
     : 0;
-  const score = rankScore + diversityBonus + legCountBonus + confidenceBonus + propPreferenceBonus + nbaStabilityBonus + nbaComboPriorityBonus + nbaHighStakesBonus + aflDisposalBonus + aflDisposalLedBonus + aflComboTargetBonus + aflComboFloorPenalty + nrlStructureBonus + nrlComboTargetBonus + mlbHitStructureBonus + mlbSameSideHitStrikeoutBonus + mlbSoftThirdLegBonus + oddsTargetBonus + (supportScore || 0) - correlationPenalty - h2hPenalty - nbaPointsPenalty - nbaVolatilityPenalty - aflGoalPenalty - aflComboStretchPenalty - nrlComboStretchPenalty - nrlStructurePenalty - mlbNoHitPenalty - mlbTotalsPenalty - mlbRbiPenalty - oddsStretchPenalty - oddsCeilingPenalty;
+  // Soft preference for builds whose markets TAB actually offers, so tips stay placeable
+  // on TAB. Only nudges ranking (never blocks): full TAB coverage > partial > none.
+  // No effect when the TAB menu for this sport is unknown (uncaptured).
+  const tabAvailability = getComboTabAvailability(candidates, eventContext?.tabMarkets);
+  const tabAvailabilityBonus = tabAvailability === 'all' ? 1.5 : tabAvailability === 'partial' ? 0.5 : 0;
+  const score = rankScore + diversityBonus + legCountBonus + confidenceBonus + propPreferenceBonus + nbaStabilityBonus + nbaComboPriorityBonus + nbaHighStakesBonus + aflDisposalBonus + aflDisposalLedBonus + aflComboTargetBonus + aflComboFloorPenalty + nrlStructureBonus + nrlComboTargetBonus + mlbHitStructureBonus + mlbSameSideHitStrikeoutBonus + mlbSoftThirdLegBonus + oddsTargetBonus + tabAvailabilityBonus + (supportScore || 0) - correlationPenalty - h2hPenalty - nbaPointsPenalty - nbaVolatilityPenalty - aflGoalPenalty - aflComboStretchPenalty - nrlComboStretchPenalty - nrlStructurePenalty - mlbNoHitPenalty - mlbTotalsPenalty - mlbRbiPenalty - oddsStretchPenalty - oddsCeilingPenalty;
 
   return {
     candidates,
@@ -2697,12 +2738,14 @@ export function buildPickFromAnalysisDecision(eventContext, candidatePool, decis
     return null;
   }
 
+  const tabMarkets = Array.isArray(eventContext?.tabMarkets) ? eventContext.tabMarkets : null;
   const legObjects = selectedLegs.map((item, index) => ({
     id: `leg-${index + 1}`,
     label: item.candidate.label,
     modelProbability: toNumber(item.decision.modelProbability),
     status: 'active',
     locked: false,
+    onTab: isCandidateOnTab(item.candidate, tabMarkets),
     rationale: item.decision.rationale || item.candidate.rationale,
     source: {
       type: item.candidate.source,
@@ -2768,6 +2811,7 @@ export function buildPickFromAnalysisDecision(eventContext, candidatePool, decis
     analysisEngine,
     ...(isSport(eventContext, 'mlb') ? { mlbStructureProfile: getMlbStructureProfile(eventContext) } : {}),
     legs: legObjects,
+    tabAvailability: getComboTabAvailability(selectedLegs.map((item) => item.candidate), tabMarkets),
     bonusLegOptions: aflBonusLegOptions,
     replacementTemplate,
     analysisChecklist: decision.checklist,
@@ -2776,5 +2820,9 @@ export function buildPickFromAnalysisDecision(eventContext, candidatePool, decis
 }
 
 export const __testables = {
-  estimateCandidateModelProbability
+  estimateCandidateModelProbability,
+  getCandidateTabMarketKey,
+  isCandidateOnTab,
+  getComboTabAvailability,
+  getNbaPropSubtype
 };

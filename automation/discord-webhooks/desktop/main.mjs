@@ -10,6 +10,7 @@ import { buildDailyTrackerSummary, appendSettlementTrackerEntries } from '../src
 import { writeSettlementsToWorkspace } from '../src/settlement-writeback.mjs';
 import { buildAnalysisCandidatePool, analyzeEventWithRules, buildPickFromAnalysisDecision } from '../src/ai-pick-generator.mjs';
 import { buildSnapshotEvents, loadSnapshotFile } from '../src/web-market-intake.mjs';
+import { loadTabMarketMenu, getTabCanonicalMarkets } from '../src/providers/tab.mjs';
 import { loadConfig, loadRawConfigFile, saveRawConfigFile } from '../src/config.mjs';
 import { buildAutomatedMessage, sendWebhookMessage } from '../src/discord.mjs';
 import { runForcedDailyCheck } from '../src/forced-daily-check.mjs';
@@ -1063,21 +1064,7 @@ async function createTray() {
   await refreshUi();
 }
 
-async function reanalyzeSlip(payload) {
-  const { pickId } = payload || {};
-
-  if (!pickId) {
-    throw new Error('No pick ID provided.');
-  }
-
-  const config = await loadConfig();
-  const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
-  const pick = feed.picks.find((p) => p.id === pickId);
-
-  if (!pick) {
-    throw new Error('Pick not found in feed.');
-  }
-
+async function reanalyzePickAgainstSnapshot(config, snapshot, pick, now, tabMenu = null) {
   const sport = (config.sports || []).find((s) => {
     const sk = String(s.key || '').toLowerCase();
     const pk = String(pick.sport || '').toLowerCase();
@@ -1088,8 +1075,6 @@ async function reanalyzeSlip(payload) {
     throw new Error(`No sport config found for sport "${pick.sport}".`);
   }
 
-  const snapshot = await loadSnapshotFile(config.__paths.snapshotFile);
-  const now = new Date();
   const snapshotEvents = buildSnapshotEvents(snapshot, config, sport, now);
   const pickName = String(pick.event || pick.summary || '').toLowerCase().trim();
   const matchedEvent = snapshotEvents.find((ev) => {
@@ -1115,7 +1100,8 @@ async function reanalyzeSlip(payload) {
     startTime: matchedEvent.commence_time,
     venue: matchedEvent.venue || null,
     weather: pick.weather || null,
-    generatorConfig: config.analysis.generator
+    generatorConfig: config.analysis.generator,
+    tabMarkets: tabMenu ? getTabCanonicalMarkets(tabMenu, sport.key) : null
   };
 
   const allQuotes = matchedEvent.snapshotQuotes || [];
@@ -1123,7 +1109,7 @@ async function reanalyzeSlip(payload) {
 
   if (candidatePool.length === 0) {
     return {
-      originalPickId: pickId,
+      originalPickId: pick.id,
       originalSummary: pick.summary || null,
       hasNewPick: false,
       newSummary: null,
@@ -1139,13 +1125,128 @@ async function reanalyzeSlip(payload) {
   const newPick = buildPickFromAnalysisDecision(eventContext, candidatePool, decision);
 
   return {
-    originalPickId: pickId,
+    originalPickId: pick.id,
     originalSummary: pick.summary || null,
     hasNewPick: Boolean(newPick?.summary),
     newSummary: newPick?.summary || null,
-    rationale: decision?.rationale || decision?.summary || null,
+    rationale: decision?.rationale || decision?.summary || decision?.noBetReason || null,
     newPick: newPick || null
   };
+}
+
+async function reanalyzeSlip(payload) {
+  const { pickId } = payload || {};
+
+  if (!pickId) {
+    throw new Error('No pick ID provided.');
+  }
+
+  const config = await loadConfig();
+  const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
+  const pick = feed.picks.find((p) => p.id === pickId);
+
+  if (!pick) {
+    throw new Error('Pick not found in feed.');
+  }
+
+  const snapshot = await loadSnapshotFile(config.__paths.snapshotFile);
+  const tabMenu = config.tab?.enabled === false ? null : await loadTabMarketMenu(config.__paths.tabMarketMenuFile);
+  return reanalyzePickAgainstSnapshot(config, snapshot, pick, new Date(), tabMenu);
+}
+
+function applyReanalyzedPickFields(existing, newPick) {
+  return {
+    ...existing,
+    summary: newPick.summary,
+    rationale: newPick.rationale || existing.rationale,
+    legs: newPick.legs || existing.legs,
+    betType: newPick.betType || existing.betType,
+    modelProbability: newPick.modelProbability ?? existing.modelProbability,
+    supportScore: newPick.supportScore ?? existing.supportScore,
+    confidenceTier: newPick.confidenceTier || existing.confidenceTier,
+    reanalyzedAt: new Date().toISOString()
+  };
+}
+
+async function reanalyzeAllSlips() {
+  const config = await loadConfig();
+  const feed = await loadRawPicksFeed(config.__paths.picksFeedFile);
+  const snapshot = await loadSnapshotFile(config.__paths.snapshotFile);
+  const tabMenu = config.tab?.enabled === false ? null : await loadTabMarketMenu(config.__paths.tabMarketMenuFile);
+  const now = new Date();
+  const dryRun = Boolean(config.dryRun);
+
+  // Active + pre-game = pending status and a start time still in the future.
+  const pregameSlips = (feed.picks || []).filter((pick) => {
+    if (String(pick.status || '').toLowerCase() !== 'pending') {
+      return false;
+    }
+
+    const start = pick.startTime ? new Date(pick.startTime) : null;
+    return start && !Number.isNaN(start.getTime()) && start.getTime() > now.getTime();
+  });
+
+  const results = [];
+  let changed = 0;
+  let unchanged = 0;
+  let noBet = 0;
+  let failed = 0;
+  let applied = 0;
+
+  for (const pick of pregameSlips) {
+    try {
+      const analysis = await reanalyzePickAgainstSnapshot(config, snapshot, pick, now, tabMenu);
+      const originalSummary = pick.summary || '';
+      const isDifferent = Boolean(analysis.hasNewPick && analysis.newSummary && analysis.newSummary !== originalSummary);
+      let didApply = false;
+
+      if (isDifferent && analysis.newPick?.summary && !dryRun) {
+        const index = feed.picks.findIndex((p) => p.id === pick.id);
+
+        if (index !== -1) {
+          feed.picks[index] = applyReanalyzedPickFields(feed.picks[index], analysis.newPick);
+          didApply = true;
+          applied += 1;
+        }
+      }
+
+      if (!analysis.hasNewPick) {
+        noBet += 1;
+      } else if (isDifferent) {
+        changed += 1;
+      } else {
+        unchanged += 1;
+      }
+
+      results.push({
+        pickId: pick.id,
+        sport: pick.sportLabel || pick.sport || '',
+        event: pick.event || pick.summary || '',
+        originalSummary,
+        newSummary: analysis.newSummary,
+        qualifies: analysis.hasNewPick,
+        changed: isDifferent,
+        applied: didApply,
+        rationale: analysis.rationale || null
+      });
+    } catch (error) {
+      failed += 1;
+      results.push({
+        pickId: pick.id,
+        sport: pick.sportLabel || pick.sport || '',
+        event: pick.event || pick.summary || '',
+        error: error.message
+      });
+    }
+  }
+
+  if (applied > 0 && !dryRun) {
+    await saveRawPicksFeed(config.__paths.picksFeedFile, feed);
+  }
+
+  await refreshUi();
+
+  return { total: pregameSlips.length, changed, unchanged, noBet, failed, applied, dryRun, results };
 }
 
 async function applyReanalyzedPick(payload) {
@@ -1170,18 +1271,7 @@ async function applyReanalyzedPick(payload) {
   const dryRun = Boolean(config.dryRun);
 
   if (!dryRun) {
-    const existing = feed.picks[pickIndex];
-    feed.picks[pickIndex] = {
-      ...existing,
-      summary: newPick.summary,
-      rationale: newPick.rationale || existing.rationale,
-      legs: newPick.legs || existing.legs,
-      betType: newPick.betType || existing.betType,
-      modelProbability: newPick.modelProbability ?? existing.modelProbability,
-      supportScore: newPick.supportScore ?? existing.supportScore,
-      confidenceTier: newPick.confidenceTier || existing.confidenceTier,
-      reanalyzedAt: new Date().toISOString()
-    };
+    feed.picks[pickIndex] = applyReanalyzedPickFields(feed.picks[pickIndex], newPick);
     await saveRawPicksFeed(config.__paths.picksFeedFile, feed);
   }
 
@@ -1189,35 +1279,6 @@ async function applyReanalyzedPick(payload) {
   return { success: true, dryRun };
 }
 
-async function testWebhook() {
-  const config = await loadConfig();
-  const webhooks = config.discord?.webhooks || {};
-  const results = [];
-
-  for (const [key, url] of Object.entries(webhooks)) {
-    if (!url) {
-      continue;
-    }
-
-    const label = WEBHOOK_LABELS[key] || key;
-
-    try {
-      const response = await fetch(`${url}?wait=false`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ content: '✅ Webhook test ping from Tipping Bot Desktop.' })
-      });
-
-      results.push({ key, label, ok: response.ok, status: response.status });
-    } catch (error) {
-      results.push({ key, label, ok: false, status: null, error: error.message });
-    }
-  }
-
-  const ok = results.filter((r) => r.ok).length;
-  const failed = results.filter((r) => !r.ok).length;
-  return { ok, failed, results };
-}
 
 ipcMain.handle('desktop:get-status', () => getDesktopStatus());
 ipcMain.handle('desktop:start-daemon', () => startDaemon());
@@ -1232,8 +1293,8 @@ ipcMain.handle('desktop:verify-referral', (_, payload) => verifyReferralOffer(pa
 ipcMain.handle('desktop:save-settings', (_, payload) => saveDesktopSettings(payload));
 ipcMain.handle('desktop:settle-pick-manually', (_, payload) => settlePickManually(payload));
 ipcMain.handle('desktop:reanalyze-slip', (_, payload) => reanalyzeSlip(payload));
+ipcMain.handle('desktop:analyze-all-slips', () => reanalyzeAllSlips());
 ipcMain.handle('desktop:apply-reanalyzed-pick', (_, payload) => applyReanalyzedPick(payload));
-ipcMain.handle('desktop:test-webhook', () => testWebhook());
 ipcMain.handle('desktop:open-config', async () => {
   const status = await getDesktopStatus();
   return shell.openPath(status.configPath);

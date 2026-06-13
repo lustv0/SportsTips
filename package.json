@@ -13,5 +13,8 @@
   "main": "automation/discord-webhooks/desktop/bootstrap.cjs",
   "engines": {
     "node": ">=22"
+  },
+  "dependencies": {
+    "playwright-core": "^1.60.0"
   }
 }
